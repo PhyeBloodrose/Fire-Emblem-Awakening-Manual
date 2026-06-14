@@ -12,13 +12,17 @@ Any other requirements are completely optional within the yaml file. It is up to
 # The Different Goals of the Manual
 
 - The Mad King Goal
+
 I took inspiration from someone else's Fire Emblem Awakening Manual and decided to include this early goal for people! The goal is to reach chapter 11 and defeat the boss of that chapter.
 
 - Grima Goal
+
 Requires you to reach Chapter 25 and obtain "End Chapter" to access Endgame where you have to defeat Grima to goal.
 
 - Apotheosis Goal
+
 Requires you to have reached Chapter 25 and aquired 20 eligible units. Depending on your yaml settings, the requirements may be more strict before the chapter is enabled. The goal is to defeat the final boss of the chapter. It does however require you to already have downloaded the Xenologue before the eshop shut down.
 
 - Emblem Hunt Goal
+
 Five items called 'Emblem Gemstone' will be randomly placed in the world. Gather them all to goal. A silly macguffin hunt!

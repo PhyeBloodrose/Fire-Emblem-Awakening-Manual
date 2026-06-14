@@ -1,0 +1,2430 @@
+{
+    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.events.schema.json",
+    "data": [
+        {
+            "name": "MasterSealed",
+            "requires": "|Chapter 12| OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)} OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 8| OR |Paralogue 12| OR |Paralogue 13|))"
+        },
+        {
+            "name": "Sealed",
+            "requires": "|Chapter 16| OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)} OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 6| OR |Paralogue 10| OR |Paralogue 16|))"
+        },
+        {
+            "name": "Chapter 1",
+            "region": "Chapter 1",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 2",
+            "region": "Chapter 2",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 3",
+            "region": "Chapter 3",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 4",
+            "region": "Chapter 4",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 5",
+            "region": "Chapter 5",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 6",
+            "region": "Chapter 6",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 7",
+            "region": "Chapter 7",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 8",
+            "region": "Chapter 8",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 9",
+            "region": "Chapter 9",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 10",
+            "region": "Chapter 10",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 11",
+            "region": "Chapter 11",
+            "category": [
+                "MainChaps"
+            ]
+        },
+        {
+            "name": "Chapter 12",
+            "region": "Chapter 12",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 13",
+            "region": "Chapter 13",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 14",
+            "region": "Chapter 14",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 15",
+            "region": "Chapter 15",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 16",
+            "region": "Chapter 16",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 17",
+            "region": "Chapter 17",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 18",
+            "region": "Chapter 18",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 19",
+            "region": "Chapter 19",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 20",
+            "region": "Chapter 20",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 21",
+            "region": "Chapter 21",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 22",
+            "region": "Chapter 22",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 23",
+            "region": "Chapter 23",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 24",
+            "region": "Chapter 24",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Chapter 25",
+            "region": "Chapter 25",
+            "category": [
+                "MainChaps",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "EndChapter",
+            "region": "End",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 1",
+            "region": "Paralogue 1"
+        },
+        {
+            "name": "Paralogue 4",
+            "region": "Paralogue 4"
+        },
+        {
+            "name": "Paralogue 5",
+            "region": "Paralogue 5",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 6",
+            "region": "Paralogue 6",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 7",
+            "region": "Paralogue 7",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 8",
+            "region": "Paralogue 8",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 9",
+            "region": "Paralogue 9",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 10",
+            "region": "Paralogue 10",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 11",
+            "region": "Paralogue 11",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 12",
+            "region": "Paralogue 12",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 13",
+            "region": "Paralogue 13",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 14",
+            "region": "Paralogue 14",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 15",
+            "region": "Paralogue 15",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 16",
+            "region": "Paralogue 16",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Paralogue 17",
+            "region": "Paralogue 17",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Xenologue 1",
+            "region": "Xenologue 1"
+        },
+        {
+            "name": "Xenologue 5",
+            "region": "Xenologue 5"
+        },
+        {
+            "name": "Xenologue 8",
+            "region": "Xenologue 8",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Apotheosis",
+            "region": "Apotheosis",
+            "category": [
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Victory Achieved",
+            "requires": "(|Chapter 11| AND {YamlEnabled(Mad_King_Goal)}) OR (|EndChapter| AND {YamlEnabled(Grima_Goal)}) OR (|Apotheosis| AND {YamlEnabled(Apotheosis_Goal)}) OR (|Emblem Gemstone:5| AND {YamlEnabled(Emblem_Hunt_Goal)})"
+        },
+        {
+            "name": "Lucina Parents",
+            "requires": "|Chrom Access| AND (((|Robin x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin (Avatar)|) OR ((|Olivia x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Olivia|) OR ((|Sumia x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sumia|) OR ((|Sully x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sully|) OR ((|Maribelle x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Maribelle|)"
+        },
+        {
+            "name": "Owain Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Lissa Support S| AND (((|Lissa x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Lissa x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Lissa x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Lissa x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Lissa x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Lissa x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Lissa x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Lissa x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Lissa x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Lissa x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Lissa x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Lissa x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Lissa x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Inigo Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Olivia Support S| AND (((|Olivia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Olivia x Chrom|)} AND |Chrom|) OR ((|Olivia x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Olivia x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Olivia x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Olivia x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Olivia x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Olivia x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Olivia x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Olivia x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Olivia x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Olivia x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Olivia x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Olivia x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Brady Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Maribelle Support S| AND (((|Maribelle x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Maribelle x Chrom|)} AND |Chrom|) OR ((|Maribelle x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Maribelle x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Maribelle x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl|) OR ((|Maribelle x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Maribelle x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Maribelle x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Maribelle x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Maribelle x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Maribelle x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Maribelle x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Maribelle x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Maribelle x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Kjelle Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Sully Support S| AND (((|Sully x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Sully x Chrom|)} AND |Chrom|) OR ((|Sully x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Sully x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Sully x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Sully x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Sully x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Sully x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Sully x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Sully x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Sully x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Sully x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Sully x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Sully x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Cynthia Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Sumia Support S| AND (((|Sumia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Sumia x Chrom|)} AND |Chrom|) OR ((|Sumia x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Sumia x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Sumia x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Severa Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Cordelia Support S| AND (((|Cordelia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Cordelia x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Cordelia x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Cordelia x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Cordelia x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Cordelia x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Cordelia x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Cordelia x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Cordelia x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Cordelia x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Cordelia x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Cordelia x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Cordelia x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Gerome Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Cherche Support S| AND (((|Cherche x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Cherche x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Cherche x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Cherche x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Cherche x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Cherche x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Cherche x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Cherche x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Cherche x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Cherche x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Cherche x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor|) OR ((|Cherche x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Cherche x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Morgan F Parents",
+            "category": [
+                "Character Pairs",
+                "MaleRobin"
+            ],
+            "requires": "{YamlEnabled(Male_Avatar)} AND |Robin Support S| AND (((|Sumia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sumia Support S|) OR ((|Olivia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Olivia Support S|) OR ((|Maribelle x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Maribelle Support S|) OR ((|Sully x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sully Support S|) OR ((|Lissa x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lissa Support S|) OR ((|Cordelia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Cordelia Support S|) OR ((|Cherche x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Cherche Support S|) OR ((|Panne x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Panne Support S|) OR ((|Miriel x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Miriel Support S|) OR ((|Tharja x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Tharja Support S|) OR ((|Nowi x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Nowi Support S|) OR ({YamlEnabled(Robin_Pair+)} AND (((|Lucina x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lucina Support S|) OR ((|Cynthia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Cynthia Support S|) OR ((|Severa x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Severa Support S|) OR ((|Noire x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Noire Support S|) OR ((|Nah x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Nah Support S|) OR ((|Kjelle x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kjelle Support S|) OR ((|Anna x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Anna Support S|) OR ((|Flavia x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Flavia Support S|) OR ((|Tiki x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Tiki Support S|) OR ((|Say'ri x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Say'ri Support S|)))"
+        },
+        {
+            "name": "Morgan M Parents",
+            "category": [
+                "Character Pairs",
+                "FemaleRobin"
+            ],
+            "requires": "{YamlDisabled(Male_Avatar)} AND |Robin Support S| AND (((|Robin x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Chrom|) OR ((|Robin x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Robin x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Robin x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Robin x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Robin x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Robin x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Robin x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Robin x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Robin x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Robin x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Robin x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Robin x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|) OR ({YamlEnabled(Robin_Pair+)} AND (((|Robin x Brady| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Brady Support S|) OR ((|Robin x Gerome| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gerome Support S|) OR ((|Robin x Owain| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Owain Support S|) OR ((|Robin x Inigo| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Inigo Support S|) OR ((|Robin x Yarne| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Yarne Support S|) OR ((|Robin x Laurent| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Laurent Support S|) OR ((|Robin x Basilio| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Basilio Support S|)))"
+        },
+        {
+            "name": "Yarne Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Panne Support S| AND (((|Panne x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Panne x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Panne x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Panne x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Panne x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Panne x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Panne x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Panne x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Panne x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Panne x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Panne x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Panne x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Panne x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Laurent Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Miriel Support S| AND (((|Miriel x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Miriel x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Miriel x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Miriel x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Miriel x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Miriel x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Miriel x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Miriel x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Miriel x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Miriel x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Miriel x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Miriel x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Miriel x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Noire Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Tharja Support S| AND (((|Tharja x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Tharja x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Tharja x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Tharja x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Tharja x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Tharja x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Tharja x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Tharja x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Tharja x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Tharja x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Tharja x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Tharja x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Tharja x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "Nah Parents",
+            "category": [
+                "Character Pairs"
+            ],
+            "requires": "|Nowi Support S| AND (((|Nowi x Robin| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin Support S|) OR ((|Nowi x Frederick| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Frederick Support S|) OR ((|Nowi x Virion| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Virion Support S|) OR ((|Nowi x Stahl| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Stahl Support S|) OR ((|Nowi x Vaike| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Vaike Support S|) OR ((|Nowi x Kellam| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Kellam Support S|) OR ((|Nowi x Lon'qu| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Lon'qu Support S|) OR ((|Nowi x Ricken| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Ricken Support S|) OR ((|Nowi x Gaius| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gaius Support S|) OR ((|Nowi x Donnel| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Donnel Support S|) OR ((|Nowi x Gregor| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Gregor Support S|) OR ((|Nowi x Libra| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Libra Support S|) OR ((|Nowi x Henry| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Henry Support S|))"
+        },
+        {
+            "name": "One Star",
+            "category": [
+                "Xenologue"
+            ],
+            "requires": "|Chapter 4|"
+        },
+        {
+            "name": "Two Star",
+            "category": [
+                "Xenologue"
+            ],
+            "requires": "|Chapter 8|"
+        },
+        {
+            "name": "Three Star",
+            "category": [
+                "Xenologue",
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 12|"
+        },
+        {
+            "name": "Four Star",
+            "category": [
+                "Xenologue",
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 16|"
+        },
+        {
+            "name": "Five Star",
+            "category": [
+                "Xenologue",
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 20|"
+        },
+        {
+            "name": "Chrom Access",
+            "region": "Chrom",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Chrom Unit",
+            "region": "Chrom_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Robin Access",
+            "region": "Robin",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Robin Unit",
+            "region": "Robin_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Lissa Access",
+            "region": "Lissa",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Lissa Unit",
+            "region": "Lissa_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Frederick Access",
+            "region": "Frederick",
+            "category": [
+                "Base Units",
+                "Units"
+            ]
+        },
+        {
+            "name": "Sully Access",
+            "region": "Sully",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Sully Unit",
+            "region": "Sully_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Virion Access",
+            "region": "Virion",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Virion Unit",
+            "region": "Virion_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Stahl Access",
+            "region": "Stahl",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Stahl Unit",
+            "region": "Stahl_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Vaike Access",
+            "region": "Vaike",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Vaike Unit",
+            "region": "Vaike_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Miriel Access",
+            "region": "Miriel",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Miriel Unit",
+            "region": "Miriel_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Sumia Access",
+            "region": "Sumia",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Sumia Unit",
+            "region": "Sumia_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Kellam Access",
+            "region": "Kellam",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Kellam Unit",
+            "region": "Kellam_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Lon'qu Access",
+            "region": "Lon'qu",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Lon'qu Unit",
+            "region": "Lon'qu_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Ricken Access",
+            "region": "Ricken",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Ricken Unit",
+            "region": "Ricken_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Maribelle Access",
+            "region": "Maribelle",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Maribelle Unit",
+            "region": "Maribelle_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Panne Access",
+            "region": "Panne",
+            "category": [
+                "Base Units",
+                "Units"
+            ]
+        },
+        {
+            "name": "Gaius Access",
+            "region": "Gaius",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Gaius Unit",
+            "region": "Gaius_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Cordelia Access",
+            "region": "Cordelia",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Cordelia Unit",
+            "region": "Cordelia_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Gregor Access",
+            "region": "Gregor",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Gregor Unit",
+            "region": "Gregor_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Nowi Access",
+            "region": "Nowi",
+            "category": [
+                "Base Units",
+                "Units"
+            ]
+        },
+        {
+            "name": "Libra Access",
+            "region": "Libra",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Libra Unit",
+            "region": "Libra_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Tharja Access",
+            "region": "Tharja",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Tharja Unit",
+            "region": "Tharja_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Olivia Access",
+            "region": "Olivia",
+            "category": [
+                "Base Units",
+                "Units"
+            ]
+        },
+        {
+            "name": "Cherche Access",
+            "region": "Cherche",
+            "category": [
+                "Base Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Cherche Unit",
+            "region": "Cherche_Promoted",
+            "category": [
+                "Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Henry Access",
+            "region": "Henry",
+            "category": [
+                "Base Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Henry Unit",
+            "region": "Henry_Promoted",
+            "category": [
+                "Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Lucina Access",
+            "region": "Lucina",
+            "category": [
+                "Base Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Lucina Unit",
+            "region": "Lucina_Promoted",
+            "category": [
+                "Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Say'ri Access",
+            "region": "Say'ri",
+            "category": [
+                "Base Units",
+                "Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Basilio Access",
+            "region": "Basilio",
+            "category": [
+                "Base Units",
+                "Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Flavia Access",
+            "region": "Flavia",
+            "category": [
+                "Base Units",
+                "Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Donnel Access",
+            "region": "Donnel",
+            "category": [
+                "Base Units"
+            ]
+        },
+        {
+            "name": "Donnel Unit",
+            "region": "Donnel_Promoted",
+            "category": [
+                "Units"
+            ]
+        },
+        {
+            "name": "Anna Access",
+            "region": "Anna",
+            "category": [
+                "Base Units",
+                "Units"
+            ]
+        },
+        {
+            "name": "Owain Access",
+            "region": "Owain",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Owain Unit",
+            "region": "Owain_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Inigo Access",
+            "region": "Inigo",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Inigo Unit",
+            "region": "Inigo_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Brady Access",
+            "region": "Brady",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Brady Unit",
+            "region": "Brady_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Kjelle Access",
+            "region": "Kjelle",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Kjelle Unit",
+            "region": "Kjelle_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Cynthia Access",
+            "region": "Cynthia",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Cynthia Unit",
+            "region": "Cynthia_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Severa Access",
+            "region": "Severa",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Severa Unit",
+            "region": "Severa_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Gerome Access",
+            "region": "Gerome",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Gerome Unit",
+            "region": "Gerome_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Morgan Access",
+            "region": "Morgan",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Morgan Unit",
+            "region": "Morgan_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Yarne Access",
+            "region": "Yarne",
+            "category": [
+                "Base Units",
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Laurent Access",
+            "region": "Laurent",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Laurent Unit",
+            "region": "Laurent_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Noire Access",
+            "region": "Noire",
+            "category": [
+                "Base Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Noire Unit",
+            "region": "Noire_Promoted",
+            "category": [
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Nah Access",
+            "region": "Nah",
+            "category": [
+                "Base Units",
+                "Units",
+                "Child Characters"
+            ]
+        },
+        {
+            "name": "Tiki Access",
+            "region": "Tiki",
+            "category": [
+                "Base Units",
+                "Units",
+                "MadKingDisabled"
+            ]
+        },
+        {
+            "name": "Gangrel Access",
+            "region": "Gangrel",
+            "category": [
+                "Base Units",
+                "Units",
+                "SpotPassChara"
+            ]
+        },
+        {
+            "name": "Walhart Access",
+            "region": "Walhart",
+            "category": [
+                "Base Units",
+                "Units",
+                "SpotPassChara"
+            ]
+        },
+        {
+            "name": "Emmeryn Access",
+            "region": "Emmeryn",
+            "category": [
+                "Base Units",
+                "Units",
+                "SpotPassChara"
+            ]
+        },
+        {
+            "name": "Yen'fay Access",
+            "region": "Yen'fay",
+            "category": [
+                "Base Units",
+                "Units",
+                "SpotPassChara"
+            ]
+        },
+        {
+            "name": "Aversa Access",
+            "region": "Aversa",
+            "category": [
+                "Base Units",
+                "Units",
+                "SpotPassChara"
+            ]
+        },
+        {
+            "name": "Priam Access",
+            "region": "Priam",
+            "category": [
+                "Base Units",
+                "Units",
+                "SpotPassChara"
+            ]
+        },
+        {
+            "name": "Robin Support S",
+            "requires": "|Robin Access| AND {OptOne(|Robin Support Rank:4|)}"
+        },
+        {
+            "name": "Robin Support A",
+            "requires": "|Robin Access| AND {OptOne(|Robin Support Rank:3|)}"
+        },
+        {
+            "name": "Robin Support B",
+            "requires": "|Robin Access| AND {OptOne(|Robin Support Rank:2|)}"
+        },
+        {
+            "name": "Robin Support C",
+            "requires": "|Robin Access| AND {OptOne(|Robin Support Rank|)}"
+        },
+        {
+            "name": "Chrom Support S",
+            "requires": "|Chrom Access| AND {OptOne(|Chrom Support Rank:4|)}"
+        },
+        {
+            "name": "Chrom Support A",
+            "requires": "|Chrom Access| AND {OptOne(|Chrom Support Rank:3|)}"
+        },
+        {
+            "name": "Chrom Support B",
+            "requires": "|Chrom Access| AND {OptOne(|Chrom Support Rank:2|)}"
+        },
+        {
+            "name": "Chrom Support C",
+            "requires": "|Chrom Access| AND {OptOne(|Chrom Support Rank|)}"
+        },
+        {
+            "name": "Lissa Support S",
+            "requires": "|Lissa Access| AND {OptOne(|Lissa Support Rank:4|)}"
+        },
+        {
+            "name": "Lissa Support A",
+            "requires": "|Lissa Access| AND {OptOne(|Lissa Support Rank:3|)}"
+        },
+        {
+            "name": "Lissa Support B",
+            "requires": "|Lissa Access| AND {OptOne(|Lissa Support Rank:2|)}"
+        },
+        {
+            "name": "Lissa Support C",
+            "requires": "|Lissa Access| AND {OptOne(|Lissa Support Rank|)}"
+        },
+        {
+            "name": "Frederick Support S",
+            "requires": "|Frederick Access| AND {OptOne(|Frederick Support Rank:4|)}"
+        },
+        {
+            "name": "Frederick Support A",
+            "requires": "|Frederick Access| AND {OptOne(|Frederick Support Rank:3|)}"
+        },
+        {
+            "name": "Frederick Support B",
+            "requires": "|Frederick Access| AND {OptOne(|Frederick Support Rank:2|)}"
+        },
+        {
+            "name": "Frederick Support C",
+            "requires": "|Frederick Access| AND {OptOne(|Frederick Support Rank|)}"
+        },
+        {
+            "name": "Virion Support S",
+            "requires": "|Virion Access| AND {OptOne(|Virion Support Rank:4|)}"
+        },
+        {
+            "name": "Virion Support A",
+            "requires": "|Virion Access| AND {OptOne(|Virion Support Rank:3|)}"
+        },
+        {
+            "name": "Virion Support B",
+            "requires": "|Virion Access| AND {OptOne(|Virion Support Rank:2|)}"
+        },
+        {
+            "name": "Virion Support C",
+            "requires": "|Virion Access| AND {OptOne(|Virion Support Rank|)}"
+        },
+        {
+            "name": "Sully Support S",
+            "requires": "|Sully Access| AND {OptOne(|Sully Support Rank:4|)}"
+        },
+        {
+            "name": "Sully Support A",
+            "requires": "|Sully Access| AND {OptOne(|Sully Support Rank:3|)}"
+        },
+        {
+            "name": "Sully Support B",
+            "requires": "|Sully Access| AND {OptOne(|Sully Support Rank:2|)}"
+        },
+        {
+            "name": "Sully Support C",
+            "requires": "|Sully Access| AND {OptOne(|Sully Support Rank|)}"
+        },
+        {
+            "name": "Vaike Support S",
+            "requires": "|Vaike Access| AND {OptOne(|Vaike Support Rank:4|)}"
+        },
+        {
+            "name": "Vaike Support A",
+            "requires": "|Vaike Access| AND {OptOne(|Vaike Support Rank:3|)}"
+        },
+        {
+            "name": "Vaike Support B",
+            "requires": "|Vaike Access| AND {OptOne(|Vaike Support Rank:2|)}"
+        },
+        {
+            "name": "Vaike Support C",
+            "requires": "|Vaike Access| AND {OptOne(|Vaike Support Rank|)}"
+        },
+        {
+            "name": "Stahl Support S",
+            "requires": "|Stahl Access| AND {OptOne(|Stahl Support Rank:4|)}"
+        },
+        {
+            "name": "Stahl Support A",
+            "requires": "|Stahl Access| AND {OptOne(|Stahl Support Rank:3|)}"
+        },
+        {
+            "name": "Stahl Support B",
+            "requires": "|Stahl Access| AND {OptOne(|Stahl Support Rank:2|)}"
+        },
+        {
+            "name": "Stahl Support C",
+            "requires": "|Stahl Access| AND {OptOne(|Stahl Support Rank|)}"
+        },
+        {
+            "name": "Miriel Support S",
+            "requires": "|Miriel Access| AND {OptOne(|Miriel Support Rank:4|)}"
+        },
+        {
+            "name": "Miriel Support A",
+            "requires": "|Miriel Access| AND {OptOne(|Miriel Support Rank:3|)}"
+        },
+        {
+            "name": "Miriel Support B",
+            "requires": "|Miriel Access| AND {OptOne(|Miriel Support Rank:2|)}"
+        },
+        {
+            "name": "Miriel Support C",
+            "requires": "|Miriel Access| AND {OptOne(|Miriel Support Rank|)}"
+        },
+        {
+            "name": "Kellam Support S",
+            "requires": "|Kellam Access| AND {OptOne(|Kellam Support Rank:4|)}"
+        },
+        {
+            "name": "Kellam Support A",
+            "requires": "|Kellam Access| AND {OptOne(|Kellam Support Rank:3|)}"
+        },
+        {
+            "name": "Kellam Support B",
+            "requires": "|Kellam Access| AND {OptOne(|Kellam Support Rank:2|)}"
+        },
+        {
+            "name": "Kellam Support C",
+            "requires": "|Kellam Access| AND {OptOne(|Kellam Support Rank|)}"
+        },
+        {
+            "name": "Sumia Support S",
+            "requires": "|Sumia Access| AND {OptOne(|Sumia Support Rank:4|)}"
+        },
+        {
+            "name": "Sumia Support A",
+            "requires": "|Sumia Access| AND {OptOne(|Sumia Support Rank:3|)}"
+        },
+        {
+            "name": "Sumia Support B",
+            "requires": "|Sumia Access| AND {OptOne(|Sumia Support Rank:2|)}"
+        },
+        {
+            "name": "Sumia Support C",
+            "requires": "|Sumia Access| AND {OptOne(|Sumia Support Rank|)}"
+        },
+        {
+            "name": "Lon'qu Support S",
+            "requires": "|Lon'qu Access| AND {OptOne(|Lon'qu Support Rank:4|)}"
+        },
+        {
+            "name": "Lon'qu Support A",
+            "requires": "|Lon'qu Access| AND {OptOne(|Lon'qu Support Rank:3|)}"
+        },
+        {
+            "name": "Lon'qu Support B",
+            "requires": "|Lon'qu Access| AND {OptOne(|Lon'qu Support Rank:2|)}"
+        },
+        {
+            "name": "Lon'qu Support C",
+            "requires": "|Lon'qu Access| AND {OptOne(|Lon'qu Support Rank|)}"
+        },
+        {
+            "name": "Ricken Support S",
+            "requires": "|Ricken Access| AND {OptOne(|Ricken Support Rank:4|)}"
+        },
+        {
+            "name": "Ricken Support A",
+            "requires": "|Ricken Access| AND {OptOne(|Ricken Support Rank:3|)}"
+        },
+        {
+            "name": "Ricken Support B",
+            "requires": "|Ricken Access| AND {OptOne(|Ricken Support Rank:2|)}"
+        },
+        {
+            "name": "Ricken Support C",
+            "requires": "|Ricken Access| AND {OptOne(|Ricken Support Rank|)}"
+        },
+        {
+            "name": "Maribelle Support S",
+            "requires": "|Maribelle Access| AND {OptOne(|Maribelle Support Rank:4|)}"
+        },
+        {
+            "name": "Maribelle Support A",
+            "requires": "|Maribelle Access| AND {OptOne(|Maribelle Support Rank:3|)}"
+        },
+        {
+            "name": "Maribelle Support B",
+            "requires": "|Maribelle Access| AND {OptOne(|Maribelle Support Rank:2|)}"
+        },
+        {
+            "name": "Maribelle Support C",
+            "requires": "|Maribelle Access| AND {OptOne(|Maribelle Support Rank|)}"
+        },
+        {
+            "name": "Panne Support S",
+            "requires": "|Panne Access| AND {OptOne(|Panne Support Rank:4|)}"
+        },
+        {
+            "name": "Panne Support A",
+            "requires": "|Panne Access| AND {OptOne(|Panne Support Rank:3|)}"
+        },
+        {
+            "name": "Panne Support B",
+            "requires": "|Panne Access| AND {OptOne(|Panne Support Rank:2|)}"
+        },
+        {
+            "name": "Panne Support C",
+            "requires": "|Panne Access| AND {OptOne(|Panne Support Rank|)}"
+        },
+        {
+            "name": "Gaius Support S",
+            "requires": "|Gaius Access| AND {OptOne(|Gaius Support Rank:4|)}"
+        },
+        {
+            "name": "Gaius Support A",
+            "requires": "|Gaius Access| AND {OptOne(|Gaius Support Rank:3|)}"
+        },
+        {
+            "name": "Gaius Support B",
+            "requires": "|Gaius Access| AND {OptOne(|Gaius Support Rank:2|)}"
+        },
+        {
+            "name": "Gaius Support C",
+            "requires": "|Gaius Access| AND {OptOne(|Gaius Support Rank|)}"
+        },
+        {
+            "name": "Cordelia Support S",
+            "requires": "|Cordelia Access| AND {OptOne(|Cordelia Support Rank:4|)}"
+        },
+        {
+            "name": "Cordelia Support A",
+            "requires": "|Cordelia Access| AND {OptOne(|Cordelia Support Rank:3|)}"
+        },
+        {
+            "name": "Cordelia Support B",
+            "requires": "|Cordelia Access| AND {OptOne(|Cordelia Support Rank:2|)}"
+        },
+        {
+            "name": "Cordelia Support C",
+            "requires": "|Cordelia Access| AND {OptOne(|Cordelia Support Rank|)}"
+        },
+        {
+            "name": "Gregor Support S",
+            "requires": "|Gregor Access| AND {OptOne(|Gregor Support Rank:4|)}"
+        },
+        {
+            "name": "Gregor Support A",
+            "requires": "|Gregor Access| AND {OptOne(|Gregor Support Rank:3|)}"
+        },
+        {
+            "name": "Gregor Support B",
+            "requires": "|Gregor Access| AND {OptOne(|Gregor Support Rank:2|)}"
+        },
+        {
+            "name": "Gregor Support C",
+            "requires": "|Gregor Access| AND {OptOne(|Gregor Support Rank|)}"
+        },
+        {
+            "name": "Nowi Support S",
+            "requires": "|Nowi Access| AND {OptOne(|Nowi Support Rank:4|)}"
+        },
+        {
+            "name": "Nowi Support A",
+            "requires": "|Nowi Access| AND {OptOne(|Nowi Support Rank:3|)}"
+        },
+        {
+            "name": "Nowi Support B",
+            "requires": "|Nowi Access| AND {OptOne(|Nowi Support Rank:2|)}"
+        },
+        {
+            "name": "Nowi Support C",
+            "requires": "|Nowi Access| AND {OptOne(|Nowi Support Rank|)}"
+        },
+        {
+            "name": "Libra Support S",
+            "requires": "|Libra Access| AND {OptOne(|Libra Support Rank:4|)}"
+        },
+        {
+            "name": "Libra Support A",
+            "requires": "|Libra Access| AND {OptOne(|Libra Support Rank:3|)}"
+        },
+        {
+            "name": "Libra Support B",
+            "requires": "|Libra Access| AND {OptOne(|Libra Support Rank:2|)}"
+        },
+        {
+            "name": "Libra Support C",
+            "requires": "|Libra Access| AND {OptOne(|Libra Support Rank|)}"
+        },
+        {
+            "name": "Tharja Support S",
+            "requires": "|Tharja Access| AND {OptOne(|Tharja Support Rank:4|)}"
+        },
+        {
+            "name": "Tharja Support A",
+            "requires": "|Tharja Access| AND {OptOne(|Tharja Support Rank:3|)}"
+        },
+        {
+            "name": "Tharja Support B",
+            "requires": "|Tharja Access| AND {OptOne(|Tharja Support Rank:2|)}"
+        },
+        {
+            "name": "Tharja Support C",
+            "requires": "|Tharja Access| AND {OptOne(|Tharja Support Rank|)}"
+        },
+        {
+            "name": "Olivia Support S",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Olivia Access| AND {OptOne(|Olivia Support Rank:4|)}"
+        },
+        {
+            "name": "Olivia Support A",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Olivia Access| AND {OptOne(|Olivia Support Rank:3|)}"
+        },
+        {
+            "name": "Olivia Support B",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Olivia Access| AND {OptOne(|Olivia Support Rank:2|)}"
+        },
+        {
+            "name": "Olivia Support C",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Olivia Access| AND {OptOne(|Olivia Support Rank|)}"
+        },
+        {
+            "name": "Cherche Support S",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Cherche Access| AND {OptOne(|Cherche Support Rank:4|)}"
+        },
+        {
+            "name": "Cherche Support A",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Cherche Access| AND {OptOne(|Cherche Support Rank:3|)}"
+        },
+        {
+            "name": "Cherche Support B",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Cherche Access| AND {OptOne(|Cherche Support Rank:2|)}"
+        },
+        {
+            "name": "Cherche Support C",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Cherche Access| AND {OptOne(|Cherche Support Rank|)}"
+        },
+        {
+            "name": "Henry Support S",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Henry Access| AND {OptOne(|Henry Support Rank:4|)}"
+        },
+        {
+            "name": "Henry Support A",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Henry Access| AND {OptOne(|Henry Support Rank:3|)}"
+        },
+        {
+            "name": "Henry Support B",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Henry Access| AND {OptOne(|Henry Support Rank:2|)}"
+        },
+        {
+            "name": "Henry Support C",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Henry Access| AND {OptOne(|Henry Support Rank|)}"
+        },
+        {
+            "name": "Lucina Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank:4|)}"
+        },
+        {
+            "name": "Lucina Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank:3|)}"
+        },
+        {
+            "name": "Lucina Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank:2|)}"
+        },
+        {
+            "name": "Lucina Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank|)}"
+        },
+        {
+            "name": "Say'ri Support S",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Say'ri Access| AND {OptOne(|Say'ri Support Rank:4|)}"
+        },
+        {
+            "name": "Say'ri Support A",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Say'ri Access| AND {OptOne(|Say'ri Support Rank:3|)}"
+        },
+        {
+            "name": "Say'ri Support B",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Say'ri Access| AND {OptOne(|Say'ri Support Rank:2|)}"
+        },
+        {
+            "name": "Say'ri Support C",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Say'ri Access| AND {OptOne(|Say'ri Support Rank|)}"
+        },
+        {
+            "name": "Basilio Support S",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Basilio Access| AND {OptOne(|Basilio Support Rank:4|)}"
+        },
+        {
+            "name": "Basilio Support A",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Basilio Access| AND {OptOne(|Basilio Support Rank:3|)}"
+        },
+        {
+            "name": "Basilio Support B",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Basilio Access| AND {OptOne(|Basilio Support Rank:2|)}"
+        },
+        {
+            "name": "Basilio Support C",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Basilio Access| AND {OptOne(|Basilio Support Rank|)}"
+        },
+        {
+            "name": "Flavia Support S",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Flavia Access| AND {OptOne(|Flavia Support Rank:4|)}"
+        },
+        {
+            "name": "Flavia Support A",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Flavia Access| AND {OptOne(|Flavia Support Rank:3|)}"
+        },
+        {
+            "name": "Flavia Support B",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Flavia Access| AND {OptOne(|Flavia Support Rank:2|)}"
+        },
+        {
+            "name": "Flavia Support C",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Flavia Access| AND {OptOne(|Flavia Support Rank|)}"
+        },
+        {
+            "name": "Donnel Support S",
+            "requires": "|Donnel Access| AND {OptOne(|Donnel Support Rank:4|)}"
+        },
+        {
+            "name": "Donnel Support A",
+            "requires": "|Donnel Access| AND {OptOne(|Donnel Support Rank:3|)}"
+        },
+        {
+            "name": "Donnel Support B",
+            "requires": "|Donnel Access| AND {OptOne(|Donnel Support Rank:2|)}"
+        },
+        {
+            "name": "Donnel Support C",
+            "requires": "|Donnel Access| AND {OptOne(|Donnel Support Rank|)}"
+        },
+        {
+            "name": "Anna Support S",
+            "requires": "|Anna Access| AND {OptOne(|Anna Support Rank:4|)}"
+        },
+        {
+            "name": "Anna Support A",
+            "requires": "|Anna Access| AND {OptOne(|Anna Support Rank:3|)}"
+        },
+        {
+            "name": "Anna Support B",
+            "requires": "|Anna Access| AND {OptOne(|Anna Support Rank:2|)}"
+        },
+        {
+            "name": "Anna Support C",
+            "requires": "|Anna Access| AND {OptOne(|Anna Support Rank|)}"
+        },
+        {
+            "name": "Owain Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Owain Access| AND {OptOne(|Owain Support Rank:4|)}"
+        },
+        {
+            "name": "Owain Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Owain Access| AND {OptOne(|Owain Support Rank:3|)}"
+        },
+        {
+            "name": "Owain Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Owain Access| AND {OptOne(|Owain Support Rank:2|)}"
+        },
+        {
+            "name": "Owain Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Owain Access| AND {OptOne(|Owain Support Rank|)}"
+        },
+        {
+            "name": "Inigo Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank:4|)}"
+        },
+        {
+            "name": "Inigo Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank:3|)}"
+        },
+        {
+            "name": "Inigo Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank:2|)}"
+        },
+        {
+            "name": "Inigo Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank|)}"
+        },
+        {
+            "name": "Brady Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Brady Access| AND {OptOne(|Brady Support Rank:4|)}"
+        },
+        {
+            "name": "Brady Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Brady Access| AND {OptOne(|Brady Support Rank:3|)}"
+        },
+        {
+            "name": "Brady Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Brady Access| AND {OptOne(|Brady Support Rank:2|)}"
+        },
+        {
+            "name": "Brady Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Brady Access| AND {OptOne(|Brady Support Rank|)}"
+        },
+        {
+            "name": "Kjelle Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank:4|)}"
+        },
+        {
+            "name": "Kjelle Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank:3|)}"
+        },
+        {
+            "name": "Kjelle Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank:2|)}"
+        },
+        {
+            "name": "Kjelle Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank|)}"
+        },
+        {
+            "name": "Cynthia Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank:4|)}"
+        },
+        {
+            "name": "Cynthia Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank:3|)}"
+        },
+        {
+            "name": "Cynthia Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank:2|)}"
+        },
+        {
+            "name": "Cynthia Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank|)}"
+        },
+        {
+            "name": "Severa Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Severa Access| AND {OptOne(|Severa Support Rank:4|)}"
+        },
+        {
+            "name": "Severa Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Severa Access| AND {OptOne(|Severa Support Rank:3|)}"
+        },
+        {
+            "name": "Severa Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Severa Access| AND {OptOne(|Severa Support Rank:2|)}"
+        },
+        {
+            "name": "Severa Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Severa Access| AND {OptOne(|Severa Support Rank|)}"
+        },
+        {
+            "name": "Gerome Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank:4|)}"
+        },
+        {
+            "name": "Gerome Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank:3|)}"
+        },
+        {
+            "name": "Gerome Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank:2|)}"
+        },
+        {
+            "name": "Gerome Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank|)}"
+        },
+        {
+            "name": "Morgan Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Morgan Access| AND {OptOne(|Morgan Support Rank:3|)}"
+        },
+        {
+            "name": "Morgan Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Morgan Access| AND {OptOne(|Morgan Support Rank:2|)}"
+        },
+        {
+            "name": "Morgan Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Morgan Access| AND {OptOne(|Morgan Support Rank|)}"
+        },
+        {
+            "name": "Yarne Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank:4|)}"
+        },
+        {
+            "name": "Yarne Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank:3|)}"
+        },
+        {
+            "name": "Yarne Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank:2|)}"
+        },
+        {
+            "name": "Yarne Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank|)}"
+        },
+        {
+            "name": "Laurent Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank:4|)}"
+        },
+        {
+            "name": "Laurent Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank:3|)}"
+        },
+        {
+            "name": "Laurent Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank:2|)}"
+        },
+        {
+            "name": "Laurent Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank|)}"
+        },
+        {
+            "name": "Noire Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Noire Access| AND {OptOne(|Noire Support Rank:4|)}"
+        },
+        {
+            "name": "Noire Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Noire Access| AND {OptOne(|Noire Support Rank:3|)}"
+        },
+        {
+            "name": "Noire Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Noire Access| AND {OptOne(|Noire Support Rank:2|)}"
+        },
+        {
+            "name": "Noire Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Noire Access| AND {OptOne(|Noire Support Rank|)}"
+        },
+        {
+            "name": "Nah Support S",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Nah Access| AND {OptOne(|Nah Support Rank:4|)}"
+        },
+        {
+            "name": "Nah Support A",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Nah Access| AND {OptOne(|Nah Support Rank:3|)}"
+        },
+        {
+            "name": "Nah Support B",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Nah Access| AND {OptOne(|Nah Support Rank:2|)}"
+        },
+        {
+            "name": "Nah Support C",
+            "category": [
+                "ChildChara"
+            ],
+            "requires": "|Nah Access| AND {OptOne(|Nah Support Rank|)}"
+        },
+        {
+            "name": "Tiki Support S",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Tiki Access| AND {OptOne(|Tiki Support Rank:4|)}"
+        },
+        {
+            "name": "Tiki Support A",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Tiki Access| AND {OptOne(|Tiki Support Rank:3|)}"
+        },
+        {
+            "name": "Tiki Support B",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Tiki Access| AND {OptOne(|Tiki Support Rank:2|)}"
+        },
+        {
+            "name": "Tiki Support C",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Tiki Access| AND {OptOne(|Tiki Support Rank|)}"
+        },
+        {
+            "name": "Gangrel Support S",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank:4|)}"
+        },
+        {
+            "name": "Gangrel Support A",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank:3|)}"
+        },
+        {
+            "name": "Gangrel Support B",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank:2|)}"
+        },
+        {
+            "name": "Gangrel Support C",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank|)}"
+        },
+        {
+            "name": "Walhart Support S",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank:4|)}"
+        },
+        {
+            "name": "Walhart Support A",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank:3|)}"
+        },
+        {
+            "name": "Walhart Support B",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank:2|)}"
+        },
+        {
+            "name": "Walhart Support C",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank|)}"
+        },
+        {
+            "name": "Emmeryn Support S",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank:4|)}"
+        },
+        {
+            "name": "Emmeryn Support A",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank:3|)}"
+        },
+        {
+            "name": "Emmeryn Support B",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank:2|)}"
+        },
+        {
+            "name": "Emmeryn Support C",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank|)}"
+        },
+        {
+            "name": "Yen'fay Support S",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank:4|)}"
+        },
+        {
+            "name": "Yen'fay Support A",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank:3|)}"
+        },
+        {
+            "name": "Yen'fay Support B",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank:2|)}"
+        },
+        {
+            "name": "Yen'fay Support C",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank|)}"
+        },
+        {
+            "name": "Aversa Support S",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank:4|)}"
+        },
+        {
+            "name": "Aversa Support A",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank:3|)}"
+        },
+        {
+            "name": "Aversa Support B",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank:2|)}"
+        },
+        {
+            "name": "Aversa Support C",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank|)}"
+        },
+        {
+            "name": "Priam Support S",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Priam Access| AND {OptOne(|Priam Support Rank:4|)}"
+        },
+        {
+            "name": "Priam Support A",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Priam Access| AND {OptOne(|Priam Support Rank:3|)}"
+        },
+        {
+            "name": "Priam Support B",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Priam Access| AND {OptOne(|Priam Support Rank:2|)}"
+        },
+        {
+            "name": "Priam Support C",
+            "category": [
+                "SpotPassChara"
+            ],
+            "requires": "|Priam Access| AND {OptOne(|Priam Support Rank|)}"
+        },
+        {
+            "name": "Level 5",
+            "requires": "|Chapter 4|"
+        },
+        {
+            "name": "Level 10",
+            "requires": "|Chapter 8|"
+        },
+        {
+            "name": "Level 15",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 12|"
+        },
+        {
+            "name": "Level 20",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 14|"
+        },
+        {
+            "name": "Level 25",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 16|"
+        },
+        {
+            "name": "Level 30",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 18|"
+        },
+        {
+            "name": "Level 35",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 20|"
+        },
+        {
+            "name": "Level 40",
+            "category": [
+                "MadKingDisabled"
+            ],
+            "requires": "|Chapter 22|"
+        },
+        {
+            "name": "Lord Class",
+            "requires": "{OptOne(|Lord|)} AND {OptOne(|Weapon Type - Swords|)}"
+        },
+        {
+            "name": "Great Lord Class",
+            "requires": "{OptOne(|Great Lord|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)})"
+        },
+        {
+            "name": "Tactician Class",
+            "requires": "{OptOne(|Tactician|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Tomes|)})"
+        },
+        {
+            "name": "Grandmaster Class",
+            "requires": "{OptOne(|Grandmaster|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Tomes|)})"
+        },
+        {
+            "name": "Cavalier Class",
+            "requires": "{OptOne(|Cavalier|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)})"
+        },
+        {
+            "name": "Knight Class",
+            "requires": "{OptOne(|Knight|)} AND {OptOne(|Weapon Type - Lances|)}"
+        },
+        {
+            "name": "Paladin Class",
+            "requires": "{OptOne(|Paladin|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)})"
+        },
+        {
+            "name": "Great Knight Class",
+            "requires": "{OptOne(|Great Knight|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+        },
+        {
+            "name": "General Class",
+            "requires": "{OptOne(|General|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+        },
+        {
+            "name": "Myrmidon Class",
+            "requires": "{OptOne(|Myrmidon|)} AND {OptOne(|Weapon Type - Swords|)}"
+        },
+        {
+            "name": "Thief Class",
+            "requires": "{OptOne(|Thief|)} AND {OptOne(|Weapon Type - Swords|)}"
+        },
+        {
+            "name": "Swordmaster Class",
+            "requires": "{OptOne(|Swordmaster|)} AND {OptOne(|Weapon Type - Swords|)}"
+        },
+        {
+            "name": "Assassin Class",
+            "requires": "{OptOne(|Assassin|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Bows|)})"
+        },
+        {
+            "name": "Trickster Class",
+            "requires": "{OptOne(|Trickster|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Staves|)})"
+        },
+        {
+            "name": "Barbarian Class",
+            "requires": "{OptOne(|Barbarian|)} AND {OptOne(|Weapon Type - Axes|)}"
+        },
+        {
+            "name": "Fighter Class",
+            "requires": "{OptOne(|Fighter|)} AND {OptOne(|Weapon Type - Axes|)}"
+        },
+        {
+            "name": "Mercenary Class",
+            "requires": "{OptOne(|Mercenary|)} AND {OptOne(|Weapon Type - Swords|)}"
+        },
+        {
+            "name": "Archer Class",
+            "requires": "{OptOne(|Archer|)} AND {OptOne(|Weapon Type - Bows|)}"
+        },
+        {
+            "name": "Berserker Class",
+            "requires": "{OptOne(|Berserker|)} AND {OptOne(|Weapon Type - Axes|)}"
+        },
+        {
+            "name": "Warrior Class",
+            "requires": "{OptOne(|Warrior|)} AND ({OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Bows|)})"
+        },
+        {
+            "name": "Hero Class",
+            "requires": "{OptOne(|Hero|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Axes|)})"
+        },
+        {
+            "name": "Bow Knight Class",
+            "requires": "{OptOne(|Bow Knight|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Bows|)})"
+        },
+        {
+            "name": "Sniper Class",
+            "requires": "{OptOne(|Sniper|)} AND {OptOne(|Weapon Type - Bows|)}"
+        },
+        {
+            "name": "Pegasus Knight Class",
+            "requires": "{OptOne(|Pegasus Knight|)} AND {OptOne(|Weapon Type - Lances|)}"
+        },
+        {
+            "name": "Wyvern Rider Class",
+            "requires": "{OptOne(|Wyvern Rider|)} AND {OptOne(|Weapon Type - Axes|)}"
+        },
+        {
+            "name": "Falcon Knight Class",
+            "requires": "{OptOne(|Falcon Knight|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Staves|)})"
+        },
+        {
+            "name": "Dark Flier Class",
+            "requires": "{OptOne(|Dark Flier|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Tomes|)})"
+        },
+        {
+            "name": "Wyvern Lord Class",
+            "requires": "{OptOne(|Wyvern Lord|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+        },
+        {
+            "name": "Griffon Rider Class",
+            "requires": "{OptOne(|Griffon Rider|)} AND {OptOne(|Weapon Type - Axes|)}"
+        },
+        {
+            "name": "Dark Mage Class",
+            "requires": "{OptOne(|Dark Mage|)} AND {OptOne(|Weapon Type - Tomes|)}"
+        },
+        {
+            "name": "Mage Class",
+            "requires": "{OptOne(|Mage|)} AND {OptOne(|Weapon Type - Tomes|)}"
+        },
+        {
+            "name": "Priest Class",
+            "requires": "{OptOne(|Priest|)} AND {OptOne(|Weapon Type - Staves|)}"
+        },
+        {
+            "name": "Cleric Class",
+            "requires": "{OptOne(|Cleric|)} AND {OptOne(|Weapon Type - Staves|)}"
+        },
+        {
+            "name": "Troubadour Class",
+            "requires": "{OptOne(|Troubadour|)} AND {OptOne(|Weapon Type - Staves|)}"
+        },
+        {
+            "name": "Sorcerer Class",
+            "requires": "{OptOne(|Sorcerer|)} AND {OptOne(|Weapon Type - Tomes|)}"
+        },
+        {
+            "name": "Dark Knight Class",
+            "requires": "{OptOne(|Dark Knight|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Tomes|)})"
+        },
+        {
+            "name": "Sage Class",
+            "requires": "{OptOne(|Sage|)} AND ({OptOne(|Weapon Type - Tomes|)} OR {OptOne(|Weapon Type - Staves|)})"
+        },
+        {
+            "name": "War Monk Class",
+            "requires": "{OptOne(|War Monk|)} AND ({OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Staves|)})"
+        },
+        {
+            "name": "War Cleric Class",
+            "requires": "{OptOne(|War Cleric|)} AND ({OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Staves|)})"
+        },
+        {
+            "name": "Valkyrie Class",
+            "requires": "{OptOne(|Valkyrie|)} AND ({OptOne(|Weapon Type - Tomes|)} OR {OptOne(|Weapon Type - Staves|)})"
+        },
+        {
+            "name": "Villager Class",
+            "requires": "{OptOne(|Villager|)} AND {OptOne(|Weapon Type - Lances|)}"
+        },
+        {
+            "name": "Taguel Class",
+            "requires": "{OptOne(|Taguel|)} AND {OptOne(|Weapon Type - Beaststones|)}"
+        },
+        {
+            "name": "Dancer Class",
+            "requires": "{OptOne(|Dancer|)} AND {OptOne(|Weapon Type - Swords|)}"
+        },
+        {
+            "name": "Manakete Class",
+            "requires": "{OptOne(|Manakete|)} AND {OptOne(|Weapon Type - Dragonstones|)}"
+        },
+        {
+            "name": "Dread Fighter Class",
+            "category": [
+                "DLC_Class",
+                "DLC02"
+            ],
+            "requires": "|Xenologue 5| AND {OptOne(|Dread Fighter|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Tomes|)})"
+        },
+        {
+            "name": "Bride Class",
+            "category": [
+                "DLC_Class",
+                "DLC03"
+            ],
+            "requires": "|Xenologue 8| AND {OptOne(|Bride|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Bows|)} OR {OptOne(|Weapon Type - Staves|)})"
+        },
+        {
+            "name": "Conqueror Class",
+            "requires": "{OptOne(|Conqueror|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+        },
+        {
+            "name": "Lodestar Class",
+            "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Weapon Type - Swords|)}"
+        }
+    ]
+}

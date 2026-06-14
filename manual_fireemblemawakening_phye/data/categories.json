@@ -1,0 +1,281 @@
+{
+    "Prog_Weapon": {
+        "yaml_option": [ "Progressive_Weapons" ],
+        "hidden": true
+    },
+    "Not_Prog_Weapon": {
+        "yaml_option": [ "!Progressive_Weapons" ],
+        "hidden": true
+    },
+    "Weapons - Rank E": {
+        "yaml_option": [ "!Progressive_Weapons", "Include_Rank_E" ]
+    },
+    "Classes - Base": {
+        "yaml_option": [ "Base_Classes" ]
+    },
+    "Classes - Promoted": {
+        "yaml_option": [ "Promoted_Classes" ]
+    },
+    "ClassGeneric": {
+        "yaml_option": [ "!Character-Specific_Classes" ],
+        "hidden": true
+    },
+    "ClassChara": {
+        "yaml_option": [ "Character-Specific_Classes" ],
+        "hidden": true
+    },
+    "ClassCharaChild": {
+        "yaml_option": [ "Character-Specific_Classes", "Character-Specific_Classes_ALL_Children", "Enable_Children", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "Class Skills": {
+        "yaml_option": [ "Skills" ]
+    },
+    "Items": {
+        "yaml_option": [ "More_Items" ]
+    },
+    "Weapon Types": {
+        "yaml_option": [ "Restrict_Weapons" ]
+    },
+    "Child Characters": {
+        "yaml_option": [ "Enable_Children", "!Mad_King_Goal" ]
+    },
+    "SpotPass": {
+        "yaml_option": [ "Enable_SpotPass_Paralogues", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "SpotPassItem": {
+        "yaml_option": [ "Enable_SpotPass_Paralogues", "Restrict_SpotPass_Paralogues", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "SpotPassChara": {
+        "yaml_option": [ "SpotPass_Characters", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "SpotPassCharaMisc": {
+        "yaml_option": [ "Misc_SpotPass_Characters" ],
+        "hidden": true
+    },
+    "SpotPassClass": {
+        "yaml_option": [ "SpotPass_Characters", "Base_Classes", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "DLC Characters": {
+        "yaml_option": [ "DLC_Characters" ]
+    },
+    "DLC_Class": {
+        "yaml_option": [ "DLC_Classes", "Base_Classes" ],
+        "hidden": true
+    },
+    "DLC_Skill": {
+        "yaml_option": [ "DLC_Skills", "Skills" ],
+        "hidden": true
+    },
+    "DLC_Item": {
+        "yaml_option": [ "DLC_Items", "More_Items" ],
+        "hidden": true
+    },
+    "EnemySanity": {
+        "yaml_option": [ "EnemySanity", "!EnemySanity_PerType" ],
+        "hidden": true
+    },
+    "EnemySanityHard": {
+        "yaml_option": [ "EnemySanity", "EnemySanity_Hard", "!EnemySanity_PerType" ],
+        "hidden": true
+    },
+    "EnemySanityLuna": {
+        "yaml_option": [ "EnemySanity", "EnemySanity_Hard", "EnemySanity_Lunatic", "!EnemySanity_PerType" ],
+        "hidden": true
+    },
+    "EnemySanityType": {
+        "yaml_option": [ "EnemySanity", "EnemySanity_PerType" ],
+        "hidden": true
+    },
+    "Sparkles": {
+        "yaml_option": [ "EventSanity" ],
+        "hidden": true
+    },
+    "Shopping": {
+        "yaml_option": [ "ShopSanity" ]
+    },
+    "MadKingGoal": {
+        "yaml_option": [ "Mad_King_Goal", "!Grima_Goal", "!Apotheosis_Goal", "!Emblem_Hunt_Goal" ],
+        "hidden": true
+    },
+    "MadKingDisabled": {
+        "yaml_option": [ "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "GrimaGoal": {
+        "yaml_option": [ "Grima_Goal", "!Mad_King_Goal", "!Apotheosis_Goal", "!Emblem_Hunt_Goal" ],
+        "hidden": true
+    },
+    "ApotheosisGoal": {
+        "yaml_option": [ "Apotheosis_DLC", "Apotheosis_Goal", "!Grima_Goal", "!Mad_King_Goal", "!Emblem_Hunt_Goal" ],
+        "hidden": true
+    },
+    "EmblemHunt": {
+        "yaml_option": [ "!Apotheosis_Goal", "!Grima_Goal", "!Mad_King_Goal", "Emblem_Hunt_Goal" ],
+        "hidden": true
+    },
+    "DLC_Apotheosis": {
+        "yaml_option": [ "Apotheosis_DLC" ],
+        "hidden": true
+    },
+    "Character Pairings": {
+        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "!Mad_King_Goal" ]
+    },
+    "Character Pairs": {
+        "yaml_option": [ "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "MaleRobin": {
+        "yaml_option": [ "Male_Avatar" ],
+        "hidden": true
+    },
+    "FemaleRobin": {
+        "yaml_option": [ "!Male_Avatar" ],
+        "hidden": true
+    },
+    "LocalPairs": {
+        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "Pairings_Local", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "RobinPlus": {
+        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "Robin_PairPlus", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "SumiaPair": { "hidden": true },
+    "OliviaPair": { "hidden": true },
+    "MaribellePair": { "hidden": true },
+    "SullyPair": { "hidden": true },
+    "LissaPair": { "hidden": true },
+    "CordeliaPair": { "hidden": true },
+    "CherchePair": { "hidden": true },
+    "PannePair": { "hidden": true },
+    "MirielPair": { "hidden": true },
+    "TharjaPair": { "hidden": true },
+    "NowiPair": { "hidden": true },
+    "RobinPair": { "hidden": true },
+    "MarthClass": {
+        "yaml_option": [ "DLC_Characters", "DLC_Classes", "Champions_DLC", "Base_Classes" ],
+        "hidden": true
+    },
+    "Chests": {
+        "yaml_option": [ "ChestSanity" ],
+        "hidden": true
+    },
+    "Villages": {
+        "yaml_option": [ "VillageSanity" ],
+        "hidden": true
+    },
+    "ItemDrop": {
+        "yaml_option": [ "ItemDropSanity" ],
+        "hidden": true
+    },
+    "ItemDropR": {
+        "yaml_option": [ "ItemDropSanity_Reinforcements" ],
+        "hidden": true
+    },
+    "ItemDropLuna": {
+        "yaml_option": [ "ItemDropSanity_Lunatic" ],
+        "hidden": true
+    },
+    "Extras": {
+        "yaml_option": [ "ExtraRewardSanity" ],
+        "hidden": true
+    },
+    "Paralogues": {
+        "yaml_option": [ "Enable_Paralogues" ],
+        "hidden": true
+    },
+    "NotProgPara": {
+        "yaml_option": [ "Enable_Paralogues", "Restrict_Paralogues", "!Progressive_Paralogues" ],
+        "hidden": true
+    },
+    "ProgPara": {
+        "yaml_option": [ "Enable_Paralogues", "Restrict_Paralogues", "Progressive_Paralogues" ],
+        "hidden": true
+    },
+    "Xenologues": {
+        "yaml_option": [ "Enable_Xenologues" ],
+        "hidden": true
+    },
+    "Xenologue Chapters": {
+        "yaml_option": [ "Enable_Xenologues", "Restrict_Xenologues" ]
+    },
+    "DLC01": {
+        "yaml_option": [ "Champions_DLC" ],
+        "hidden": true
+    },
+    "DLC02": {
+        "yaml_option": [ "Lost_Bloodlines_DLC" ],
+        "hidden": true
+    },
+    "DLC03": {
+        "yaml_option": [ "Smash_DLC" ],
+        "hidden": true
+    },
+    "DLC04": {
+        "yaml_option": [ "Rogue_And_Redeemers_DLC" ],
+        "hidden": true
+    },
+    "DLC05": {
+        "yaml_option": [ "Golden_DLC" ],
+        "hidden": true
+    },
+    "DLC06": {
+        "yaml_option": [ "Scramble_DLC" ],
+        "hidden": true
+    },
+    "DLC07": {
+        "yaml_option": [ "Challenge_DLC" ],
+        "hidden": true
+    },
+    "DLC08": {
+        "yaml_option": [ "Future Past_DLC" ],
+        "hidden": true
+    },
+    "DLC09": {
+        "yaml_option": [ "Apotheosis_DLC" ],
+        "hidden": true
+    },
+    "ApotheosisSecret": {
+        "yaml_option": [ "Apotheosis_DLC", "Apotheosis_Secret" ],
+        "hidden": true
+    },
+    "Support Ranks": {
+        "yaml_option": [ "Restrict_Support" ]
+    },
+    "Unit Support": {
+        "yaml_option": [ "SupportSanity", "!SupportSanity_Mini" ],
+        "hidden": true
+    },
+    "Child Support": {
+        "yaml_option": [ "SupportSanity_Children", "!Mad_King_Goal", "!SupportSanity_Mini" ],
+        "hidden": true
+    },
+    "ChildChara": {
+        "yaml_option": [ "Enable_Children", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "UnitSupp": {
+        "yaml_option": [ "SupportSanity", "SupportSanity_Mini" ],
+        "hidden": true
+    },
+    "ChildSupp": {
+        "yaml_option": [ "SupportSanity_Children", "!Mad_King_Goal", "SupportSanity_Mini" ],
+        "hidden": true
+    },
+    "Skill Learning": {
+        "yaml_option": [ "SkillSanity" ]
+    },
+    "LevelUpSanity": {
+        "yaml_option": [ "LevelUpSanity" ],
+        "hidden": true
+    },
+    "LevelUpSanityPromo": {
+        "yaml_option": [ "LevelUpSanity", "LevelUpSanityPlus", "!Mad_King_Goal" ],
+        "hidden": true
+    }
+}

@@ -1,0 +1,675 @@
+{
+    "$schema": "https://raw.githubusercontent.com/ManualForArchipelago/Manual/main/schemas/Manual.options.schema.json",
+    "_comment": "Add a _ before an option name to comment it out and it wont be added to the apworld",
+    "core": {
+        "goal":{
+            "_comment": [
+                "Using 'goal' as the name of an option let you override some of the generated goal parameters"
+            ],
+            "display_name": "The End Objective",
+            "description": "How to End your Randomized playthrough.",
+            "aliases": {"easiest": 0},
+            "hidden": false
+        },
+        "death_link": {
+            "default": false
+        },
+        "filler_traps": {
+            "_comment": "Using values here let you set a 'recommended' filler_trap percentage or even a default percentage",
+            "values": {
+                "recommended": 20
+            }
+        }
+    },
+    "user": {
+        "Progressive_Weapons": {
+            "description": [
+                "When enabled, will give progressive weapons going from rank D to A. E is available from start.",
+                "When disabled, one of each weapon will be added into the multiworld. Rank E of every weapon type is allowed to use from start.",
+                "Beware if this is disabled, you may need some extra locations to have room to place all of them into the multiworld.",
+                "These are considered as Useful Items."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Item Options"
+        },
+        "Include_Rank_E": {
+            "description": [
+                "If 'Progressive_Weapons' is enabled, will add an additional Progressive Weapon of each type.",
+                "If 'Progressive_Weapons' is disabled, will also include every Rank E weapon in the pool.",
+                "Logic is not balanced around this option, use at your own risk!",
+                "These are considered as Useful Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Base_Classes": {
+            "description": [
+                "Adds one of each Base Class as an item into the item pool restricting you from using said class until found.",
+                "These are considered as Progression Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Promoted_Classes": {
+            "description": [
+                "Adds one of each Promoted Class as an item into the item pool restricting you from using said class until found.",
+                "These are considered as Progression Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Character-Specific_Classes": {
+            "description": [
+                "If enabled will add an item for each Character and their potential classes they can become, such as 'Robin's Tactician' and 'Chrom's Lord'.",
+                "If Children are enabled, will add one for each of their initial classes as the generator won't know what parents they will have.",
+                "If DLC Characters or Misc SpotPass Characters are enabled, it won't give you a class for them. Just allow yourself to use them whenever you've aquired a class for any character that shares the same class",
+                "Need either Base or Promoted Classes to be enabled or it does nothing.",
+                "These are considered as Progression Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Character-Specific_Classes_ALL_Children": {
+            "description": [
+                "If enabled will add an item of Each Class for Every Children for their gender.",
+                "Does Nothing if 'Character-Specific_Classes' is disabled.",
+                "The intention of this option is if you wish to experience a wide range of classes for the Child Characters",
+                "Since the item generation won't know what parents the children will have it can only guarantee their initial classes no matter pairing.",
+                "Most of these items may end up as 'fillers' depending on your choice of parents.",
+                "These are considered as Progression Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Skills": {
+            "description": [
+                "Adds one of each Skill as an item into the item pool restricting you from using said skill until found.",
+                "These are considered as Useful Items.",
+                "Galeforce and Limit Breaker are labeled as progression items due to their almost must have status for harder difficulties."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "More_Items": {
+            "description": [
+                "Adds one of each item(exluding weapons) into the multiworld.",
+                "These are considered as filler items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Restrict_Weapons": {
+            "description": [
+                "When enabled will add an item for each Weapon Type into the multiworld called 'Weapon Type - Swords', 'Weapon Type - Bows' and so forth.",
+                "Those being: Swords, Lances, Axes, Bows, Tomes, Staves, Beaststone and Dragonstone.",
+                "The intention is that you cannot use any weapons of its type before it is found.",
+                "These are considered as Progression Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Restrict_Support": {
+            "description": [
+                "When enabled will add four of each item for each Character into the multiworld called 'Robin's Support Rank', 'Chrom's Support Rank' and so forth.",
+                "The intention is that you cannot progress through the support ranks without them. In the example above you would need both of them to get Chrom and Robin to reach C Rank Support.",
+                "You can manually restrain yourself from triggering the support rank upgrade.",
+                "1 is required for C, 2 is required for B, 3 is required for A and 4 are required for S. If a unit pair cannot have S Rank, just treat the fourth as filler.",
+                "These are considered as Progression Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Enable_Paralogues": {
+            "description": [
+                "When enabled every Paralogue(Side Story in EU) will be included as locations."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Paralogue Options"
+        },
+        "Restrict_Paralogues": {
+            "description": [
+                "When enabled every Paralogue(Side Story in EU) will require an item of its name before it is accessible.",
+                "Does nothing if 'Enable_Paralogues' is disabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Paralogue Options"
+        },
+        "Progressive_Paralogues": {
+            "description": [
+                "When enabled every Paralogue(Side Story in EU) will require a 'Progressive Paralogue Chapter' of the same amount of its number before it is accessible.",
+                "Does nothing if 'Restrict_Paralogues' is disabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Paralogue Options"
+        },
+        "Enable_Children": {
+            "description": [
+                "When enabled every Child Character will be added into the pool.",
+                "To get the children's chapter in logic if Paralogues is enabled, you just need their mother and any father capable of marrying them.",
+                "Children will not be enabled if you have the Mad King as your goal."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Child Options"
+        },
+        "Male_Avatar": {
+            "description": [
+                "When enabled, will balance options around Robin (Avatar) being male.",
+                "If disabled, will balance options around Robin (Avatar) being female.",
+                "Mainly used to decide which pairings to use in 'Restrict_ChildPairs'."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Extra Options"
+        },
+        "Restrict_ChildPairs": {
+            "description": [
+                "One item for each child which randomly decides their parents will be added into the pool named 'MotherName x FatherName'.",
+                "If using Paralogues, children won't be accessible until you've found the 'pairing item' in the world.",
+                "Chapter 11 will require a Chrom Pairing before it is accessible as Chrom forces a S Support level with his wife.",
+                "Does nothing if 'Enable_Children' is disabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Child Options"
+        },
+        "Robin_PairPlus": {
+            "description": [
+                "When enabled, will include the extra Main Characters which only Robin can marry for their potential partners.",
+                "Those being the Future Children, Anna, Tiki, Say'ri, Flavia and Basilio.",
+                "This doesn't include the SpotPass characters which Robin can marry.",
+                "Does nothing if 'Restrict_ChildPairs' is disabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Child Options"
+        },
+        "Pairings_Local": {
+            "description": [
+                "When enabled, pairings will be placed on a local location accessible as soon as the mother unit is accessible.",
+                "If disabled, the pairings will be found in the multiworld as any other item. Be warned, you require the pairings' item before the child's paralogue is accessible if enabled.",
+                "If 'Robin_PairPlus' is enabled, this option cannot place Robin's pair unless Robin is female. That's because the locations are females only.",
+                "Does nothing if 'Restrict_ChildPairs' is disabled."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Child Options"
+        },
+        "Enable_SpotPass_Paralogues": {
+            "description": [
+                "Enables every Paralogue 18 to 23 which was obtained from SpotPass.",
+                "Does nothing if the Mad King is the goal.",
+                "Does nothing if 'Enable_Paralogues' option is disabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "SpotPass Options"
+        },
+        "Restrict_SpotPass_Paralogues": {
+            "description": [
+                "Adds an item for every Paralogue obtained from SpotPass.",
+                "Does nothing if the Mad King is the goal."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "SpotPass Options"
+        },
+        "SpotPass_Characters": {
+            "description": [
+                "Adds Gangrel, Walhart, Emmeryn, Yen'fay, Aversa and Priam which are obtained from SpotPass.",
+                "Will not be added if the Mad King is the goal."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "SpotPass Options"
+        },
+        "Misc_SpotPass_Characters": {
+            "description": [
+                "Adds every Bonus Team Character obtained from SpotPass.",
+                "These characters will be considered as Useful Items.",
+                "Only Exception is Marth which is required for his own class 'Lodestar' and as such need to be treated as progression."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "SpotPass Options"
+        },
+        "Disable_SealLogic": {
+            "description": [
+                "If enabled, will not restrict access to classes/skills that are reached by using Master or Second Seals.",
+                "Does nothing if related options are not enabled.",
+                "Useful for those who wish to farm Second/Master Seals from random merchants or Outrealm.",
+                "Otherwise the logic for Second Seals is being able to reach Chapter 16.",
+                "The Logic for reaching Master Seal is being able to reach Chapter 12.",
+                "You may have access to the seals earlier if Paralogues are enabled.",
+                "If you pick the Mad King as your goal this will be enabled by default."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
+        },
+        "Disable_AvatarLogic": {
+            "description": [
+                "If enabled, will not treat the Avatar as no other class than Tactician and Grandmaster.",
+                "The same is applied for Morgan.",
+                "Useful for those who wish to experience more units when doing SkillSanity."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
+        },
+        "Early_Thief": {
+            "description": [
+                "If enabled, will make Gaius be required to access chapter 6.",
+                "For those who wish to guarantee they can open chests early.",
+                "Note: Gaius or Anna is required for Chapter 11 and beyond as to not miss out on too much. They won't be required if the goal is the Mad King however."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
+        },
+        "Early_Chrom": {
+            "description": [
+                "If enabled, will make Chrom be required to access the Prologue Chapter.",
+                "For those who wish to have him from start.",
+                "Note: Chrom is required at the latest in Chapter 11 otherwise."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
+        },
+        "Early_Starting_Units": {
+            "description": [
+                "If enabled, will make Chrom, Robin, Lissa and Frederick be required to access Chapter 1.",
+                "For those who wish to guarantee those units early.",
+                "Note: You are already guaranteed Chrom, Robin or Frederick to be required for Chapter 3."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
+        },
+        "Guaranteed_Army": {
+            "description": [
+                "If enabled, will make it so you're required to have a certain amount of units before tackling specific chapters.",
+                "Chapter 5 will require 6 Units, Chapter 10 will require 10 units, Chapter 15 will require 12 units and Chapter 20 will require 15 units.",
+                "It's an attempt to make sure you don't have to solo the whole game with just your starting unit."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
+        },
+        "ChestSanity": {
+            "description": [
+                "Reaching or Opening a chest in each chapter is a check."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "EventSanity": {
+            "description": [
+                "Activating each event tile in each chapter is a check.",
+                "An event tile is a tile which sparkles on the map."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "ShopSanity": {
+            "description": [
+                "Buying Items from locations on the worldmap is a check.",
+                "These are accessible after chapter 4.",
+                "If 'Restrict_Weapons' is enabled, you require the respective weapon type before they are in logic to be purchased."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "EnemySanity": {
+            "description": [
+                "Defeating every initial enemy unit in each chapter is a check.",
+                "You don't require to defeat specific units, just a number of them. As such if reinforcements do arrive in a chapter you'll have some wiggle room.",
+                "This does not include extra enemies on Hard or Lunatic Difficulty.",
+                "This does not include enemies which can be recruited.",
+                "If the Mad King Goal is enabled, it will decrease the amount of enemies you're required to defeat in specific Xenologue Chapters if Xenologues are enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "EnemySanity_Hard": {
+            "description": [
+                "Does nothing if 'EnemySanity' is not enabled.",
+                "Includes enemies which only appear on Hard Difficulty."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "EnemySanity_Lunatic": {
+            "description": [
+                "Does nothing if 'EnemySanity' and 'Enemysanity_Hard' are not enabled.",
+                "Includes enemies which only appear on Lunatic Difficulty."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "EnemySanity_PerType": {
+            "description": [
+                "If enabled, will make the EnemySanity count for each different kind of unit on the battle field instead of each unit on the field.",
+                "Does nothing if 'EnemySanity' is disabled.",
+                "Does not account for the Boss' type of each chapter since that location is always seperate.",
+                "The only exception to this option is Chapter 22 where instead of its types its every different named NPC instead."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "LevelUpSanity": {
+            "description": [
+                "Reaching Level 5, 10, 15 and 20 for each Main and Child(if enabled) Character in their Base Class is a check.",
+                "Already Promoted Units will not be included in this option, you'll need 'LevelUpSanityPlus' as well.",
+                "Level 5 requires Chapter 4, Level 10 requires chapter 8, Level 15 requires chapter 12 and Level 20 requires Chapter 14.",
+                "Disclaimer: This is not intended as a level cap and is just a guesstimate on what would make the checks flow nicely in a playthrough."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "LevelUpSanityPlus": {
+            "description": [
+                "Reaching Level 5, 10, 15 and 20 for each Main and Child(if enabled) Character in a Promoted Class is a check.",
+                "This does nothing if 'LevelUpSanity' is disabled.",
+                "Level 5 requires Chapter 16, Level 10 requires chapter 18, Level 15 requires chapter 22 and Level 20 requires Chapter 25.",
+                "Disclaimer: This is not intended as a level cap and is just a guesstimate on what would make the checks flow nicely in a playthrough."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "SkillSanity": {
+            "description": [
+                "Learning the various skills for Each Class is a check.",
+                "You need to have finished Chapter 16 before most checks are accessible as that's when you have reliable access to both Master and Second Seals.",
+                "If 'Base_Classes' or 'Promoted_Classes' are enabled, it will require said class before the skills are in logic but you will not need the actual skill if you are using the 'Skills' setting as you can still just unequip them if you don't have them unlocked.",
+                "Children's access to various classes are only restricted to their initial classes unless 'Restrict_ChildPairs' is enabled which will allow for a wider range of access.",
+                "Morgan's access to classes are only accounted for if 'Restrict ChildPairs' is enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "SupportSanity": {
+            "description": [
+                "Every Support Rank between C to A for every main character is a check except S Rank as to not softlock anyone.",
+                "The Logic for reaching specific support ranks are as following; C requires Chapter 8, B requires chapter 10 and A requires chapter 12.",
+                "You may still reach the required support ranks earlier but this was the only way to not overwhelm you too early with the support grind!"
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "SupportSanity_Children": {
+            "description": [
+                "Every Support Rank between C to A for every child character is a check except S Rank as to not softlock anyone.",
+                "This will include their parents but for the fathers it will not name one specifically and be more generic.",
+                "One of the only exceptions is Lucina which has Chrom as her guaranteed father and instead her mother will be labeled generic.",
+                "The other being Morgan which can have any combinations of Parents. If Male Robin is enabled, it will have a generic mother location and vice versa."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "SupportSanity_Mini": {
+            "description": [
+                "If Enabled, will add 3 locations for each Unit called 'Reached Support Rank C' and so forth instead of having every Support Convo as a location.",
+                "Does nothing if neither 'SupportSanity' or 'SupportSanity_Children' is enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "VillageSanity": {
+            "description": [
+                "Every Village in each chapter is a check.",
+                "This also includes some NPCs that acts similar to Villages if the 'Enable Paralogues' option is enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "ExtraRewardSanity": {
+            "description": [
+                "Saving Multiple NPCs for increased Rewards is a check.",
+                "This also includes letting Inigo get Kills for More Items in Inigo's Paralogue making him a requirement for his own Paralogue if this is enabled.",
+                "Also includes a few extra item checks here and there."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "ItemDropSanity": {
+            "description": [
+                "Items dropped by Enemies are a check. Those items highlighted in Green.",
+                "This does not include items obtained from recruitable enemies."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "ItemDropSanity_Reinforcements": {
+            "description": [
+                "Items dropped by Enemy Reinforcements are a check. Those items highlighted in Green."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "ItemDropSanity_Lunatic": {
+            "description": [
+                "Items dropped by Enemies only on Lunatic difficulty are a check. Those items highlighted in Green."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Sanity Options"
+        },
+        "Enable_Xenologues": {
+            "description": [
+                "When enabled every Xenologue(Outrealm Tale in EU) will be included as locations.",
+                "Only matters if you have enabled any specific DLC.",
+                "Xenologues are numbered in the order of their Japanese Release and only used to easily track them",
+                "One Star Xenologues are accessible from start, Two Stars requires Chapter 8, Three Stars requires Chapter 12, Four Stars requires Chapter 16 and Five Star requires 20",
+                "Apotheosis Requires Chapter 25 access as it has a 'Max' Difficulty."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "Restrict_Xenologues": {
+            "description": [
+                "When enabled every Xenologue(Outrealm Tale in EU) will require an item of its name before it is accessible.",
+                "Does nothing if 'Enable_Xenologues' is disabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "DLC_Characters": {
+            "description": [
+                "When enabled together with the DLC the character is from, the dlc character will be added into the pool of characters you are allowed to use.",
+                "These characters will be considered as Useful Items.",
+                "Only Exception is Prince Marth which is required for his own class 'Lodestar' and as such need to be treated as progression."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "DLC_Classes": {
+            "description": [
+                "When enabled together with the DLC the class is from, the dlc class will be added into the item pool.",
+                "Is only added if you have 'Base_Classes' enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "DLC_Skills": {
+            "description": [
+                "When enabled together with the DLC the skill is from, the dlc skill will be added into the item pool.",
+                "Is only added if you have 'Skills' enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "DLC_Items": {
+            "description": [
+                "When enabled together with the DLC the item is from, the dlc item will be added into the item pool.",
+                "Is only added if you have 'More_Items' enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "Champions_DLC": {
+            "description": [
+                "Enables 'Champions of Yore' Xenologues, Prince Marth, Roy, Micaiah and the All Stats +2 skill."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Golden_DLC": {
+            "description": [
+                "Enables 'The Golden Gaffe', 'EXPonential Growth' and 'Infinite Regalia' Xenologues, Eldigan and the Silver Card."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Scramble_DLC": {
+            "description": [
+                "Enables the 'Scramble' Xenologues."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Rogue_And_Redeemers_DLC": {
+            "description": [
+                "Enables 'Rogue and Redeemers' Xenologues, Ephraim, Celica, Ike and the Limit Breaker."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Future Past_DLC": {
+            "description": [
+                "Enables 'Future Past' Xenologues."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Lost_Bloodlines_DLC": {
+            "description": [
+                "Enables 'Lost Bloodlines' Xenologues, Leif, Alm, Seliph, Dread Scroll(Dread Fighter) and Paragon."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Smash_DLC": {
+            "description": [
+                "Enables 'Smash Brethren' Xenologues, Elincia, Eirika, Lyn, Wedding Bouquet(Bride) and Iote's Shield."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Challenge_DLC": {
+            "description": [
+                "Enables 'Death's Embrace', 'Five-Anna Firefight' and 'Roster Rescue' Xenologues, Est, Catria and Palla."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Apotheosis_DLC": {
+            "description": [
+                "Enables 'Apotheosis' Xenologue and Katarina."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Pack Options"
+        },
+        "Apotheosis_Secret": {
+            "description": [
+                "Enables Apotheosis's Secret Route locations.",
+                "Does nothing if the Apotheosis DLC is disabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "Mad_King_Goal": {
+            "description": [
+                "When enabled requires you to defeat the Mad King in Chapter 11 to goal.",
+                "Will also limited available locations drastically when enabled. Make sure you have enough room for required additional progression items if you picked any extra options.",
+                "Will remove any characters recruitable from chapter 12+ from the pool.",
+                "Disclaimer: Only One Goal has to be enabled to generate properly, if multiple goals are selected it will fail."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Goal Options"
+        },
+        "Grima_Goal": {
+            "description": [
+                "When enabled requires you to defeat Grima in the final chapter to goal.",
+                "Disclaimer: Only One Goal has to be enabled to generate properly, if multiple goals are selected it will fail."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Goal Options"
+        },
+        "Apotheosis_Goal": {
+            "description": [
+                "When enabled requires you to beat 'Apothesis' in the Outrealm to goal.",
+                "Requires the Apothesis DLC.",
+                "The goal will be accessible after you've reached Chapter 25 and have 20 eligble units.",
+                "Eligability is only checked if you have settings which restrict them and will not be able to make sure you have a balanced team.",
+                "For Child Characters, it will only check for classes outside their default classes unless 'Restrict_ChildPairs' is enabled as it won't know otherwise what classes are available to them.",
+                "It also checks if you have access to at least one weapon type for said classes if the Yaml Option is enabled.",
+                "This will only check if you have enough Main and Child Characters. Misc SpotPass and DLC Characters are not accounted for.",
+                "Disclaimer: Only One Goal has to be enabled to generate properly, if multiple goals are selected it will fail."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Goal Options"
+        },
+        "Emblem_Hunt_Goal": {
+            "description": [
+                "When enabled requires you to collect five 'Emblem Gemstones' for the Fire Emblem to goal.",
+                "These Gemstones are just macguffins, as soon as you have them in your inventory the goal will be accessible.",
+                "Disclaimer: Only One Goal has to be enabled to generate properly, if multiple goals are selected it will fail."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Goal Options"
+        }
+    }
+
+}

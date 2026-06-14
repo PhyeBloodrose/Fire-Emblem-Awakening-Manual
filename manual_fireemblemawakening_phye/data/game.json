@@ -1,0 +1,7 @@
+{
+  "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.game.schema.json",
+  "game": "FireEmblemAwakening",
+  "creator": "Phye",
+  "filler_item_name": "Friendship",
+  "starting_items": []
+}

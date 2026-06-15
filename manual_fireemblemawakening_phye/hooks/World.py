@@ -85,19 +85,16 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
         "Nowi": ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry"],
         }
     chrom_wives = ["Sully", "Sumia", "Maribelle", "Olivia"]
-    robin_wives = ["Sully", "Sumia", "Maribelle", "Olivia", "Lissa", "Cordelia", "Cherche", "Panne", "Miriel", "Tharja", "Nowi", "Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah", "Anna", "Say'ri", "Flavia", "Tiki" ]
+    robin_wives = ["Sully", "Sumia", "Maribelle", "Olivia", "Lissa", "Cordelia", "Cherche", "Panne", "Miriel", "Tharja", "Nowi" ]
+    robin_extra_wives = ["Sully", "Sumia", "Maribelle", "Olivia", "Lissa", "Cordelia", "Cherche", "Panne", "Miriel", "Tharja", "Nowi", "Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah", "Anna", "Say'ri", "Flavia", "Tiki" ]
     robin_extra = is_option_enabled(multiworld, player, "Robin_PairPlus")
-
-    if male_avatar:
-        if not robin_extra:
-            for mother in possible_pairings:
-                possible_pairings[mother].append("Robin")
+        
     if not male_avatar:
-            chrom_wives.append("Robin")
-            if not robin_extra:
-                possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry"]
-            if robin_extra:
-                possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry", "Brady", "Gerome", "Owain", "Inigo", "Yarne","Laurent", "Basilio"]
+       chrom_wives.append("Robin")
+       if not robin_extra:
+          possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry"]
+       if robin_extra:
+          possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry", "Brady", "Gerome", "Owain", "Inigo", "Yarne","Laurent", "Basilio"]
                 
     # Generates Parents for children and making sure everyone can be paired 
     def generate_pairings(possible_pairings, rng):
@@ -105,11 +102,15 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
         #Chrom Gets his Wife first!
         chrom_wife = rng.choice(chrom_wives)
         possible_pairings[chrom_wife] = ["Chrom"]
-        #Then Robin gets his if Extras are enabled
+        #Then Robin gets his if he is male
         if male_avatar:
-            if robin_extra:
+            if not robin_extra:
                 robin_wives.remove(chrom_wife)
                 robin_wife = rng.choice(robin_wives)
+                possible_pairings[robin_wife] = ["Robin"]    
+            if robin_extra:
+                robin_extra_wives.remove(chrom_wife)
+                robin_wife = rng.choice(robin_extra_wives)
                 possible_pairings[robin_wife] = ["Robin"]
 
         for fathers in possible_pairings.values():
@@ -120,7 +121,7 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
         mothers = list(possible_pairings.keys())
         rng.shuffle(mothers)
 
-        #Makes sure the mother with the least amount of pairings get their partner first.
+        #Makes sure the mothers with the least amount of pairings get their partner first.
         mothers = sorted(
         possible_pairings.keys(),
         key=lambda m: len(possible_pairings[m])

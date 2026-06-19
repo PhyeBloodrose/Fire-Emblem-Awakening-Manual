@@ -664,7 +664,7 @@
             "description": [
                 "When enabled requires you to collect five 'Emblem Gemstones' for the Fire Emblem to goal.",
                 "These Gemstones are just macguffins, as soon as you have them in your inventory the goal will be accessible.",
-                "Disclaimer: Only One Goal has to be enabled to generate properly, if multiple goals are selected it will fail."
+                "NOTE: Unlike other Goals, this goal can be added together with another goal, in that case you require both of the goals to be achieved before you can Goal the game!"
             ],
             "type": "Toggle",
             "default": false,

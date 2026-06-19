@@ -328,7 +328,7 @@
         },
         {
             "name": "Victory Achieved",
-            "requires": "(|Chapter 11| AND {YamlEnabled(Mad_King_Goal)}) OR (|EndChapter| AND {YamlEnabled(Grima_Goal)}) OR (|Apotheosis| AND {YamlEnabled(Apotheosis_Goal)}) OR (|Emblem Gemstone:5| AND {YamlEnabled(Emblem_Hunt_Goal)})"
+            "requires": "((|Chapter 11| AND {YamlEnabled(Mad_King_Goal)}) OR (|EndChapter| AND {YamlEnabled(Grima_Goal)}) OR (|Apotheosis| AND {YamlEnabled(Apotheosis_Goal)}) OR ({YamlDisabled(Mad_King_Goal)} AND {YamlDisabled(Grima_Goal)} AND {YamlDisabled(Apotheosis_Goal)})) AND {OptOne(|Emblem Gemstone:5|)}"
         },
         {
             "name": "Lucina Parents",

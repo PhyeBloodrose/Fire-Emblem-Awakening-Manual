@@ -99,7 +99,7 @@
         "yaml_option": [ "ShopSanity" ]
     },
     "MadKingGoal": {
-        "yaml_option": [ "Mad_King_Goal", "!Grima_Goal", "!Apotheosis_Goal", "!Emblem_Hunt_Goal" ],
+        "yaml_option": [ "Mad_King_Goal", "!Grima_Goal", "!Apotheosis_Goal" ],
         "hidden": true
     },
     "MadKingDisabled": {
@@ -107,15 +107,15 @@
         "hidden": true
     },
     "GrimaGoal": {
-        "yaml_option": [ "Grima_Goal", "!Mad_King_Goal", "!Apotheosis_Goal", "!Emblem_Hunt_Goal" ],
+        "yaml_option": [ "Grima_Goal", "!Mad_King_Goal", "!Apotheosis_Goal" ],
         "hidden": true
     },
     "ApotheosisGoal": {
-        "yaml_option": [ "Apotheosis_DLC", "Apotheosis_Goal", "!Grima_Goal", "!Mad_King_Goal", "!Emblem_Hunt_Goal" ],
+        "yaml_option": [ "Apotheosis_DLC", "Apotheosis_Goal", "!Grima_Goal", "!Mad_King_Goal" ],
         "hidden": true
     },
     "EmblemHunt": {
-        "yaml_option": [ "!Apotheosis_Goal", "!Grima_Goal", "!Mad_King_Goal", "Emblem_Hunt_Goal" ],
+        "yaml_option": [ "Emblem_Hunt_Goal" ],
         "hidden": true
     },
     "DLC_Apotheosis": {

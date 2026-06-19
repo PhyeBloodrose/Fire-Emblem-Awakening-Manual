@@ -25,4 +25,4 @@ Requires you to have reached Chapter 25 and aquired 20 eligible units. Depending
 
 - Emblem Hunt Goal
 
-Five items called 'Emblem Gemstone' will be randomly placed in the world. Gather them all to goal. A silly macguffin hunt!
+Five items called 'Emblem Gemstone' will be randomly placed in the world. Gather them all to goal. A silly macguffin hunt! This goal can be done solo or as an addition to the other three goals!

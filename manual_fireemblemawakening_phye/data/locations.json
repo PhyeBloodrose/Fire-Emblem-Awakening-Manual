@@ -25737,7 +25737,8 @@
             "category": [
                 "Xenologue 06 - Lost Bloodlines 3",
                 "Xenologues",
-                "DLC02"
+                "DLC02",
+                "MadKingDisabled"
             ],
             "requires": ""
         },
@@ -27520,7 +27521,8 @@
             "category": [
                 "Xenologue 09 - Smash Brethren 3",
                 "Xenologues",
-                "DLC03"
+                "DLC03",
+                "MadKingDisabled"
             ],
             "requires": ""
         },

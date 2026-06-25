@@ -24,6 +24,10 @@
         "yaml_option": [ "Character-Specific_Classes" ],
         "hidden": true
     },
+    "StartClass": {
+        "yaml_option": [ "Character-Specific_Classes", "Character-Specific_Classes_Include_Start_Class" ],
+        "hidden": true
+    },
     "ClassCharaChild": {
         "yaml_option": [ "Character-Specific_Classes", "Character-Specific_Classes_ALL_Children", "Enable_Children", "!Mad_King_Goal" ],
         "hidden": true

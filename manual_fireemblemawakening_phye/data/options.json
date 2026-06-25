@@ -87,6 +87,17 @@
             "default": false,
             "group": "Item Options"
         },
+        "Character-Specific_Classes_Include_Start_Class": {
+            "description": [
+                "If enabled will add an item of Each Class for Every Character's Starting Class they are when recruited.",
+                "Does Nothing if 'Character-Specific_Classes' is disabled.",
+                "The only one unaffected by this option is Morgan, since they can start as any class depending on their parents and as such is unable to be predicted which one should be disabled.",
+                "These are considered as Progression Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
         "Skills": {
             "description": [
                 "Adds one of each Skill as an item into the item pool restricting you from using said skill until found.",
@@ -491,7 +502,7 @@
                 "When enabled every Xenologue(Outrealm Tale in EU) will be included as locations.",
                 "Only matters if you have enabled any specific DLC.",
                 "Xenologues are numbered in the order of their Japanese Release and only used to easily track them",
-                "One Star Xenologues are accessible from start, Two Stars requires Chapter 8, Three Stars requires Chapter 12, Four Stars requires Chapter 16 and Five Star requires 20",
+                "One Star Xenologues are accessible from start, Two Stars requires Chapter 10, Three Stars requires Chapter 14, Four Stars requires Chapter 18 and Five Star requires 22",
                 "Apotheosis Requires Chapter 25 access as it has a 'Max' Difficulty."
             ],
             "type": "Toggle",

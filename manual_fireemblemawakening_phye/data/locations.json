@@ -1553,7 +1553,7 @@
             "requires": "{OptOne(|Weapon Type - Axes|)}"
         },
         {
-            "name": "Border Pass - Buy Thunder",
+            "name": "Border Pass - Buy Wind",
             "region": "Chapter 5",
             "category": [
                 "Chapter 05 - The Exalt and the King",
@@ -30542,7 +30542,6 @@
                 "Xenologue 13 - The Golden Gaffe",
                 "ItemDrop",
                 "Xenologues",
-                "SpotPass",
                 "DLC05"
             ],
             "requires": ""
@@ -30554,7 +30553,6 @@
                 "Xenologue 13 - The Golden Gaffe",
                 "ItemDrop",
                 "Xenologues",
-                "SpotPass",
                 "DLC05"
             ],
             "requires": "|Chapter 8|"
@@ -30566,7 +30564,6 @@
                 "Xenologue 13 - The Golden Gaffe",
                 "ItemDrop",
                 "Xenologues",
-                "SpotPass",
                 "DLC05",
                 "MadKingDisabled"
             ],
@@ -30579,7 +30576,6 @@
                 "Xenologue 13 - The Golden Gaffe",
                 "ItemDrop",
                 "Xenologues",
-                "SpotPass",
                 "DLC05",
                 "MadKingDisabled"
             ],
@@ -30795,10 +30791,10 @@
             "requires": "|Chapter 20|"
         },
         {
-            "name": "X13 - Defeat an Entombed",
-            "region": "Xenologue 13",
+            "name": "X14 - Defeat an Entombed",
+            "region": "Xenologue 14",
             "category": [
-                "Xenologue 13 - The Golden Gaffe",
+                "Xenologue 14 - EXPonential Growth",
                 "EnemySanityType",
                 "Xenologues",
                 "DLC05"
@@ -37997,7 +37993,7 @@
             "category": [
                 "Xenologue: Apotheosis",
                 "Xenologues",
-                "DLC01",
+                "DLC09",
                 "MadKingDisabled"
             ],
             "requires": ""

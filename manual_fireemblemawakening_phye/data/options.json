@@ -62,7 +62,7 @@
             "default": false,
             "group": "Item Options"
         },
-        "Character-Specific_Classes": {
+        "Character_Specific_Classes": {
             "description": [
                 "If enabled will add an item for each Character and their potential classes they can become, such as 'Robin's Tactician' and 'Chrom's Lord'.",
                 "If Children are enabled, will add one for each of their initial classes as the generator won't know what parents they will have.",
@@ -74,24 +74,21 @@
             "default": false,
             "group": "Item Options"
         },
-        "Character-Specific_Classes_ALL_Children": {
+        "Character_Specific_Classes_ALL_Children": {
             "description": [
                 "If enabled will add an item of Each Class for Every Children for their gender.",
                 "Does Nothing if 'Character-Specific_Classes' is disabled.",
-                "The intention of this option is if you wish to experience a wide range of classes for the Child Characters",
-                "Since the item generation won't know what parents the children will have it can only guarantee their initial classes no matter pairing.",
-                "Most of these items may end up as 'fillers' depending on your choice of parents.",
+                "If 'Restrict Childpairs' is enabled, it will remove all classes the children cannot receive from their parents.",
                 "These are considered as Progression Items."
             ],
             "type": "Toggle",
             "default": false,
             "group": "Item Options"
         },
-        "Character-Specific_Classes_Include_Start_Class": {
+        "Character_Specific_Classes_Include_Start_Class": {
             "description": [
                 "If enabled will add an item of Each Class for Every Character's Starting Class they are when recruited.",
                 "Does Nothing if 'Character-Specific_Classes' is disabled.",
-                "The only one unaffected by this option is Morgan, since they can start as any class depending on their parents and as such is unable to be predicted which one should be disabled.",
                 "These are considered as Progression Items."
             ],
             "type": "Toggle",

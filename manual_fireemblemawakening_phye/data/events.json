@@ -2228,179 +2228,179 @@
         },
         {
             "name": "Lord Class",
-            "requires": "{OptOne(|Lord|)} AND {OptOne(|Weapon Type - Swords|)}"
+            "requires": "{OptOne(|Lord|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
         },
         {
             "name": "Great Lord Class",
-            "requires": "{OptOne(|Great Lord|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)})"
+            "requires": "{OptOne(|Great Lord|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}))"
         },
         {
             "name": "Tactician Class",
-            "requires": "{OptOne(|Tactician|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Tomes|)})"
+            "requires": "{OptOne(|Tactician|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
         },
         {
             "name": "Grandmaster Class",
-            "requires": "{OptOne(|Grandmaster|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Tomes|)})"
+            "requires": "{OptOne(|Grandmaster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
         },
         {
             "name": "Cavalier Class",
-            "requires": "{OptOne(|Cavalier|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)})"
+            "requires": "{OptOne(|Cavalier|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}))"
         },
         {
             "name": "Knight Class",
-            "requires": "{OptOne(|Knight|)} AND {OptOne(|Weapon Type - Lances|)}"
+            "requires": "{OptOne(|Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}"
         },
         {
             "name": "Paladin Class",
-            "requires": "{OptOne(|Paladin|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)})"
+            "requires": "{OptOne(|Paladin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}))"
         },
         {
             "name": "Great Knight Class",
-            "requires": "{OptOne(|Great Knight|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+            "requires": "{OptOne(|Great Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
         },
         {
             "name": "General Class",
-            "requires": "{OptOne(|General|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+            "requires": "{OptOne(|General|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
         },
         {
             "name": "Myrmidon Class",
-            "requires": "{OptOne(|Myrmidon|)} AND {OptOne(|Weapon Type - Swords|)}"
+            "requires": "{OptOne(|Myrmidon|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
         },
         {
             "name": "Thief Class",
-            "requires": "{OptOne(|Thief|)} AND {OptOne(|Weapon Type - Swords|)}"
+            "requires": "{OptOne(|Thief|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
         },
         {
             "name": "Swordmaster Class",
-            "requires": "{OptOne(|Swordmaster|)} AND {OptOne(|Weapon Type - Swords|)}"
+            "requires": "{OptOne(|Swordmaster|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
         },
         {
             "name": "Assassin Class",
-            "requires": "{OptOne(|Assassin|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Bows|)})"
+            "requires": "{OptOne(|Assassin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}))"
         },
         {
             "name": "Trickster Class",
-            "requires": "{OptOne(|Trickster|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Staves|)})"
+            "requires": "{OptOne(|Trickster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
         },
         {
             "name": "Barbarian Class",
-            "requires": "{OptOne(|Barbarian|)} AND {OptOne(|Weapon Type - Axes|)}"
+            "requires": "{OptOne(|Barbarian|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
         },
         {
             "name": "Fighter Class",
-            "requires": "{OptOne(|Fighter|)} AND {OptOne(|Weapon Type - Axes|)}"
+            "requires": "{OptOne(|Fighter|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
         },
         {
             "name": "Mercenary Class",
-            "requires": "{OptOne(|Mercenary|)} AND {OptOne(|Weapon Type - Swords|)}"
+            "requires": "{OptOne(|Mercenary|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
         },
         {
             "name": "Archer Class",
-            "requires": "{OptOne(|Archer|)} AND {OptOne(|Weapon Type - Bows|)}"
+            "requires": "{OptOne(|Archer|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}"
         },
         {
             "name": "Berserker Class",
-            "requires": "{OptOne(|Berserker|)} AND {OptOne(|Weapon Type - Axes|)}"
+            "requires": "{OptOne(|Berserker|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
         },
         {
             "name": "Warrior Class",
-            "requires": "{OptOne(|Warrior|)} AND ({OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Bows|)})"
+            "requires": "{OptOne(|Warrior|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}))"
         },
         {
             "name": "Hero Class",
-            "requires": "{OptOne(|Hero|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Axes|)})"
+            "requires": "{OptOne(|Hero|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
         },
         {
             "name": "Bow Knight Class",
-            "requires": "{OptOne(|Bow Knight|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Bows|)})"
+            "requires": "{OptOne(|Bow Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}))"
         },
         {
             "name": "Sniper Class",
-            "requires": "{OptOne(|Sniper|)} AND {OptOne(|Weapon Type - Bows|)}"
+            "requires": "{OptOne(|Sniper|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}"
         },
         {
             "name": "Pegasus Knight Class",
-            "requires": "{OptOne(|Pegasus Knight|)} AND {OptOne(|Weapon Type - Lances|)}"
+            "requires": "{OptOne(|Pegasus Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}"
         },
         {
             "name": "Wyvern Rider Class",
-            "requires": "{OptOne(|Wyvern Rider|)} AND {OptOne(|Weapon Type - Axes|)}"
+            "requires": "{OptOne(|Wyvern Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
         },
         {
             "name": "Falcon Knight Class",
-            "requires": "{OptOne(|Falcon Knight|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Staves|)})"
+            "requires": "{OptOne(|Falcon Knight|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
         },
         {
             "name": "Dark Flier Class",
-            "requires": "{OptOne(|Dark Flier|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Tomes|)})"
+            "requires": "{OptOne(|Dark Flier|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
         },
         {
             "name": "Wyvern Lord Class",
-            "requires": "{OptOne(|Wyvern Lord|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+            "requires": "{OptOne(|Wyvern Lord|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
         },
         {
             "name": "Griffon Rider Class",
-            "requires": "{OptOne(|Griffon Rider|)} AND {OptOne(|Weapon Type - Axes|)}"
+            "requires": "{OptOne(|Griffon Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
         },
         {
             "name": "Dark Mage Class",
-            "requires": "{OptOne(|Dark Mage|)} AND {OptOne(|Weapon Type - Tomes|)}"
+            "requires": "{OptOne(|Dark Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}"
         },
         {
             "name": "Mage Class",
-            "requires": "{OptOne(|Mage|)} AND {OptOne(|Weapon Type - Tomes|)}"
+            "requires": "{OptOne(|Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}"
         },
         {
             "name": "Priest Class",
-            "requires": "{OptOne(|Priest|)} AND {OptOne(|Weapon Type - Staves|)}"
+            "requires": "{OptOne(|Priest|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}"
         },
         {
             "name": "Cleric Class",
-            "requires": "{OptOne(|Cleric|)} AND {OptOne(|Weapon Type - Staves|)}"
+            "requires": "{OptOne(|Cleric|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}"
         },
         {
             "name": "Troubadour Class",
-            "requires": "{OptOne(|Troubadour|)} AND {OptOne(|Weapon Type - Staves|)}"
+            "requires": "{OptOne(|Troubadour|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}"
         },
         {
             "name": "Sorcerer Class",
-            "requires": "{OptOne(|Sorcerer|)} AND {OptOne(|Weapon Type - Tomes|)}"
+            "requires": "{OptOne(|Sorcerer|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}"
         },
         {
             "name": "Dark Knight Class",
-            "requires": "{OptOne(|Dark Knight|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Tomes|)})"
+            "requires": "{OptOne(|Dark Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
         },
         {
             "name": "Sage Class",
-            "requires": "{OptOne(|Sage|)} AND ({OptOne(|Weapon Type - Tomes|)} OR {OptOne(|Weapon Type - Staves|)})"
+            "requires": "{OptOne(|Sage|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
         },
         {
             "name": "War Monk Class",
-            "requires": "{OptOne(|War Monk|)} AND ({OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Staves|)})"
+            "requires": "{OptOne(|War Monk|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
         },
         {
             "name": "War Cleric Class",
-            "requires": "{OptOne(|War Cleric|)} AND ({OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Staves|)})"
+            "requires": "{OptOne(|War Cleric|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
         },
         {
             "name": "Valkyrie Class",
-            "requires": "{OptOne(|Valkyrie|)} AND ({OptOne(|Weapon Type - Tomes|)} OR {OptOne(|Weapon Type - Staves|)})"
+            "requires": "{OptOne(|Valkyrie|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
         },
         {
             "name": "Villager Class",
-            "requires": "{OptOne(|Villager|)} AND {OptOne(|Weapon Type - Lances|)}"
+            "requires": "{OptOne(|Villager|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}"
         },
         {
             "name": "Taguel Class",
-            "requires": "{OptOne(|Taguel|)} AND {OptOne(|Weapon Type - Beaststones|)}"
+            "requires": "{OptOne(|Taguel|)} AND {OptOne(|Weapon Type - Beaststones|)} AND {OptOne(|Beaststone|)}"
         },
         {
             "name": "Dancer Class",
-            "requires": "{OptOne(|Dancer|)} AND {OptOne(|Weapon Type - Swords|)}"
+            "requires": "{OptOne(|Dancer|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
         },
         {
             "name": "Manakete Class",
-            "requires": "{OptOne(|Manakete|)} AND {OptOne(|Weapon Type - Dragonstones|)}"
+            "requires": "{OptOne(|Manakete|)} AND {OptOne(|Weapon Type - Dragonstones|)} AND {OptOne(|Dragonstone|)}"
         },
         {
             "name": "Dread Fighter Class",
@@ -2408,7 +2408,7 @@
                 "DLC_Class",
                 "DLC02"
             ],
-            "requires": "|Xenologue 5| AND {OptOne(|Dread Fighter|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Axes|)} OR {OptOne(|Weapon Type - Tomes|)})"
+            "requires": "|Xenologue 5| AND {OptOne(|Dread Fighter|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
         },
         {
             "name": "Bride Class",
@@ -2416,15 +2416,15 @@
                 "DLC_Class",
                 "DLC03"
             ],
-            "requires": "|Xenologue 8| AND {OptOne(|Bride|)} AND ({OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Bows|)} OR {OptOne(|Weapon Type - Staves|)})"
+            "requires": "|Xenologue 8| AND {OptOne(|Bride|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
         },
         {
             "name": "Conqueror Class",
-            "requires": "{OptOne(|Conqueror|)} AND ({OptOne(|Weapon Type - Swords|)} OR {OptOne(|Weapon Type - Lances|)} OR {OptOne(|Weapon Type - Axes|)})"
+            "requires": "{OptOne(|Conqueror|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
         },
         {
             "name": "Lodestar Class",
-            "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Weapon Type - Swords|)}"
+            "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
         }
     ]
 }

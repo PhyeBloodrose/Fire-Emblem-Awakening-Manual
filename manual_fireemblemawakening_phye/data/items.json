@@ -657,7 +657,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Iron Sword",
@@ -668,7 +668,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Steel Sword",
@@ -701,7 +701,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Armourslayer",
@@ -712,7 +712,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Wyrmslayer",
@@ -723,7 +723,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Killing Edge",
@@ -756,7 +756,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Noble Rapier",
@@ -767,7 +767,7 @@
                 "Weapons - Rank C"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Missiletainn",
@@ -778,7 +778,7 @@
                 "Weapons - Rank C"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Sol",
@@ -800,7 +800,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Falchion",
@@ -811,7 +811,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Exalted Falchion",
@@ -822,7 +822,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Parallel Falchion",
@@ -833,7 +833,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Mercurius",
@@ -844,7 +844,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Tyrfing",
@@ -855,7 +855,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Balmung",
@@ -866,7 +866,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Mystletainn",
@@ -877,7 +877,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Sol Katti",
@@ -888,7 +888,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Ragnell",
@@ -899,7 +899,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Tree Branch",
@@ -910,7 +910,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Glass Sword",
@@ -921,7 +921,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Soothing Sword",
@@ -932,7 +932,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Superior Edge",
@@ -954,7 +954,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Roy's Blade",
@@ -965,7 +965,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Eliwood's Blade",
@@ -1020,7 +1020,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Iron Lance",
@@ -1031,7 +1031,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Steel Lance",
@@ -1064,7 +1064,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Javelin",
@@ -1075,7 +1075,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Short Spear",
@@ -1108,7 +1108,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Blessed Lance",
@@ -1152,7 +1152,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Gáe Bolg",
@@ -1163,7 +1163,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Gungnir",
@@ -1174,7 +1174,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Log",
@@ -1185,7 +1185,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Glass Lance",
@@ -1196,7 +1196,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Miniature Lance",
@@ -1207,7 +1207,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Shockstick",
@@ -1240,7 +1240,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Ephraim's Lance",
@@ -1273,7 +1273,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Iron Axe",
@@ -1284,7 +1284,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Steel Axe",
@@ -1317,7 +1317,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Hand Axe",
@@ -1328,7 +1328,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Short Axe",
@@ -1361,7 +1361,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Bolt Axe",
@@ -1405,7 +1405,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Hauteclere",
@@ -1416,7 +1416,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Helswath",
@@ -1427,7 +1427,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Armads",
@@ -1438,7 +1438,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Ladle",
@@ -1449,7 +1449,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Glass Axe",
@@ -1460,7 +1460,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Imposing Axe",
@@ -1471,7 +1471,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Volant Axe",
@@ -1504,7 +1504,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Titania's Axe",
@@ -1537,7 +1537,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Iron Bow",
@@ -1548,7 +1548,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Steel Bow",
@@ -1581,7 +1581,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Blessed Bow",
@@ -1636,7 +1636,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Yewfelle",
@@ -1647,7 +1647,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Nidhogg",
@@ -1658,7 +1658,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Double Bow",
@@ -1669,7 +1669,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Slack Bow",
@@ -1680,7 +1680,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Glass Bow",
@@ -1691,7 +1691,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Towering Bow",
@@ -1702,7 +1702,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Underdog Bow",
@@ -1713,7 +1713,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Superior Bow",
@@ -1753,29 +1753,32 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Fire Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Fire)",
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Elfire",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Fire Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Fire)",
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Arcfire",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Fire Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Fire)",
                 "Weapons - Rank C"
             ],
             "count": 1,
@@ -1786,7 +1789,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Fire Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Fire)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -1797,40 +1801,44 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Fire Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Fire)",
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Thunder",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Thunder Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Thunder)",
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Elthunder",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Thunder Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Thunder)",
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Arcthunder",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Thunder Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Thunder)",
                 "Weapons - Rank C"
             ],
             "count": 1,
@@ -1841,7 +1849,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Thunder Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Thunder)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -1852,7 +1861,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Thunder Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Thunder)",
                 "Weapons - Rank A"
             ],
             "count": 1,
@@ -1863,29 +1873,32 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Elwind",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Arcwind",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank C"
             ],
             "count": 1,
@@ -1896,7 +1909,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -1907,62 +1921,68 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Forseti",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Book of Naga",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Water Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Water)",
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Flux",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Nosferatu",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Ruin",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank C"
             ],
             "count": 1,
@@ -1973,7 +1993,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -1984,18 +2005,20 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Grima's Truth",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -2006,7 +2029,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank C"
             ],
             "count": 1,
@@ -2017,18 +2041,20 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Fire Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Fire)",
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Micaiah's Pyre",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Fire Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Fire)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -2039,7 +2065,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Thunder Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Thunder)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -2050,7 +2077,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Thunder Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Thunder)",
                 "Weapons - Rank C"
             ],
             "count": 1,
@@ -2061,18 +2089,20 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Celica's Gale",
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Wind Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Wind)",
                 "Weapons - Rank C"
             ],
             "count": 1,
@@ -2083,7 +2113,8 @@
             "category": [
                 "Weapons",
                 "Not_Prog_Weapon",
-                "Weapons - Dark Tomes",
+                "Weapons - Tomes",
+                "Weapons - Tomes (Dark)",
                 "Weapons - Rank B"
             ],
             "count": 1,
@@ -2098,7 +2129,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Mend",
@@ -2109,7 +2140,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Physic",
@@ -2142,7 +2173,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Goddess Staff",
@@ -2153,7 +2184,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Rescue",
@@ -2164,7 +2195,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Ward",
@@ -2197,7 +2228,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Balmwood Staff",
@@ -2208,7 +2239,7 @@
                 "Weapons - Rank D"
             ],
             "count": 1,
-            "useful": true
+            "filler": true
         },
         {
             "name": "Catharsis",
@@ -2228,7 +2259,7 @@
                 "Not_Prog_Weapon"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Beaststone+",
@@ -2237,7 +2268,7 @@
                 "Not_Prog_Weapon"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Dragonstone",
@@ -2246,7 +2277,7 @@
                 "Not_Prog_Weapon"
             ],
             "count": 1,
-            "useful": true
+            "progression": true
         },
         {
             "name": "Dragonstone+",
@@ -2255,7 +2286,7 @@
                 "Not_Prog_Weapon"
             ],
             "count": 1,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Chrom",
@@ -12055,7 +12086,7 @@
         },
         {
             "count": 1,
-            "name": "Lord - Dual Strike+",
+            "name": "Lord Skill (Lv1) - Dual Strike+",
             "category": [
                 "Class Skills"
             ],
@@ -12063,7 +12094,7 @@
         },
         {
             "count": 1,
-            "name": "Lord - Charm",
+            "name": "Lord Skill (Lv10) - Charm",
             "category": [
                 "Class Skills"
             ],
@@ -12071,7 +12102,7 @@
         },
         {
             "count": 1,
-            "name": "Great Lord - Aether",
+            "name": "Great Lord Skill (Lv5) - Aether",
             "category": [
                 "Class Skills"
             ],
@@ -12079,7 +12110,7 @@
         },
         {
             "count": 1,
-            "name": "Great Lord - Rightful King",
+            "name": "Great Lord Skill (Lv15) - Rightful King",
             "category": [
                 "Class Skills"
             ],
@@ -12087,7 +12118,15 @@
         },
         {
             "count": 1,
-            "name": "Tactician - Veteran",
+            "name": "Tactician Skill (Lv1) - Veteran",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Tactician Skill (Lv10) - Solidarity",
             "category": [
                 "Class Skills"
             ],
@@ -12095,7 +12134,7 @@
         },
         {
             "count": 1,
-            "name": "Tactician - Solidarity",
+            "name": "Grandmaster Skill (Lv5) - Ignis",
             "category": [
                 "Class Skills"
             ],
@@ -12103,7 +12142,23 @@
         },
         {
             "count": 1,
-            "name": "Grandmaster - Ignis",
+            "name": "Grandmaster Skill (Lv15) - Rally Spectrum",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Cavalier Skill (Lv1) - Discipline",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Cavalier Skill (Lv10) - Outdoor Fighter",
             "category": [
                 "Class Skills"
             ],
@@ -12111,7 +12166,7 @@
         },
         {
             "count": 1,
-            "name": "Grandmaster - Rally Spectrum",
+            "name": "Paladin Skill (Lv5) - Defender",
             "category": [
                 "Class Skills"
             ],
@@ -12119,351 +12174,15 @@
         },
         {
             "count": 1,
-            "name": "Cavalier - Discipline",
+            "name": "Paladin Skill (Lv15) - Aegis",
             "category": [
                 "Class Skills"
             ],
-            "useful": true
+            "filler": true
         },
         {
             "count": 1,
-            "name": "Cavalier - Outdoor Fighter",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Paladin - Defender",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Paladin - Aegis",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Great Knight - Luna",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Great Knight - Dual Guard+",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Knight - Defence +2",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Knight - Indoor Fighter",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "General - Rally Defence",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "General - Pavise",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Myrmidon - Avoid +10",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Myrmidon - Vantage",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Swordmaster - Astra",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Swordmaster - Swordfaire",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Mercenary - Armsthrift",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Mercenary - Patience",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Hero - Sol",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Hero - Axebreaker",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Fighter - HP +5",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Fighter - Zeal",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Warrior - Rally Strength",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Warrior - Counter",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Barbarian - Despoil",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Barbarian - Gamble",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Berserker - Wrath",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Berserker - Axefaire",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Archer - Skill +2",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Archer - Prescience",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Sniper - Hit Rate +20",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Sniper - Bowfaire",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Bow Knight - Rally Skill",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Bow Knight - Bowbreaker",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Thief - Locktouch",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Thief - Movement +1",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Assassin - Lethality",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Assassin - Pass",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Trickster - Lucky Seven",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Trickster - Acrobat",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Pegasus Knight - Speed +2",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Pegasus Knight - Relief",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Falcon Knight - Rally Speed",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Falcon Knight - Lancefaire",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Dark Flier - Rally Movement",
-            "category": [
-                "Class Skills"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Dark Flier - Galeforce",
+            "name": "Great Knight Skill (Lv5) - Luna",
             "category": [
                 "Class Skills"
             ],
@@ -12471,7 +12190,23 @@
         },
         {
             "count": 1,
-            "name": "Wyvern Rider - Strength +2",
+            "name": "Great Knight Skill (Lv15) - Dual Guard+",
+            "category": [
+                "Class Skills"
+            ],
+            "progression_skip_balancing": true
+        },
+        {
+            "count": 1,
+            "name": "Knight Skill (Lv1) - Defence +2",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Knight Skill (Lv10) - Indoor Fighter",
             "category": [
                 "Class Skills"
             ],
@@ -12479,7 +12214,31 @@
         },
         {
             "count": 1,
-            "name": "Wyvern Rider - Tantivy",
+            "name": "General Skill (Lv5) - Rally Defence",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "General Skill (Lv15) - Pavise",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Myrmidon Skill (Lv1) - Avoid +10",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Myrmidon Skill (Lv10) - Vantage",
             "category": [
                 "Class Skills"
             ],
@@ -12487,7 +12246,7 @@
         },
         {
             "count": 1,
-            "name": "Wyvern Lord - Quick Burn",
+            "name": "Swordmaster Skill (Lv5) - Astra",
             "category": [
                 "Class Skills"
             ],
@@ -12495,7 +12254,7 @@
         },
         {
             "count": 1,
-            "name": "Wyvern Lord - Swordbreaker",
+            "name": "Swordmaster Skill (Lv15) - Swordfaire",
             "category": [
                 "Class Skills"
             ],
@@ -12503,7 +12262,23 @@
         },
         {
             "count": 1,
-            "name": "Griffon Rider - Deliverer",
+            "name": "Mercenary Skill (Lv1) - Armsthrift",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Mercenary Skill (Lv10) - Patience",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Hero Skill (Lv5) - Sol",
             "category": [
                 "Class Skills"
             ],
@@ -12511,7 +12286,7 @@
         },
         {
             "count": 1,
-            "name": "Griffon Rider - Lancebreaker",
+            "name": "Hero Skill (Lv15) - Axebreaker",
             "category": [
                 "Class Skills"
             ],
@@ -12519,7 +12294,31 @@
         },
         {
             "count": 1,
-            "name": "Mage - Magic +2",
+            "name": "Fighter Skill (Lv1) - HP +5",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Fighter Skill (Lv10) - Zeal",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Warrior Skill (Lv5) - Rally Strength",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Warrior Skill (Lv15) - Counter",
             "category": [
                 "Class Skills"
             ],
@@ -12527,7 +12326,23 @@
         },
         {
             "count": 1,
-            "name": "Mage - Focus",
+            "name": "Barbarian Skill (Lv1) - Despoil",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Barbarian Skill (Lv10) - Gamble",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Berserker Skill (Lv5) - Wrath",
             "category": [
                 "Class Skills"
             ],
@@ -12535,7 +12350,7 @@
         },
         {
             "count": 1,
-            "name": "Sage - Rally Magic",
+            "name": "Berserker Skill (Lv15) - Axefaire",
             "category": [
                 "Class Skills"
             ],
@@ -12543,7 +12358,15 @@
         },
         {
             "count": 1,
-            "name": "Sage - Tomefaire",
+            "name": "Archer Skill (Lv1) - Skill +2",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Archer Skill (Lv10) - Prescience",
             "category": [
                 "Class Skills"
             ],
@@ -12551,7 +12374,7 @@
         },
         {
             "count": 1,
-            "name": "Dark Mage - Hex",
+            "name": "Sniper Skill (Lv5) - Hit Rate +20",
             "category": [
                 "Class Skills"
             ],
@@ -12559,7 +12382,7 @@
         },
         {
             "count": 1,
-            "name": "Dark Mage - Anathema",
+            "name": "Sniper Skill (Lv15) - Bowfaire",
             "category": [
                 "Class Skills"
             ],
@@ -12567,7 +12390,15 @@
         },
         {
             "count": 1,
-            "name": "Sorcerer - Vengeance",
+            "name": "Bow Knight Skill (Lv5) - Rally Skill",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Bow Knight Skill (Lv15) - Bowbreaker",
             "category": [
                 "Class Skills"
             ],
@@ -12575,7 +12406,23 @@
         },
         {
             "count": 1,
-            "name": "Sorcerer - Tomebreaker",
+            "name": "Thief Skill (Lv1) - Locktouch",
+            "category": [
+                "Class Skills"
+            ],
+            "progression": true
+        },
+        {
+            "count": 1,
+            "name": "Thief Skill (Lv10) - Movement +1",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Assassin Skill (Lv5) - Lethality",
             "category": [
                 "Class Skills"
             ],
@@ -12583,7 +12430,31 @@
         },
         {
             "count": 1,
-            "name": "Dark Knight - Slow Burn",
+            "name": "Assassin Skill (Lv15) - Pass",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Trickster Skill (Lv5) - Lucky Seven",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Trickster Skill (Lv15) - Acrobat",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Pegasus Knight Skill (Lv1) - Speed +2",
             "category": [
                 "Class Skills"
             ],
@@ -12591,7 +12462,23 @@
         },
         {
             "count": 1,
-            "name": "Dark Knight - Lifetaker",
+            "name": "Pegasus Knight Skill (Lv10) - Relief",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Falcon Knight Skill (Lv5) - Rally Speed",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Falcon Knight Skill (Lv15) - Lancefaire",
             "category": [
                 "Class Skills"
             ],
@@ -12599,7 +12486,47 @@
         },
         {
             "count": 1,
-            "name": "Priest/Cleric - Miracle",
+            "name": "Dark Flier Skill (Lv5) - Rally Movement",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Dark Flier Skill (Lv15) - Galeforce",
+            "category": [
+                "Class Skills"
+            ],
+            "progression_skip_balancing": true
+        },
+        {
+            "count": 1,
+            "name": "Wyvern Rider Skill (Lv1) - Strength +2",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Wyvern Rider Skill (Lv10) - Tantivy",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Wyvern Lord Skill (Lv5) - Quick Burn",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Wyvern Lord Skill (Lv15) - Swordbreaker",
             "category": [
                 "Class Skills"
             ],
@@ -12607,7 +12534,15 @@
         },
         {
             "count": 1,
-            "name": "Priest/Cleric - Healtouch",
+            "name": "Griffon Rider Skill (Lv5) - Deliverer",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Griffon Rider Skill (Lv15) - Lancebreaker",
             "category": [
                 "Class Skills"
             ],
@@ -12615,7 +12550,31 @@
         },
         {
             "count": 1,
-            "name": "War Monk/Cleric - Rally Luck",
+            "name": "Mage Skill (Lv1) - Magic +2",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Mage Skill (Lv10) - Focus",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Sage Skill (Lv5) - Rally Magic",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Sage Skill (Lv15) - Tomefaire",
             "category": [
                 "Class Skills"
             ],
@@ -12623,7 +12582,7 @@
         },
         {
             "count": 1,
-            "name": "War Monk/Cleric - Renewal",
+            "name": "Dark Mage Skill (Lv1) - Hex",
             "category": [
                 "Class Skills"
             ],
@@ -12631,7 +12590,7 @@
         },
         {
             "count": 1,
-            "name": "Troubadour - Resistance +2",
+            "name": "Dark Mage Skill (Lv10) - Anathema",
             "category": [
                 "Class Skills"
             ],
@@ -12639,7 +12598,7 @@
         },
         {
             "count": 1,
-            "name": "Troubadour - Demoiselle",
+            "name": "Sorcerer Skill (Lv5) - Vengeance",
             "category": [
                 "Class Skills"
             ],
@@ -12647,7 +12606,7 @@
         },
         {
             "count": 1,
-            "name": "Valkyrie - Rally Resistance",
+            "name": "Sorcerer Skill (Lv15) - Tomebreaker",
             "category": [
                 "Class Skills"
             ],
@@ -12655,7 +12614,47 @@
         },
         {
             "count": 1,
-            "name": "Valkyrie - Dual Support+",
+            "name": "Dark Knight Skill (Lv5) - Slow Burn",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Dark Knight Skill (Lv15) - Lifetaker",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Cleric/Priest Skill (Lv1) - Miracle",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Cleric/Priest Skill (Lv10) - Healtouch",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "War Cleric/Monk Skill (Lv5) - Rally Luck",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "War Cleric/Monk Skill (Lv10) - Renewal",
             "category": [
                 "Class Skills"
             ],
@@ -12663,7 +12662,15 @@
         },
         {
             "count": 1,
-            "name": "Villager - Aptitude",
+            "name": "Troubadour Skill (Lv1) - Resistance +2",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Troubadour Skill (Lv10) - Demoiselle",
             "category": [
                 "Class Skills"
             ],
@@ -12671,7 +12678,15 @@
         },
         {
             "count": 1,
-            "name": "Villager - Underdog",
+            "name": "Valkyrie Skill (Lv5) - Rally Resistance",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Valkyrie Skill (Lv15) - Dual Support+",
             "category": [
                 "Class Skills"
             ],
@@ -12679,7 +12694,15 @@
         },
         {
             "count": 1,
-            "name": "Dancer - Luck +4",
+            "name": "Villager Skill (Lv1) - Aptitude",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Villager Skill (Lv15) - Underdog",
             "category": [
                 "Class Skills"
             ],
@@ -12687,7 +12710,15 @@
         },
         {
             "count": 1,
-            "name": "Dancer - Special Dance",
+            "name": "Dancer Skill (Lv1) - Luck +4",
+            "category": [
+                "Class Skills"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Dancer Skill (Lv15) - Special Dance",
             "category": [
                 "Class Skills"
             ],
@@ -12695,7 +12726,7 @@
         },
         {
             "count": 1,
-            "name": "Taguel - Even Rhythm",
+            "name": "Taguel Skill (Lv1) - Even Rhythm",
             "category": [
                 "Class Skills"
             ],
@@ -12703,7 +12734,7 @@
         },
         {
             "count": 1,
-            "name": "Taguel - Beastbane",
+            "name": "Taguel Skill (Lv15) - Beastbane",
             "category": [
                 "Class Skills"
             ],
@@ -12711,7 +12742,7 @@
         },
         {
             "count": 1,
-            "name": "Manakete - Odd Rhythm",
+            "name": "Manakete Skill (Lv1) - Odd Rhythm",
             "category": [
                 "Class Skills"
             ],
@@ -12719,7 +12750,7 @@
         },
         {
             "count": 1,
-            "name": "Manakete - Wyrmsbane",
+            "name": "Manakete Skill (Lv15) - Wyrmsbane",
             "category": [
                 "Class Skills"
             ],
@@ -12727,7 +12758,16 @@
         },
         {
             "count": 1,
-            "name": "Micaiah/Katarina - Shadowgift",
+            "name": "Special Class Skill - Shadowgift",
+            "category": [
+                "Class Skills",
+                "DLC_Skill"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Special Class Skill - Conquest",
             "category": [
                 "Class Skills",
                 "DLC_Skill"
@@ -12736,16 +12776,7 @@
         },
         {
             "count": 1,
-            "name": "Zephiel/Ephraim - Conquest",
-            "category": [
-                "Class Skills",
-                "DLC_Skill"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "Dread Fighter - Resistance +10",
+            "name": "Dread Fighter Skill (Lv1) - Resistance +10",
             "category": [
                 "Class Skills",
                 "DLC_Skill",
@@ -12755,17 +12786,27 @@
         },
         {
             "count": 1,
-            "name": "Dread Fighter - Aggressor",
+            "name": "Dread Fighter Skill (Lv15) - Aggressor",
             "category": [
                 "Class Skills",
                 "DLC_Skill",
                 "DLC02"
             ],
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "count": 1,
-            "name": "Bride - Rally Heart",
+            "name": "Bride Skill (Lv1) - Rally Heart",
+            "category": [
+                "Class Skills",
+                "DLC_Skill",
+                "DLC03"
+            ],
+            "filler": true
+        },
+        {
+            "count": 1,
+            "name": "Bride Skill (Lv15) - Bond",
             "category": [
                 "Class Skills",
                 "DLC_Skill",
@@ -12775,37 +12816,27 @@
         },
         {
             "count": 1,
-            "name": "Bride - Bond",
-            "category": [
-                "Class Skills",
-                "DLC_Skill",
-                "DLC03"
-            ],
-            "useful": true
-        },
-        {
-            "count": 1,
-            "name": "DLC Item - All Stats +2",
+            "name": "DLC Item Skill - All Stats +2",
             "category": [
                 "Class Skills",
                 "DLC_Skill",
                 "DLC01"
             ],
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "count": 1,
-            "name": "DLC Item - Paragon",
+            "name": "DLC Item Skill - Paragon",
             "category": [
                 "Class Skills",
                 "DLC_Skill",
                 "DLC02"
             ],
-            "useful": true
+            "filler": true
         },
         {
             "count": 1,
-            "name": "DLC Item - Iote's Shield",
+            "name": "DLC Item Skill - Iote's Shield",
             "category": [
                 "Class Skills",
                 "DLC_Skill",
@@ -12815,7 +12846,7 @@
         },
         {
             "count": 1,
-            "name": "DLC Item - Limit Breaker",
+            "name": "DLC Item Skill - Limit Breaker",
             "category": [
                 "Class Skills",
                 "DLC_Skill",

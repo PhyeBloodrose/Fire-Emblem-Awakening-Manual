@@ -67,7 +67,7 @@
             "Panne",
             "Gaius"
         ],
-        "requires": "|Main Chapter Progression:6| AND ((|Gaius| AND |Thief Class| AND {OptOne(|Gaius's Thief|)}) OR {YamlDisabled(Early_Thief)})"
+        "requires": "|Main Chapter Progression:6| AND ((|Gaius| AND |Thief Class| AND {OptOne(|Gaius's Thief|)} AND {OptOne(|Thief Skill (Lv1) - Locktouch|)}) OR {YamlDisabled(Early_Thief)})"
     },
     "Chapter 7": {
         "connects_to": [
@@ -105,7 +105,7 @@
             "Chapter 12",
             "Olivia"
         ],
-        "requires": "|Main Chapter Progression:11| AND ({YamlEnabled(Mad_King_Goal)} OR ((|Gaius Access| OR |Anna Access|)) AND |Lucina Parents|)"
+        "requires": "|Main Chapter Progression:11| AND ({YamlEnabled(Mad_King_Goal)} OR ((|Gaius Access| OR |Anna Access|)) AND |Lucina Parents| AND {OptOne(|Thief Skill (Lv1) - Locktouch|)})"
     },
     "Chapter 12": {
         "connects_to": [

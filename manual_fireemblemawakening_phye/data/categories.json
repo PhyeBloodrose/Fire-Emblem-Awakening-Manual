@@ -281,5 +281,8 @@
     "LevelUpSanityPromo": {
         "yaml_option": [ "LevelUpSanity", "LevelUpSanityPlus", "!Mad_King_Goal" ],
         "hidden": true
+    },
+    "Allowed Forging": {
+        "yaml_option": [ "Restrict_Forging" ]
     }
 }

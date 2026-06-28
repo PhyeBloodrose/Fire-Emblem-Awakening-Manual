@@ -143,6 +143,17 @@
             "default": false,
             "group": "Item Options"
         },
+        "Restrict_Forging": {
+            "description": [
+                "When enabled will add five items for each category of Forging you can do to a weapon.",
+                "They're called 'Forging Might', 'Forging Hit' and 'Forging Critical'",
+                "The intention is that you cannot forge past the amount you have in a particular category when forging weapons!",
+                "These are considered as Useful Items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
         "Enable_Paralogues": {
             "description": [
                 "When enabled every Paralogue(Side Story in EU) will be included as locations."

@@ -15192,6 +15192,30 @@
                 "ChildChara"
             ],
             "progression": true
+        },
+        {
+            "count": 5,
+            "name": "Forging Might",
+            "category": [
+                "Allowed Forging"
+            ],
+            "useful": true
+        },
+        {
+            "count": 5,
+            "name": "Forging Hit",
+            "category": [
+                "Allowed Forging"
+            ],
+            "useful": true
+        },
+        {
+            "count": 5,
+            "name": "Forging Critical",
+            "category": [
+                "Allowed Forging"
+            ],
+            "useful": true
         }
     ]
 }

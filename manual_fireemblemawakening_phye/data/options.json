@@ -217,6 +217,7 @@
                 "When enabled, will include the extra Characters which only Robin can marry for their potential partners.",
                 "Those being the Future Children, Anna, Tiki, Say'ri, Flavia, Basilio and the Spotpass Characters.",
                 "This will add them progressively future_children > robin_exclusives > spotpass. If you enable spotpass then all of the others will also be included.",
+                "SpotPass Characters are not picked even if the setting is enabled if 'SpotPass_Characters' is disabled.",
                 "Does nothing if 'Restrict_ChildPairs' is disabled."
             ],
             "values": {

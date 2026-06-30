@@ -90,7 +90,9 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     robin_extra_wives = ["Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah"]
     robin_extra_1 = get_option_value(multiworld, player, "Robin_PairPlus") >= 1
     robin_extra_2 = get_option_value(multiworld, player, "Robin_PairPlus") >= 2
-    robin_extra_3 = get_option_value(multiworld, player, "Robin_PairPlus") >= 3
+    robin_spotpass = get_option_value(multiworld, player, "Robin_PairPlus") >= 3
+    spotpassChara = is_option_enabled(multiworld, player, "SpotPass_Characters")
+    robin_extra_3 = robin_spotpass and spotpassChara
     robin_2nd = is_option_enabled(multiworld, player, "Robin_2ndGen")
 
         

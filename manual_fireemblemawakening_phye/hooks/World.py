@@ -70,6 +70,7 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
+    from ..Helpers import get_option_value
     male_avatar = is_option_enabled(multiworld, player, "Male_Avatar")
     possible_pairings = {
         "Sumia": ["Frederick", "Gaius", "Henry"],
@@ -86,15 +87,25 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
         }
     chrom_wives = ["Sully", "Sumia", "Maribelle", "Olivia"]
     robin_wives = ["Sully", "Sumia", "Maribelle", "Olivia", "Lissa", "Cordelia", "Cherche", "Panne", "Miriel", "Tharja", "Nowi" ]
-    robin_extra_wives = ["Sully", "Sumia", "Maribelle", "Olivia", "Lissa", "Cordelia", "Cherche", "Panne", "Miriel", "Tharja", "Nowi", "Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah", "Anna", "Say'ri", "Flavia", "Tiki" ]
-    robin_extra = is_option_enabled(multiworld, player, "Robin_PairPlus")
+    robin_extra_wives = ["Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah"]
+    robin_extra_1 = get_option_value(multiworld, player, "Robin_PairPlus") >= 1
+    robin_extra_2 = get_option_value(multiworld, player, "Robin_PairPlus") >= 2
+    robin_extra_3 = get_option_value(multiworld, player, "Robin_PairPlus") >= 3
+    robin_2nd = is_option_enabled(multiworld, player, "Robin_2ndGen")
+
         
     if not male_avatar:
        chrom_wives.append("Robin")
-       if not robin_extra:
+       if not robin_2nd:
           possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry"]
-       if robin_extra:
-          possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry", "Brady", "Gerome", "Owain", "Inigo", "Yarne","Laurent", "Basilio"]
+          if robin_extra_1:
+             possible_pairings["Robin"] += ["Brady", "Gerome", "Owain", "Inigo", "Yarne", "Laurent"]
+             if robin_extra_2:
+                possible_pairings["Robin"] += ["Basilio"]
+                if robin_extra_3:
+                   possible_pairings["Robin"] += ["Gangrel", "Walhart", "Yen'fay", "Priam"]
+       if robin_2nd:
+          possible_pairings["Robin"] = ["Brady", "Gerome", "Owain", "Inigo", "Yarne", "Laurent"]
                 
     # Generates Parents for children and making sure everyone can be paired 
     def generate_pairings(possible_pairings, rng):
@@ -105,15 +116,24 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
         possible_pairings[chrom_wife] = ["Chrom"]
         #Then Robin gets his if he is male
         if male_avatar:
-            if not robin_extra:
+            if not robin_2nd:
                 robin_wives.remove(chrom_wife)
+                if robin_extra_1:
+                    robin_wives_1 = ["Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah"]
+                    robin_wives.extend(robin_wives_1)
+                    if robin_extra_2:
+                        robin_wives_2 = ["Anna", "Say'ri", "Flavia", "Tiki"]
+                        robin_wives.extend(robin_wives_2)
+                        if robin_extra_3:
+                            robin_wives_3 = ["Aversa", "Emmeryn"]
+                            robin_wives.extend(robin_wives_3)
                 robin_wife = rng.choice(robin_wives)
-            if robin_extra:
-                robin_extra_wives.remove(chrom_wife)
+            if robin_2nd:
                 robin_wife = rng.choice(robin_extra_wives)
             possible_pairings[robin_wife] = ["Robin"]
             world.robin_wife = robin_wife
-
+        if not male_avatar:
+            world.robin_wife = "None"
         for fathers in possible_pairings.values():
             available_fathers.update(fathers)
         
@@ -190,9 +210,9 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                     kjelle_father = generated_pairings.get("Sully")
                     cynthia_father = generated_pairings.get("Sumia")
                     severa_father = generated_pairings.get("Cordelia")
-                    gerome_father = generated_pairings.get("Cherche")  
+                    gerome_father = generated_pairings.get("Cherche")
+                    morgan_mother = world.robin_wife
                     morgan_father = generated_pairings.get("Robin")
-                    morgan_mother = world.robin_wife 
                     yarne_father = generated_pairings.get("Panne")
                     laurent_father = generated_pairings.get("Miriel")
                     noire_father = generated_pairings.get("Tharja")
@@ -201,7 +221,7 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                     world.robin_wife == "Panne" or
                     generated_pairings.get("Robin") == "Yarne"
                     )
-
+                    
                     if lucina_mother != "Robin":
                         item_config["Lucina's Tactician"] = {"progression": 0}
                         item_config["Lucina's Grandmaster"] = {"progression": 0}

@@ -14585,8 +14585,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin",
-                "RobinPlus"
+                "FemaleRobin"
             ],
             "progression": true
         },
@@ -14596,8 +14595,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin",
-                "RobinPlus"
+                "FemaleRobin"
             ],
             "progression": true
         },
@@ -14607,8 +14605,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin",
-                "RobinPlus"
+                "FemaleRobin"
             ],
             "progression": true
         },
@@ -14618,8 +14615,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin",
-                "RobinPlus"
+                "FemaleRobin"
             ],
             "progression": true
         },
@@ -14629,8 +14625,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin",
-                "RobinPlus"
+                "FemaleRobin"
             ],
             "progression": true
         },
@@ -14640,8 +14635,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin",
-                "RobinPlus"
+                "FemaleRobin"
             ],
             "progression": true
         },
@@ -14651,8 +14645,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14662,8 +14655,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14673,8 +14665,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14684,8 +14675,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14695,8 +14685,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14706,8 +14695,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14717,8 +14705,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14728,8 +14715,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14739,8 +14725,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14750,8 +14735,7 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "MaleRobin",
-                "RobinPlus"
+                "MaleRobin"
             ],
             "progression": true
         },
@@ -14761,8 +14745,67 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin",
-                "RobinPlus"
+                "FemaleRobin"
+            ],
+            "progression": true
+        },
+        {
+            "count": 0,
+            "name": "Robin x Gangrel",
+            "category": [
+                "Character Pairings",
+                "RobinPair",
+                "FemaleRobin"
+            ],
+            "progression": true
+        },
+        {
+            "count": 0,
+            "name": "Robin x Walhart",
+            "category": [
+                "Character Pairings",
+                "RobinPair",
+                "FemaleRobin"
+            ],
+            "progression": true
+        },
+        {
+            "count": 0,
+            "name": "Emmeryn x Robin",
+            "category": [
+                "Character Pairings",
+                "RobinPair",
+                "MaleRobin"
+            ],
+            "progression": true
+        },
+        {
+            "count": 0,
+            "name": "Robin x Yen'fay",
+            "category": [
+                "Character Pairings",
+                "RobinPair",
+                "FemaleRobin"
+            ],
+            "progression": true
+        },
+        {
+            "count": 0,
+            "name": "Aversa x Robin",
+            "category": [
+                "Character Pairings",
+                "RobinPair",
+                "MaleRobin"
+            ],
+            "progression": true
+        },
+        {
+            "count": 0,
+            "name": "Robin x Priam",
+            "category": [
+                "Character Pairings",
+                "RobinPair",
+                "FemaleRobin"
             ],
             "progression": true
         },

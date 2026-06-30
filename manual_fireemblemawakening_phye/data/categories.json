@@ -145,10 +145,6 @@
         "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "Pairings_Local", "!Mad_King_Goal" ],
         "hidden": true
     },
-    "RobinPlus": {
-        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "Robin_PairPlus", "!Mad_King_Goal" ],
-        "hidden": true
-    },
     "SumiaPair": { "hidden": true },
     "OliviaPair": { "hidden": true },
     "MaribellePair": { "hidden": true },

@@ -212,10 +212,26 @@
             "group": "Child Options"
         },
         "Robin_PairPlus": {
+            "type": "Choice",
             "description": [
-                "When enabled, will include the extra Main Characters which only Robin can marry for their potential partners.",
-                "Those being the Future Children, Anna, Tiki, Say'ri, Flavia and Basilio.",
-                "This doesn't include the SpotPass characters which Robin can marry.",
+                "When enabled, will include the extra Characters which only Robin can marry for their potential partners.",
+                "Those being the Future Children, Anna, Tiki, Say'ri, Flavia, Basilio and the Spotpass Characters.",
+                "This will add them progressively future_children > robin_exclusives > spotpass. If you enable spotpass then all of the others will also be included.",
+                "Does nothing if 'Restrict_ChildPairs' is disabled."
+            ],
+            "values": {
+                "disabled": 0,
+                "future_children": 1,
+                "robin_exclusives": 2,
+                "spotpass": 3
+            },
+            "default": 0,
+            "group": "Child Options"
+        },
+        "Robin_2ndGen": {
+            "description": [
+                "When enabled, will make Robin prioritize the 2nd Generation Units as their partner.",
+                "Those being all of the Future Children.",
                 "Does nothing if 'Restrict_ChildPairs' is disabled."
             ],
             "type": "Toggle",

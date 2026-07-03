@@ -145,6 +145,7 @@
         "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "Pairings_Local", "!Mad_King_Goal" ],
         "hidden": true
     },
+    "ChromPair": { "hidden": true },
     "SumiaPair": { "hidden": true },
     "OliviaPair": { "hidden": true },
     "MaribellePair": { "hidden": true },

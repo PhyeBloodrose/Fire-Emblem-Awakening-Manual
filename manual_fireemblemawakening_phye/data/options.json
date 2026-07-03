@@ -197,8 +197,7 @@
                 "Mainly used to decide which pairings to use in 'Restrict_ChildPairs'."
             ],
             "type": "Toggle",
-            "default": true,
-            "group": "Extra Options"
+            "default": true
         },
         "Restrict_ChildPairs": {
             "description": [

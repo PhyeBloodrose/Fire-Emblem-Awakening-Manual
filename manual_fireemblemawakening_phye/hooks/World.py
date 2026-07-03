@@ -95,10 +95,11 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     robin_extra_3 = robin_spotpass and spotpassChara
     robin_2nd = is_option_enabled(multiworld, player, "Robin_2ndGen")
 
+    #Pairings for Female Robin
         
     if not male_avatar:
-       chrom_wives.append("Robin")
        if not robin_2nd:
+          chrom_wives.append("Robin")
           possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry"]
           if robin_extra_1:
              possible_pairings["Robin"] += ["Brady", "Gerome", "Owain", "Inigo", "Yarne", "Laurent"]
@@ -108,34 +109,30 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                    possible_pairings["Robin"] += ["Gangrel", "Walhart", "Yen'fay", "Priam"]
        if robin_2nd:
           possible_pairings["Robin"] = ["Brady", "Gerome", "Owain", "Inigo", "Yarne", "Laurent"]
-                
+    
+    
+    #Function to handle Robin's Wives later during gen
+    def get_robin_wife_pool():
+        if robin_2nd:
+            return robin_extra_wives.copy()
+
+        wives = robin_wives.copy()
+
+        if robin_extra_1:
+            wives.extend(["Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah"])
+
+            if robin_extra_2:
+                wives.extend(["Anna", "Say'ri", "Flavia", "Tiki"])
+
+                if robin_extra_3:
+                    wives.extend(["Aversa", "Emmeryn"])
+
+        return wives
+
     # Generates Parents for children and making sure everyone can be paired 
     def generate_pairings(possible_pairings, rng):
         available_fathers = set()
-        #Chrom Gets his Wife first!
-        chrom_wife = rng.choice(chrom_wives)
-        world.chrom_wife = chrom_wife
-        possible_pairings[chrom_wife] = ["Chrom"]
-        #Then Robin gets his if he is male
-        if male_avatar:
-            if not robin_2nd:
-                robin_wives.remove(chrom_wife)
-                if robin_extra_1:
-                    robin_wives_1 = ["Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah"]
-                    robin_wives.extend(robin_wives_1)
-                    if robin_extra_2:
-                        robin_wives_2 = ["Anna", "Say'ri", "Flavia", "Tiki"]
-                        robin_wives.extend(robin_wives_2)
-                        if robin_extra_3:
-                            robin_wives_3 = ["Aversa", "Emmeryn"]
-                            robin_wives.extend(robin_wives_3)
-                robin_wife = rng.choice(robin_wives)
-            if robin_2nd:
-                robin_wife = rng.choice(robin_extra_wives)
-            possible_pairings[robin_wife] = ["Robin"]
-            world.robin_wife = robin_wife
-        if not male_avatar:
-            world.robin_wife = "None"
+        
         for fathers in possible_pairings.values():
             available_fathers.update(fathers)
         
@@ -197,55 +194,106 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
         if Children:
            if ChildPair:
               generated_pairing_names = set()
+              manual_pairings = ManualPair or []
+              generated_pairings = {}
 
-              if ManualPair:
-                manual_pairings = ManualPair
-                generated_pairings = {}
+              for pairing_name in manual_pairings:
+                   item_config[pairing_name] = {"progression": 1}
+                   generated_pairing_names.add(pairing_name)
 
-                for pairing_name in manual_pairings:
-                    item_config[pairing_name] = {"progression": 1}
-                    generated_pairing_names.add(pairing_name)
+                   mother, father = pairing_name.split(" x ")
+                   generated_pairings[mother] = father
 
-                    mother, father = pairing_name.split(" x ")
-                    generated_pairings[mother] = father
+              used_mothers = set(generated_pairings.keys())
+              used_fathers = set(generated_pairings.values())
 
-                    if father == "Chrom":
-                        world.chrom_wife = mother
-                    if father == "Robin":
-                        world.robin_wife = mother
+              for mother in used_mothers:
+                   possible_pairings.pop(mother, None)
 
-                world.generated_pairings = generated_pairings
+              for mother in possible_pairings:
+                   possible_pairings[mother] = [
+                        father for father in possible_pairings[mother]
+                        if father not in used_fathers
+                   ]
 
-              if not ManualPair:
-                generated_pairings = generate_pairings(possible_pairings,world.random)
-                world.generated_pairings = generated_pairings
+              if "Chrom" not in used_fathers:
+                    available_chrom_wives = [
+                        wife for wife in chrom_wives
+                        if wife not in used_mothers
+                    ]
+
+                    chrom_wife = world.random.choice(available_chrom_wives) if available_chrom_wives else "Maiden"
+
+                    generated_pairings[chrom_wife] = "Chrom"
+                    world.chrom_wife = chrom_wife
+
+                    possible_pairings.pop(chrom_wife, None)
+                    used_mothers.add(chrom_wife)
+                    used_fathers.add("Chrom")
+              else:
+                    world.chrom_wife = next(
+                        mother for mother, father in generated_pairings.items()
+                        if father == "Chrom"
+                    )
+              
+              if male_avatar and "Robin" in used_fathers:
+                    world.robin_wife = next(
+                    mother for mother, father in generated_pairings.items()
+                    if father == "Robin"
+                    )
+
+              if male_avatar and "Robin" not in used_fathers:
+                   robin_pool = get_robin_wife_pool()
+
+                   available_robin_wives = [
+                     wife for wife in robin_pool
+                     if wife not in used_mothers
+                   ]
+
+                   if available_robin_wives:
+                      robin_wife = world.random.choice(available_robin_wives)
+
+                      generated_pairings[robin_wife] = "Robin"
+                      world.robin_wife = robin_wife
+
+                      possible_pairings.pop(robin_wife, None)
+                      used_mothers.add(robin_wife)
+                      used_fathers.add("Robin")
+
+              if not male_avatar:
+                   world.robin_wife = "None"
+              
+              auto_pairings = generate_pairings(possible_pairings, world.random)
+              generated_pairings.update(auto_pairings)
+
+              world.generated_pairings = generated_pairings
                 
-                for mother, father in generated_pairings.items():
-                    pairing_name = f"{mother} x {father}"
-                    generated_pairing_names.add(pairing_name)
-                    item_config[pairing_name] = {"progression": 1}
+              for mother, father in generated_pairings.items():
+                   pairing_name = f"{mother} x {father}"
+                   generated_pairing_names.add(pairing_name)
+                   item_config[pairing_name] = {"progression": 1}
 
               if CharaSpecific:
-                    lucina_mother = world.chrom_wife
-                    owain_father = generated_pairings.get("Lissa")
-                    inigo_father = generated_pairings.get("Olivia")
-                    brady_father = generated_pairings.get("Maribelle")
-                    kjelle_father = generated_pairings.get("Sully")
-                    cynthia_father = generated_pairings.get("Sumia")
-                    severa_father = generated_pairings.get("Cordelia")
-                    gerome_father = generated_pairings.get("Cherche")
-                    morgan_mother = world.robin_wife
-                    morgan_father = generated_pairings.get("Robin")
-                    yarne_father = generated_pairings.get("Panne")
-                    laurent_father = generated_pairings.get("Miriel")
-                    noire_father = generated_pairings.get("Tharja")
-                    nah_father = generated_pairings.get("Nowi")    
-                    taguel_parent = (
-                    world.robin_wife == "Panne" or
-                    generated_pairings.get("Robin") == "Yarne"
-                    )
+                   lucina_mother = world.chrom_wife
+                   owain_father = generated_pairings.get("Lissa")
+                   inigo_father = generated_pairings.get("Olivia")
+                   brady_father = generated_pairings.get("Maribelle")
+                   kjelle_father = generated_pairings.get("Sully")
+                   cynthia_father = generated_pairings.get("Sumia")
+                   severa_father = generated_pairings.get("Cordelia")
+                   gerome_father = generated_pairings.get("Cherche")
+                   morgan_mother = world.robin_wife
+                   morgan_father = generated_pairings.get("Robin")
+                   yarne_father = generated_pairings.get("Panne")
+                   laurent_father = generated_pairings.get("Miriel")
+                   noire_father = generated_pairings.get("Tharja")
+                   nah_father = generated_pairings.get("Nowi")    
+                   taguel_parent = (
+                   world.robin_wife == "Panne" or
+                   generated_pairings.get("Robin") == "Yarne"
+                   )
                     
-                    if lucina_mother != "Robin":
+                   if lucina_mother != "Robin":
                         item_config["Lucina's Tactician"] = {"progression": 0}
                         item_config["Lucina's Grandmaster"] = {"progression": 0}
                         item_config["Lucina's Thief"] = {"progression": 0}
@@ -255,693 +303,693 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                         item_config["Lucina's Sorcerer"] = {"progression": 0}
                         item_config["Lucina's Dark Mage"] = {"progression": 0}                 
                        
-                    if lucina_mother not in {"Robin", "Sumia"}:
+                   if lucina_mother not in {"Robin", "Sumia"}:
                         item_config["Lucina's Knight"] = {"progression": 0}
                         item_config["Lucina's General"] = {"progression": 0}
 
-                    if lucina_mother not in {"Robin", "Sully", "Olivia"}:
+                   if lucina_mother not in {"Robin", "Sully", "Olivia"}:
                         item_config["Lucina's Swordmaster"] = {"progression": 0}
                         item_config["Lucina's Myrmidon"] = {"progression": 0}
                         item_config["Lucina's Assassin"] = {"progression": 0}
                  
-                    if lucina_mother not in {"Robin", "Sumia", "Maribelle", "Olivia"}:
+                   if lucina_mother not in {"Robin", "Sumia", "Maribelle", "Olivia"}:
                         item_config["Lucina's Pegasus Knight"] = {"progression": 0}
                         item_config["Lucina's Falcon Knight"] = {"progression": 0}
                         item_config["Lucina's Dark Flier"] = {"progression": 0}
 
-                    if lucina_mother not in {"Robin", "Sully"}:
+                   if lucina_mother not in {"Robin", "Sully"}:
                         item_config["Lucina's Wyvern Rider"] = {"progression": 0}
                         item_config["Lucina's Wyvern Lord"] = {"progression": 0}
                         item_config["Lucina's Griffon Rider"] = {"progression": 0}
 
-                    if lucina_mother not in {"Robin", "Maribelle"}:
+                   if lucina_mother not in {"Robin", "Maribelle"}:
                         item_config["Lucina's Dark Knight"] = {"progression": 0}
                         item_config["Lucina's Mage"] = {"progression": 0}
                         item_config["Lucina's Troubadour"] = {"progression": 0}
                         item_config["Lucina's Valkyrie"] = {"progression": 0}
 
-                    if lucina_mother not in {"Robin", "Sumia", "Maribelle"}:
+                   if lucina_mother not in {"Robin", "Sumia", "Maribelle"}:
                         item_config["Lucina's Sage"] = {"progression": 0}
                         item_config["Lucina's Cleric"] = {"progression": 0}
                         item_config["Lucina's War Cleric"] = {"progression": 0}
 
-                    if owain_father != "Robin":
+                   if owain_father != "Robin":
                         item_config["Owain's Tactician"] = {"progression": 0}
                         item_config["Owain's Grandmaster"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
+                   if owain_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
                         item_config["Owain's Paladin"] = {"progression": 0}
                         item_config["Owain's Cavalier"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Frederick", "Kellam"}:
+                   if owain_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Owain's Knight"] = {"progression": 0}
                         item_config["Owain's General"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
+                   if owain_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
                         item_config["Owain's Great Knight"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if owain_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Owain's Thief"] = {"progression": 0}
                         item_config["Owain's Trickster"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Vaike", "Donnel"}:
+                   if owain_father not in {"Robin", "Vaike", "Donnel"}:
                         item_config["Owain's Fighter"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
+                   if owain_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
                         item_config["Owain's Hero"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Donnel", "Gregor"}:
+                   if owain_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Owain's Mercenary"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
+                   if owain_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
                         item_config["Owain's Bow Knight"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
+                   if owain_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
                         item_config["Owain's Archer"] = {"progression": 0}
                         item_config["Owain's Sniper"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
+                   if owain_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
                         item_config["Owain's Wyvern Rider"] = {"progression": 0}
                         item_config["Owain's Wyvern Lord"] = {"progression": 0}
                         item_config["Owain's Griffon Rider"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Libra", "Henry"}:
+                   if owain_father not in {"Robin", "Libra", "Henry"}:
                         item_config["Owain's Sorcerer"] = {"progression": 0}
                         item_config["Owain's Dark Mage"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
+                   if owain_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
                         item_config["Owain's Dark Knight"] = {"progression": 0}
 
-                    if owain_father not in {"Robin", "Virion", "Ricken", "Libra"}:
+                   if owain_father not in {"Robin", "Virion", "Ricken", "Libra"}:
                         item_config["Owain's Mage"] = {"progression": 0}
 
-                    if owain_father != "Donnel":
+                   if owain_father != "Donnel":
                         item_config["Owain's Villager"] = {"progression": 0}
 
-                    if inigo_father != "Robin":
+                   if inigo_father != "Robin":
                         item_config["Inigo's Tactician"] = {"progression": 0}
                         item_config["Inigo's Grandmaster"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Chrom"}:
+                   if inigo_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Chrom"}:
                         item_config["Inigo's Paladin"] = {"progression": 0}
                         item_config["Inigo's Cavalier"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Frederick", "Kellam"}:
+                   if inigo_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Inigo's Knight"] = {"progression": 0}
                         item_config["Inigo's General"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam", "Chrom"}:
+                   if inigo_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam", "Chrom"}:
                         item_config["Inigo's Great Knight"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if inigo_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Inigo's Thief"] = {"progression": 0}
                         item_config["Inigo's Trickster"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Vaike", "Donnel"}:
+                   if inigo_father not in {"Robin", "Vaike", "Donnel"}:
                         item_config["Inigo's Fighter"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Virion", "Stahl", "Ricken", "Chrom"}:
+                   if inigo_father not in {"Robin", "Virion", "Stahl", "Ricken", "Chrom"}:
                         item_config["Inigo's Archer"] = {"progression": 0}
                         item_config["Inigo's Sniper"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
+                   if inigo_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
                         item_config["Inigo's Wyvern Rider"] = {"progression": 0}
                         item_config["Inigo's Wyvern Lord"] = {"progression": 0}
                         item_config["Inigo's Griffon Rider"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Libra", "Henry"}:
+                   if inigo_father not in {"Robin", "Libra", "Henry"}:
                         item_config["Inigo's Sorcerer"] = {"progression": 0}
                         item_config["Inigo's Dark Mage"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
+                   if inigo_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
                         item_config["Inigo's Dark Knight"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Virion", "Ricken", "Libra"}:
+                   if inigo_father not in {"Robin", "Virion", "Ricken", "Libra"}:
                         item_config["Inigo's Mage"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
+                   if inigo_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
                         item_config["Inigo's Sage"] = {"progression": 0}
 
-                    if inigo_father not in {"Robin", "Kellam", "Libra"}:
+                   if inigo_father not in {"Robin", "Kellam", "Libra"}:
                         item_config["Inigo's Priest"] = {"progression": 0}
                         item_config["Inigo's War Monk"] = {"progression": 0}
 
-                    if inigo_father != "Donnel":
+                   if inigo_father != "Donnel":
                         item_config["Inigo's Villager"] = {"progression": 0} 
 
-                    if brady_father != "Robin":
+                   if brady_father != "Robin":
                         item_config["Brady's Tactician"] = {"progression": 0}
                         item_config["Brady's Grandmaster"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Frederick", "Kellam"}:
+                   if brady_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Brady's Knight"] = {"progression": 0}
                         item_config["Brady's General"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
+                   if brady_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
                         item_config["Brady's Swordmaster"] = {"progression": 0}
                         item_config["Brady's Myrmidon"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
+                   if brady_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
                         item_config["Brady's Assassin"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if brady_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Brady's Thief"] = {"progression": 0}
                         item_config["Brady's Trickster"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Vaike", "Gaius", "Gregor", "Henry"}:
+                   if brady_father not in {"Robin", "Vaike", "Gaius", "Gregor", "Henry"}:
                         item_config["Brady's Berserker"] = {"progression": 0}
                         item_config["Brady's Barbarian"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Vaike", "Gaius", "Gregor", "Henry", "Donnel"}:
+                   if brady_father not in {"Robin", "Vaike", "Gaius", "Gregor", "Henry", "Donnel"}:
                         item_config["Brady's Warrior"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Vaike", "Donnel"}:
+                   if brady_father not in {"Robin", "Vaike", "Donnel"}:
                         item_config["Brady's Fighter"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
+                   if brady_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
                         item_config["Brady's Hero"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Donnel", "Gregor"}:
+                   if brady_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Brady's Mercenary"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken", "Chrom"}:
+                   if brady_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken", "Chrom"}:
                         item_config["Brady's Bow Knight"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Virion", "Stahl", "Ricken", "Chrom"}:
+                   if brady_father not in {"Robin", "Virion", "Stahl", "Ricken", "Chrom"}:
                         item_config["Brady's Archer"] = {"progression": 0}
                         item_config["Brady's Sniper"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
+                   if brady_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
                         item_config["Brady's Wyvern Rider"] = {"progression": 0}
                         item_config["Brady's Wyvern Lord"] = {"progression": 0}
                         item_config["Brady's Griffon Rider"] = {"progression": 0}
 
-                    if brady_father not in {"Robin", "Libra", "Henry"}:
+                   if brady_father not in {"Robin", "Libra", "Henry"}:
                         item_config["Brady's Sorcerer"] = {"progression": 0}
                         item_config["Brady's Dark Mage"] = {"progression": 0}
 
-                    if brady_father != "Donnel":
+                   if brady_father != "Donnel":
                         item_config["Brady's Villager"] = {"progression": 0}  
 
-                    if kjelle_father != "Robin":
+                   if kjelle_father != "Robin":
                         item_config["Kjelle's Tactician"] = {"progression": 0}
                         item_config["Kjelle's Grandmaster"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if kjelle_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Kjelle's Thief"] = {"progression": 0}
                         item_config["Kjelle's Trickster"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
+                   if kjelle_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
                         item_config["Kjelle's Hero"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Donnel", "Gregor"}:
+                   if kjelle_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Kjelle's Mercenary"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken", "Chrom"}:
+                   if kjelle_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken", "Chrom"}:
                         item_config["Kjelle's Bow Knight"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Virion", "Stahl", "Ricken", "Chrom"}:
+                   if kjelle_father not in {"Robin", "Virion", "Stahl", "Ricken", "Chrom"}:
                         item_config["Kjelle's Archer"] = {"progression": 0}
                         item_config["Kjelle's Sniper"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Donnel", "Gaius"}:
+                   if kjelle_father not in {"Robin", "Donnel", "Gaius"}:
                         item_config["Kjelle's Pegasus Knight"] = {"progression": 0}
                         item_config["Kjelle's Falcon Knight"] = {"progression": 0}
                         item_config["Kjelle's Dark Flier"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Libra", "Henry"}:
+                   if kjelle_father not in {"Robin", "Libra", "Henry"}:
                         item_config["Kjelle's Sorcerer"] = {"progression": 0}
                         item_config["Kjelle's Dark Mage"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
+                   if kjelle_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
                         item_config["Kjelle's Dark Knight"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Virion", "Ricken", "Libra"}:
+                   if kjelle_father not in {"Robin", "Virion", "Ricken", "Libra"}:
                         item_config["Kjelle's Mage"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
+                   if kjelle_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
                         item_config["Kjelle's Sage"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Kellam", "Libra"}:
+                   if kjelle_father not in {"Robin", "Kellam", "Libra"}:
                         item_config["Kjelle's Cleric"] = {"progression": 0}
                         item_config["Kjelle's War Cleric"] = {"progression": 0}
 
-                    if kjelle_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
+                   if kjelle_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
                         item_config["Kjelle's Troubadour"] = {"progression": 0}
                         item_config["Kjelle's Valkyrie"] = {"progression": 0} 
 
-                    if cynthia_father != "Robin":
+                   if cynthia_father != "Robin":
                         item_config["Cynthia's Tactician"] = {"progression": 0}
                         item_config["Cynthia's Grandmaster"] = {"progression": 0}
                         item_config["Cynthia's Mercenary"] = {"progression": 0}
                         item_config["Cynthia's Hero"] = {"progression": 0}
                         item_config["Cynthia's Mage"] = {"progression": 0}
 
-                    if cynthia_father not in {"Robin", "Chrom", "Frederick"}:
+                   if cynthia_father not in {"Robin", "Chrom", "Frederick"}:
                         item_config["Cynthia's Cavalier"] = {"progression": 0}
                         item_config["Cynthia's Paladin"] = {"progression": 0}
 
-                    if cynthia_father not in {"Robin", "Gaius"}:
+                   if cynthia_father not in {"Robin", "Gaius"}:
                         item_config["Cynthia's Myrmidon"] = {"progression": 0}
                         item_config["Cynthia's Swordmaster"] = {"progression": 0}
 
-                    if cynthia_father not in {"Robin", "Gaius", "Henry"}:
+                   if cynthia_father not in {"Robin", "Gaius", "Henry"}:
                         item_config["Cynthia's Assassin"] = {"progression": 0}
                         item_config["Cynthia's Thief"] = {"progression": 0}
                         item_config["Cynthia's Trickster"] = {"progression": 0}
 
-                    if cynthia_father not in {"Robin", "Chrom"}:
+                   if cynthia_father not in {"Robin", "Chrom"}:
                         item_config["Cynthia's Bow Knight"] = {"progression": 0}
                         item_config["Cynthia's Archer"] = {"progression": 0}
                         item_config["Cynthia's Sniper"] = {"progression": 0}
 
-                    if cynthia_father not in {"Robin", "Frederick"}:
+                   if cynthia_father not in {"Robin", "Frederick"}:
                         item_config["Cynthia's Wyvern Rider"] = {"progression": 0}
                         item_config["Cynthia's Wyvern Lord"] = {"progression": 0}
                         item_config["Cynthia's Griffon Rider"] = {"progression": 0}
 
-                    if cynthia_father not in {"Robin", "Henry"}:
+                   if cynthia_father not in {"Robin", "Henry"}:
                         item_config["Cynthia's Dark Mage"] = {"progression": 0}
                         item_config["Cynthia's Sorcerer"] = {"progression": 0}
                         item_config["Cynthia's Dark Knight"] = {"progression": 0}
                         item_config["Cynthia's Troubadour"] = {"progression": 0}
                         item_config["Cynthia's Valkyrie"] = {"progression": 0}
 
-                    if severa_father != "Robin":
+                   if severa_father != "Robin":
                         item_config["Severa's Tactician"] = {"progression": 0}
                         item_config["Severa's Grandmaster"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
+                   if severa_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
                         item_config["Severa's Paladin"] = {"progression": 0}
                         item_config["Severa's Cavalier"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
+                   if severa_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
                         item_config["Severa's Great Knight"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Frederick", "Kellam"}:
+                   if severa_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Severa's Knight"] = {"progression": 0}
                         item_config["Severa's General"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
+                   if severa_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
                         item_config["Severa's Swordmaster"] = {"progression": 0}
                         item_config["Severa's Myrmidon"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
+                   if severa_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
                         item_config["Severa's Assassin"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if severa_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Severa's Thief"] = {"progression": 0}
                         item_config["Severa's Trickster"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
+                   if severa_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
                         item_config["Severa's Archer"] = {"progression": 0}
                         item_config["Severa's Sniper"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
+                   if severa_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
                         item_config["Severa's Wyvern Rider"] = {"progression": 0}
                         item_config["Severa's Wyvern Lord"] = {"progression": 0}
                         item_config["Severa's Griffon Rider"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Virion", "Ricken", "Libra"}:
+                   if severa_father not in {"Robin", "Virion", "Ricken", "Libra"}:
                         item_config["Severa's Mage"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
+                   if severa_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
                         item_config["Severa's Sage"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Kellam", "Libra"}:
+                   if severa_father not in {"Robin", "Kellam", "Libra"}:
                         item_config["Severa's Cleric"] = {"progression": 0}
                         item_config["Severa's War Cleric"] = {"progression": 0}
 
-                    if severa_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
+                   if severa_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
                         item_config["Severa's Troubadour"] = {"progression": 0}
                         item_config["Severa's Valkyrie"] = {"progression": 0}
 
-                    if gerome_father != "Robin":
+                   if gerome_father != "Robin":
                         item_config["Gerome's Tactician"] = {"progression": 0}
                         item_config["Gerome's Grandmaster"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
+                   if gerome_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
                         item_config["Gerome's Paladin"] = {"progression": 0}
                         item_config["Gerome's Cavalier"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
+                   if gerome_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
                         item_config["Gerome's Great Knight"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Frederick", "Kellam"}:
+                   if gerome_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Gerome's Knight"] = {"progression": 0}
                         item_config["Gerome's General"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
+                   if gerome_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
                         item_config["Gerome's Swordmaster"] = {"progression": 0}
                         item_config["Gerome's Myrmidon"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
+                   if gerome_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
                         item_config["Gerome's Assassin"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if gerome_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Gerome's Thief"] = {"progression": 0}
                         item_config["Gerome's Trickster"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Vaike", "Gaius", "Gregor", "Henry"}:
+                   if gerome_father not in {"Robin", "Vaike", "Gaius", "Gregor", "Henry"}:
                         item_config["Gerome's Berserker"] = {"progression": 0}
                         item_config["Gerome's Barbarian"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Donnel", "Gregor"}:
+                   if gerome_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Gerome's Mercenary"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
+                   if gerome_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
                         item_config["Gerome's Bow Knight"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
+                   if gerome_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
                         item_config["Gerome's Archer"] = {"progression": 0}
                         item_config["Gerome's Sniper"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Libra", "Henry"}:
+                   if gerome_father not in {"Robin", "Libra", "Henry"}:
                         item_config["Gerome's Sorcerer"] = {"progression": 0}
                         item_config["Gerome's Dark Mage"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
+                   if gerome_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
                         item_config["Gerome's Dark Knight"] = {"progression": 0}
 
-                    if gerome_father not in {"Robin", "Virion", "Ricken", "Libra"}:
+                   if gerome_father not in {"Robin", "Virion", "Ricken", "Libra"}:
                         item_config["Gerome's Mage"] = {"progression": 0}
 
-                    if gerome_father != "Donnel":
+                   if gerome_father != "Donnel":
                         item_config["Gerome's Villager"] = {"progression": 0} 
 
-                    if morgan_mother not in {"Nowi", "Nah", "Tiki"}:
+                   if morgan_mother not in {"Nowi", "Nah", "Tiki"}:
                         item_config["Morgan's Manakete"] = {"progression": 0}  
 
-                    if morgan_father != "Donnel":
+                   if morgan_father != "Donnel":
                         item_config["Morgan's Villager"] = {"progression": 0}  
 
-                    if not taguel_parent:
+                   if not taguel_parent:
                         item_config["Morgan's Taguel"] = {"progression": 0}
 
-                    if yarne_father != "Robin":
+                   if yarne_father != "Robin":
                         item_config["Yarne's Tactician"] = {"progression": 0}
                         item_config["Yarne's Grandmaster"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
+                   if yarne_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
                         item_config["Yarne's Paladin"] = {"progression": 0}
                         item_config["Yarne's Cavalier"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
+                   if yarne_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
                         item_config["Yarne's Great Knight"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Frederick", "Kellam"}:
+                   if yarne_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Yarne's Knight"] = {"progression": 0}
                         item_config["Yarne's General"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
+                   if yarne_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
                         item_config["Yarne's Swordmaster"] = {"progression": 0}
                         item_config["Yarne's Myrmidon"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Vaike", "Donnel"}:
+                   if yarne_father not in {"Robin", "Vaike", "Donnel"}:
                         item_config["Yarne's Fighter"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
+                   if yarne_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
                         item_config["Yarne's Hero"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Donnel", "Gregor"}:
+                   if yarne_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Yarne's Mercenary"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
+                   if yarne_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
                         item_config["Yarne's Bow Knight"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
+                   if yarne_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
                         item_config["Yarne's Archer"] = {"progression": 0}
                         item_config["Yarne's Sniper"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
+                   if yarne_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
                         item_config["Yarne's Wyvern Rider"] = {"progression": 0}
                         item_config["Yarne's Wyvern Lord"] = {"progression": 0}
                         item_config["Yarne's Griffon Rider"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Libra", "Henry"}:
+                   if yarne_father not in {"Robin", "Libra", "Henry"}:
                         item_config["Yarne's Sorcerer"] = {"progression": 0}
                         item_config["Yarne's Dark Mage"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
+                   if yarne_father not in {"Robin", "Virion", "Ricken", "Libra", "Henry"}:
                         item_config["Yarne's Dark Knight"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Virion", "Ricken", "Libra"}:
+                   if yarne_father not in {"Robin", "Virion", "Ricken", "Libra"}:
                         item_config["Yarne's Mage"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
+                   if yarne_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
                         item_config["Yarne's Sage"] = {"progression": 0}
 
-                    if yarne_father not in {"Robin", "Kellam", "Libra"}:
+                   if yarne_father not in {"Robin", "Kellam", "Libra"}:
                         item_config["Yarne's Priest"] = {"progression": 0}
                         item_config["Yarne's War Monk"] = {"progression": 0}
 
-                    if yarne_father != "Donnel":
+                   if yarne_father != "Donnel":
                         item_config["Yarne's Villager"] = {"progression": 0}  
 
-                    if laurent_father != "Robin":
+                   if laurent_father != "Robin":
                         item_config["Laurent's Tactician"] = {"progression": 0}
                         item_config["Laurent's Grandmaster"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
+                   if laurent_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
                         item_config["Laurent's Paladin"] = {"progression": 0}
                         item_config["Laurent's Cavalier"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
+                   if laurent_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
                         item_config["Laurent's Great Knight"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Frederick", "Kellam"}:
+                   if laurent_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Laurent's Knight"] = {"progression": 0}
                         item_config["Laurent's General"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
+                   if laurent_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
                         item_config["Laurent's Swordmaster"] = {"progression": 0}
                         item_config["Laurent's Myrmidon"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
+                   if laurent_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
                         item_config["Laurent's Assassin"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if laurent_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Laurent's Thief"] = {"progression": 0}
                         item_config["Laurent's Trickster"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Vaike", "Donnel"}:
+                   if laurent_father not in {"Robin", "Vaike", "Donnel"}:
                         item_config["Laurent's Fighter"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
+                   if laurent_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
                         item_config["Laurent's Hero"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Donnel", "Gregor"}:
+                   if laurent_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Laurent's Mercenary"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
+                   if laurent_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
                         item_config["Laurent's Bow Knight"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
+                   if laurent_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
                         item_config["Laurent's Archer"] = {"progression": 0}
                         item_config["Laurent's Sniper"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
+                   if laurent_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
                         item_config["Laurent's Wyvern Rider"] = {"progression": 0}
                         item_config["Laurent's Wyvern Lord"] = {"progression": 0}
                         item_config["Laurent's Griffon Rider"] = {"progression": 0}
 
-                    if laurent_father not in {"Robin", "Kellam", "Libra"}:
+                   if laurent_father not in {"Robin", "Kellam", "Libra"}:
                         item_config["Laurent's Priest"] = {"progression": 0}
                         item_config["Laurent's War Monk"] = {"progression": 0}
 
-                    if laurent_father != "Donnel":
+                   if laurent_father != "Donnel":
                         item_config["Laurent's Villager"] = {"progression": 0}  
 
-                    if noire_father != "Robin":
+                   if noire_father != "Robin":
                         item_config["Noire's Tactician"] = {"progression": 0}
                         item_config["Noire's Grandmaster"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
+                   if noire_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
                         item_config["Noire's Paladin"] = {"progression": 0}
                         item_config["Noire's Cavalier"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
+                   if noire_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
                         item_config["Noire's Swordmaster"] = {"progression": 0}
                         item_config["Noire's Myrmidon"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
+                   if noire_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
                         item_config["Noire's Assassin"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if noire_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Noire's Thief"] = {"progression": 0}
                         item_config["Noire's Trickster"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
+                   if noire_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
                         item_config["Noire's Hero"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Donnel", "Gregor"}:
+                   if noire_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Noire's Mercenary"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Donnel", "Gaius"}:
+                   if noire_father not in {"Robin", "Donnel", "Gaius"}:
                         item_config["Noire's Pegasus Knight"] = {"progression": 0}
                         item_config["Noire's Falcon Knight"] = {"progression": 0}
                         item_config["Noire's Dark Flier"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
+                   if noire_father not in {"Robin", "Frederick", "Virion", "Lon'qu"}:
                         item_config["Noire's Wyvern Rider"] = {"progression": 0}
                         item_config["Noire's Wyvern Lord"] = {"progression": 0}
                         item_config["Noire's Griffon Rider"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Virion", "Ricken", "Libra"}:
+                   if noire_father not in {"Robin", "Virion", "Ricken", "Libra"}:
                         item_config["Noire's Mage"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
+                   if noire_father not in {"Robin", "Virion", "Ricken", "Libra", "Kellam"}:
                         item_config["Noire's Sage"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Kellam", "Libra"}:
+                   if noire_father not in {"Robin", "Kellam", "Libra"}:
                         item_config["Noire's Cleric"] = {"progression": 0}
                         item_config["Noire's War Cleric"] = {"progression": 0}
 
-                    if noire_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
+                   if noire_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
                         item_config["Noire's Troubadour"] = {"progression": 0}
                         item_config["Noire's Valkyrie"] = {"progression": 0}  
 
-                    if nah_father != "Robin":
+                   if nah_father != "Robin":
                         item_config["Nah's Tactician"] = {"progression": 0}
                         item_config["Nah's Grandmaster"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
+                   if nah_father not in {"Robin", "Frederick", "Stahl", "Ricken"}:
                         item_config["Nah's Paladin"] = {"progression": 0}
                         item_config["Nah's Cavalier"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
+                   if nah_father not in {"Robin", "Frederick", "Stahl", "Ricken", "Kellam"}:
                         item_config["Nah's Great Knight"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Frederick", "Kellam"}:
+                   if nah_father not in {"Robin", "Frederick", "Kellam"}:
                         item_config["Nah's Knight"] = {"progression": 0}
                         item_config["Nah's General"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
+                   if nah_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor"}:
                         item_config["Nah's Swordmaster"] = {"progression": 0}
                         item_config["Nah's Myrmidon"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
+                   if nah_father not in {"Robin", "Stahl", "Lon'qu", "Gaius", "Gregor", "Vaike", "Kellam", "Gaius", "Henry"}:
                         item_config["Nah's Assassin"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
+                   if nah_father not in {"Robin", "Vaike", "Kellam", "Lon'qu", "Gaius", "Henry"}:
                         item_config["Nah's Thief"] = {"progression": 0}
                         item_config["Nah's Trickster"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
+                   if nah_father not in {"Robin", "Vaike", "Donnel", "Gregor"}:
                         item_config["Nah's Hero"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Donnel", "Gregor"}:
+                   if nah_father not in {"Robin", "Donnel", "Gregor"}:
                         item_config["Nah's Mercenary"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
+                   if nah_father not in {"Robin", "Donnel", "Gregor", "Virion", "Stahl", "Ricken"}:
                         item_config["Nah's Bow Knight"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
+                   if nah_father not in {"Robin", "Virion", "Stahl", "Ricken"}:
                         item_config["Nah's Archer"] = {"progression": 0}
                         item_config["Nah's Sniper"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Donnel", "Gaius"}:
+                   if nah_father not in {"Robin", "Donnel", "Gaius"}:
                         item_config["Nah's Pegasus Knight"] = {"progression": 0}
                         item_config["Nah's Falcon Knight"] = {"progression": 0}
                         item_config["Nah's Dark Flier"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Libra", "Henry"}:
+                   if nah_father not in {"Robin", "Libra", "Henry"}:
                         item_config["Nah's Sorcerer"] = {"progression": 0}
                         item_config["Nah's Dark Mage"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Kellam", "Libra"}:
+                   if nah_father not in {"Robin", "Kellam", "Libra"}:
                         item_config["Nah's Cleric"] = {"progression": 0}
                         item_config["Nah's War Cleric"] = {"progression": 0}
 
-                    if nah_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
+                   if nah_father not in {"Robin", "Donnel", "Gregor", "Henry"}:
                         item_config["Nah's Troubadour"] = {"progression": 0}
                         item_config["Nah's Valkyrie"] = {"progression": 0}  
 
-                    StartClass = is_option_enabled(multiworld, player, "Character_Specific_Classes_Include_Start_Class")
+                   StartClass = is_option_enabled(multiworld, player, "Character_Specific_Classes_Include_Start_Class")
 
-                    if not StartClass:
-                        if morgan_mother in {"Olivia", "Lucina"}:
+                   if not StartClass:
+                       if morgan_mother in {"Olivia", "Lucina"}:
                             item_config["Morgan's Tactician"] = {"progression": 0}
 
-                        if morgan_father in {"Chrom", "Walhart"}:
+                       if morgan_father in {"Chrom", "Walhart"}:
                             item_config["Morgan's Tactician"] = {"progression": 0}
 
-                        if morgan_mother in {"Lissa", "Emmeryn"}:
+                       if morgan_mother in {"Lissa", "Emmeryn"}:
                             item_config["Morgan's Cleric"] = {"progression": 0}
 
-                        if morgan_father in {"Frederick", "Stahl"}:
+                       if morgan_father in {"Frederick", "Stahl"}:
                             item_config["Morgan's Cavalier"] = {"progression": 0}
 
-                        if morgan_mother == "Sully":
+                       if morgan_mother == "Sully":
                             item_config["Morgan's Cavalier"] = {"progression": 0}
 
-                        if morgan_father == "Virion":
+                       if morgan_father == "Virion":
                             item_config["Morgan's Archer"] = {"progression": 0}
 
-                        if morgan_mother == "Noire":
+                       if morgan_mother == "Noire":
                             item_config["Morgan's Archer"] = {"progression": 0}
 
-                        if morgan_father in {"Vaike", "Basilio"}:
+                       if morgan_father in {"Vaike", "Basilio"}:
                             item_config["Morgan's Fighter"] = {"progression": 0}
 
-                        if morgan_father in {"Ricken", "Laurent"}:
+                       if morgan_father in {"Ricken", "Laurent"}:
                             item_config["Morgan's Mage"] = {"progression": 0}
 
-                        if morgan_mother == "Miriel":
+                       if morgan_mother == "Miriel":
                             item_config["Morgan's Mage"] = {"progression": 0}
 
-                        if morgan_mother in {"Sumia", "Cordelia", "Aversa", "Cynthia"}:
+                       if morgan_mother in {"Sumia", "Cordelia", "Aversa", "Cynthia"}:
                             item_config["Morgan's Pegasus Knight"] = {"progression": 0}
 
-                        if morgan_mother == "Kjelle":
+                       if morgan_mother == "Kjelle":
                             item_config["Morgan's Knight"] = {"progression": 0}
 
-                        if morgan_father == "Kellam":
+                       if morgan_father == "Kellam":
                             item_config["Morgan's Knight"] = {"progression": 0}
 
-                        if morgan_father == "Donnel":
+                       if morgan_father == "Donnel":
                             item_config["Morgan's Villager"] = {"progression": 0}
 
-                        if morgan_father in {"Lon'qu", "Yen'fay", "Owain"}:
+                       if morgan_father in {"Lon'qu", "Yen'fay", "Owain"}:
                             item_config["Morgan's Myrmidon"] = {"progression": 0}
 
-                        if morgan_mother == "Say'ri":
+                       if morgan_mother == "Say'ri":
                             item_config["Morgan's Myrmidon"] = {"progression": 0}
 
-                        if morgan_mother == "Maribelle":
+                       if morgan_mother == "Maribelle":
                             item_config["Morgan's Troubadour"] = {"progression": 0}
 
-                        if taguel_parent:
+                       if taguel_parent:
                             item_config["Morgan's Taguel"] = {"progression": 0}
 
-                        if morgan_father in {"Gaius", "Gangrel"}:
+                       if morgan_father in {"Gaius", "Gangrel"}:
                             item_config["Morgan's Thief"] = {"progression": 0}
 
-                        if morgan_mother == "Anna":
+                       if morgan_mother == "Anna":
                             item_config["Morgan's Thief"] = {"progression": 0}
 
-                        if morgan_father in {"Gregor", "Priam", "Inigo"}:
+                       if morgan_father in {"Gregor", "Priam", "Inigo"}:
                             item_config["Morgan's Mercenary"] = {"progression": 0}
 
-                        if morgan_mother in {"Flavia", "Severa"}:
+                       if morgan_mother in {"Flavia", "Severa"}:
                             item_config["Morgan's Mercenary"] = {"progression": 0}
 
-                        if morgan_mother in {"Nowi", "Tiki", "Nah"}:
+                       if morgan_mother in {"Nowi", "Tiki", "Nah"}:
                             item_config["Morgan's Manakete"] = {"progression": 0}
 
-                        if morgan_father in {"Libra", "Brady"}:
+                       if morgan_father in {"Libra", "Brady"}:
                             item_config["Morgan's Priest"] = {"progression": 0}
 
-                        if morgan_mother == "Tharja":
+                       if morgan_mother == "Tharja":
                             item_config["Morgan's Dark Mage"] = {"progression": 0}
 
-                        if morgan_father == "Henry":
+                       if morgan_father == "Henry":
                             item_config["Morgan's Dark Mage"] = {"progression": 0}
 
-                        if morgan_mother == "Cherche":
+                       if morgan_mother == "Cherche":
                             item_config["Morgan's Wyvern Rider"] = {"progression": 0}
 
-                        if morgan_father == "Gerome":
+                       if morgan_father == "Gerome":
                             item_config["Morgan's Wyvern Rider"] = {"progression": 0}
 
     return item_config

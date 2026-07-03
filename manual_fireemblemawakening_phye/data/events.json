@@ -332,7 +332,7 @@
         },
         {
             "name": "Lucina Parents",
-            "requires": "|Chrom Access| AND (((|Robin x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin (Avatar)|) OR ((|Olivia x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Olivia|) OR ((|Sumia x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sumia|) OR ((|Sully x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sully|) OR ((|Maribelle x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Maribelle|)"
+            "requires": "|Chrom Access| AND (((|Robin x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Robin (Avatar)|) OR ((|Olivia x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Olivia|) OR ((|Sumia x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sumia|) OR ((|Sully x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Sully|) OR ((|Maribelle x Chrom| OR {YamlDisabled(Restrict_ChildPairs)}) AND |Maribelle|) OR |Maiden x Chrom|)"
         },
         {
             "name": "Owain Parents",

@@ -1866,7 +1866,7 @@
         "connects_to": [
             "Taguel",
             "Panne_Bride",
-            "Panne_Promoted"
+            "Panne_SecondSeal"
         ],
         "requires": "|Panne| AND {OptOne(|Panne's Taguel|)} AND |Taguel Class|"
     },
@@ -1876,50 +1876,63 @@
         ],
         "requires": "{OptOne(|Panne's Bride|)} AND |Bride Class|"
     },
-    "Panne_Promoted": {
+    "Panne_SecondSeal": {
         "connects_to": [
             "Panne_Thief",
-            "Panne_Assassin",
-            "Panne_Trickster",
-            "Panne_WyvernRider",
-            "Panne_WyvernLord",
-            "Panne_GriffonRider"
+            "Panne_WyvernRider"
         ],
         "requires": "|Sealed|"
     },
+    "Panne_Promoted": {
+        "connects_to": [
+            "Panne_Assassin",
+            "Panne_Trickster",
+            "Panne_WyvernLord",
+            "Panne_GriffonRider"
+        ],
+        "requires": ""
+    },
     "Panne_Thief": {
         "connects_to": [
-            "Thief"
+            "Thief",
+            "Panne_Assassin",
+            "Panne_Trickster"
         ],
         "requires": "{OptOne(|Panne's Thief|)} AND |Thief Class|"
     },
     "Panne_Assassin": {
         "connects_to": [
-            "Assassin"
+            "Assassin",
+            "Panne_Promoted"
         ],
         "requires": "{OptOne(|Panne's Assassin|)} AND |Assassin Class|"
     },
     "Panne_Trickster": {
         "connects_to": [
-            "Trickster"
+            "Trickster",
+            "Panne_Promoted"
         ],
         "requires": "{OptOne(|Panne's Trickster|)} AND |Trickster Class|"
     },
     "Panne_WyvernRider": {
         "connects_to": [
-            "Wyvern Rider"
+            "Wyvern Rider",
+            "Panne_WyvernLord",
+            "Panne_GriffonRider"
         ],
         "requires": "{OptOne(|Panne's Wyvern Rider|)} AND |Wyvern Rider Class|"
     },
     "Panne_WyvernLord": {
         "connects_to": [
-            "Wyvern Lord"
+            "Wyvern Lord",
+            "Panne_Promoted"
         ],
         "requires": "{OptOne(|Panne's Wyvern Lord|)} AND |Wyvern Lord Class|"
     },
     "Panne_GriffonRider": {
         "connects_to": [
-            "Griffon Rider"
+            "Griffon Rider",
+            "Panne_Promoted"
         ],
         "requires": "{OptOne(|Panne's Griffon Rider|)} AND |Griffon Rider Class|"
     },
@@ -2176,7 +2189,7 @@
         "connects_to": [
             "Manakete",
             "Nowi_Bride",
-            "Nowi_Promoted"
+            "Nowi_SecondSeal"
         ],
         "requires": "|Nowi| AND {OptOne(|Nowi's Manakete|)} AND |Manakete Class|"
     },
@@ -2186,50 +2199,63 @@
         ],
         "requires": "{OptOne(|Nowi's Bride|)} AND |Bride Class|"
     },
-    "Nowi_Promoted": {
+    "Nowi_SecondSeal": {
         "connects_to": [
             "Nowi_Mage",
-            "Nowi_DarkKnight",
-            "Nowi_Sage",
-            "Nowi_WyvernRider",
-            "Nowi_WyvernLord",
-            "Nowi_GriffonRider"
+            "Nowi_WyvernRider"
         ],
         "requires": "|Sealed|"
     },
+    "Nowi_Promoted": {
+        "connects_to": [
+            "Nowi_DarkKnight",
+            "Nowi_Sage",
+            "Nowi_WyvernLord",
+            "Nowi_GriffonRider"
+        ],
+        "requires": ""
+    },
     "Nowi_Mage": {
         "connects_to": [
-            "Mage"
+            "Mage",
+            "Nowi_DarkKnight",
+            "Nowi_Sage"
         ],
         "requires": "{OptOne(|Nowi's Mage|)} AND |Mage Class|"
     },
     "Nowi_DarkKnight": {
         "connects_to": [
-            "Dark Knight"
+            "Dark Knight",
+            "Nowi_Promoted"
         ],
         "requires": "{OptOne(|Nowi's Dark Knight|)} AND |Dark Knight Class|"
     },
     "Nowi_Sage": {
         "connects_to": [
-            "Sage"
+            "Sage",
+            "Nowi_Promoted"
         ],
         "requires": "{OptOne(|Nowi's Sage|)} AND |Sage Class|"
     },
     "Nowi_WyvernRider": {
         "connects_to": [
-            "Wyvern Rider"
+            "Wyvern Rider",
+            "Nowi_WyvernLord",
+            "Nowi_GriffonRider"
         ],
         "requires": "{OptOne(|Nowi's Wyvern Rider|)} AND |Wyvern Rider Class|"
     },
     "Nowi_WyvernLord": {
         "connects_to": [
-            "Wyvern Lord"
+            "Wyvern Lord",
+            "Nowi_Promoted"
         ],
         "requires": "{OptOne(|Nowi's Wyvern Lord|)} AND |Wyvern Lord Class|"
     },
     "Nowi_GriffonRider": {
         "connects_to": [
-            "Griffon Rider"
+            "Griffon Rider",
+            "Nowi_Promoted"
         ],
         "requires": "{OptOne(|Nowi's Griffon Rider|)} AND |Griffon Rider Class|"
     },
@@ -2459,7 +2485,7 @@
         "connects_to": [
             "Dancer",
             "Olivia_Bride",
-            "Olivia_Promoted"
+            "Olivia_SecondSeal"
         ],
         "requires": "|Olivia| AND {OptOne(|Olivia's Dancer|)} AND |Dancer Class|"
     },
@@ -2469,50 +2495,63 @@
         ],
         "requires": "{OptOne(|Olivia's Bride|)} AND |Bride Class|"
     },
-    "Olivia_Promoted": {
+    "Olivia_SecondSeal": {
         "connects_to": [
             "Olivia_Myrmidon",
-            "Olivia_Swordmaster",
-            "Olivia_Assassin",
-            "Olivia_PegasusKnight",
-            "Olivia_FalconKnight",
-            "Olivia_DarkFlier"
+            "Olivia_PegasusKnight"
         ],
         "requires": "|Sealed|"
     },
+    "Olivia_Promoted": {
+        "connects_to": [
+            "Olivia_Swordmaster",
+            "Olivia_Assassin",
+            "Olivia_FalconKnight",
+            "Olivia_DarkFlier"
+        ],
+        "requires": ""
+    },
     "Olivia_Myrmidon": {
         "connects_to": [
-            "Myrmidon"
+            "Myrmidon",
+            "Olivia_Swordmaster",
+            "Olivia_Assassin"
         ],
         "requires": "{OptOne(|Olivia's Myrmidon|)} AND |Myrmidon Class|"
     },
     "Olivia_Swordmaster": {
         "connects_to": [
-            "Swordmaster"
+            "Swordmaster",
+            "Olivia_Promoted"
         ],
         "requires": "{OptOne(|Olivia's Swordmaster|)} AND |Swordmaster Class|"
     },
     "Olivia_Assassin": {
         "connects_to": [
-            "Assassin"
+            "Assassin",
+            "Olivia_Promoted"
         ],
         "requires": "{OptOne(|Olivia's Assassin|)} AND |Assassin Class|"
     },
     "Olivia_PegasusKnight": {
         "connects_to": [
-            "Pegasus Knight"
+            "Pegasus Knight",
+            "Olivia_FalconKnight",
+            "Olivia_DarkFlier"
         ],
         "requires": "{OptOne(|Olivia's Pegasus Knight|)} AND |Pegasus Knight Class|"
     },
     "Olivia_FalconKnight": {
         "connects_to": [
-            "Falcon Knight"
+            "Falcon Knight",
+            "Olivia_Promoted"
         ],
         "requires": "{OptOne(|Olivia's Falcon Knight|)} AND |Falcon Knight Class|"
     },
     "Olivia_DarkFlier": {
         "connects_to": [
-            "Dark Flier"
+            "Dark Flier",
+            "Olivia_Promoted"
         ],
         "requires": "{OptOne(|Olivia's Dark Flier|)} AND |Dark Flier Class|"
     },
@@ -2759,7 +2798,7 @@
         "connects_to": [
             "Manakete",
             "Tiki_Bride",
-            "Tiki_Promoted"
+            "Tiki_SecondSeal"
         ],
         "requires": "|Tiki| AND {OptOne(|Tiki's Manakete|)} AND |Manakete Class|"
     },
@@ -2769,50 +2808,63 @@
         ],
         "requires": "{OptOne(|Tiki's Bride|)} AND |Bride Class|"
     },
-    "Tiki_Promoted": {
+    "Tiki_SecondSeal": {
         "connects_to": [
             "Tiki_WyvernRider",
-            "Tiki_WyvernLord",
-            "Tiki_GriffonRider",
-            "Tiki_Mage",
-            "Tiki_DarkKnight",
-            "Tiki_Sage"
+            "Tiki_Mage"
         ],
         "requires": "|Sealed|"
     },
+    "Tiki_Promoted": {
+        "connects_to": [
+            "Tiki_WyvernLord",
+            "Tiki_GriffonRider",
+            "Tiki_DarkKnight",
+            "Tiki_Sage"
+        ],
+        "requires": ""
+    },
     "Tiki_WyvernRider": {
         "connects_to": [
-            "Wyvern Rider"
+            "Wyvern Rider",
+            "Tiki_WyvernLord",
+            "Tiki_GriffonRider"
         ],
         "requires": "{OptOne(|Tiki's Wyvern Rider|)} AND |Wyvern Rider Class|"
     },
     "Tiki_WyvernLord": {
         "connects_to": [
-            "Wyvern Lord"
+            "Wyvern Lord",
+            "Tiki_Promoted"
         ],
         "requires": "{OptOne(|Tiki's Wyvern Lord|)} AND |Wyvern Lord Class|"
     },
     "Tiki_GriffonRider": {
         "connects_to": [
-            "Griffon Rider"
+            "Griffon Rider",
+            "Tiki_Promoted"
         ],
         "requires": "{OptOne(|Tiki's Griffon Rider|)} AND |Griffon Rider Class|"
     },
     "Tiki_Mage": {
         "connects_to": [
-            "Mage"
+            "Mage",
+            "Tiki_DarkKnight",
+            "Tiki_Sage"
         ],
         "requires": "{OptOne(|Tiki's Mage|)} AND |Mage Class|"
     },
     "Tiki_DarkKnight": {
         "connects_to": [
-            "Dark Knight"
+            "Dark Knight",
+            "Tiki_Promoted"
         ],
         "requires": "{OptOne(|Tiki's Dark Knight|)} AND |Dark Knight Class|"
     },
     "Tiki_Sage": {
         "connects_to": [
-            "Sage"
+            "Sage",
+            "Tiki_Promoted"
         ],
         "requires": "{OptOne(|Tiki's Sage|)} AND |Sage Class|"
     },
@@ -5745,7 +5797,8 @@
             "Morgan_DarkMage_Start",
             "Morgan_WyvernRider_Start",
             "Morgan_Bride",
-            "Morgan_DreadFighter"
+            "Morgan_DreadFighter",
+            "Morgan_SecondSeal"
         ],
         "requires": "|Morgan|"
     },
@@ -5753,7 +5806,7 @@
         "connects_to": [
             "Morgan_Tactician"
         ],
-        "requires": "|Robin x Chrom| OR |Olivia x Robin| OR |Lucina x Robin|"
+        "requires": "|Robin x Chrom| OR |Olivia x Robin| OR |Lucina x Robin| OR {YamlEnabled(Disable_AvatarLogic)}"
     },
     "Morgan_Tactician": {
         "connects_to": [
@@ -5959,8 +6012,7 @@
     },
     "Morgan_Villager": {
         "connects_to": [
-            "Villager",
-            "Morgan_Promoted"
+            "Villager"
         ],
         "requires": "{OptOne(|Morgan's Villager|)} AND |Villager Class|"
     },
@@ -6021,8 +6073,7 @@
     },
     "Morgan_Taguel": {
         "connects_to": [
-            "Taguel",
-            "Morgan_Promoted"
+            "Taguel"
         ],
         "requires": "{OptOne(|Morgan's Taguel|)} AND |Taguel Class|"
     },
@@ -6069,8 +6120,7 @@
     },
     "Morgan_Manakete": {
         "connects_to": [
-            "Manakete",
-            "Morgan_Promoted"
+            "Manakete"
         ],
         "requires": "{OptOne(|Morgan's Manakete|)} AND |Manakete Class|"
     },
@@ -6156,6 +6206,23 @@
         ],
         "requires": "{YamlDisabled(Disable_AvatarLogic)} AND {YamlDisabled(Male_Avatar)} AND {OptOne(|Morgan's Dread Fighter|)} AND |Dread Fighter Class|"
     },
+    "Morgan_SecondSeal": {
+        "connects_to": [
+            "MorganMale_Base",
+            "MorganFemale_Base",
+            "Morgan_Tactician",
+            "Morgan_Cavalier",
+            "Morgan_Knight",
+            "Morgan_Myrmidon",
+            "Morgan_Mercenary",
+            "Morgan_Archer",
+            "Morgan_Thief",
+            "Morgan_WyvernRider",
+            "Morgan_Mage",
+            "Morgan_DarkMage"
+        ],
+        "requires": "|Sealed| AND {YamlDisabled(Disable_AvatarLogic)}"
+    },
     "Morgan_Promoted": {
         "connects_to": [
             "Morgan_Grandmaster",
@@ -6173,41 +6240,41 @@
             "Morgan_Sorcerer",
             "Morgan_DarkKnight",
             "Morgan_Sage",
-            "MorganMale",
-            "MorganFemale",
-            "Morgan_Tactician",
-            "Morgan_Cavalier",
-            "Morgan_Knight",
-            "Morgan_Myrmidon",
-            "Morgan_Mercenary",
-            "Morgan_Archer",
-            "Morgan_Thief",
-            "Morgan_WyvernRider",
-            "Morgan_Mage",
-            "Morgan_DarkMage"
+            "MorganMale_Promoted",
+            "MorganFemale_Promoted"
         ],
         "requires": "|Sealed|"
     },
-    "MorganMale": {
+    "MorganMale_Base": {
         "connects_to": [
-            "Morgan_Berserker",
-            "Morgan_Warrior",
-            "Morgan_WarMonk",
             "Morgan_Fighter",
             "Morgan_Barbarian",
             "Morgan_Priest"
         ],
         "requires": "{YamlDisabled(Male_Avatar)}"
     },
-    "MorganFemale": {
+    "MorganMale_Promoted": {
+        "connects_to": [
+            "Morgan_Berserker",
+            "Morgan_Warrior",
+            "Morgan_WarMonk"
+        ],
+        "requires": "{YamlDisabled(Male_Avatar)}"
+    },
+    "MorganFemale_Base": {
+        "connects_to": [
+            "Morgan_PegasusKnight",
+            "Morgan_Cleric",
+            "Morgan_Troubadour"
+        ],
+        "requires": "{YamlEnabled(Male_Avatar)}"
+    },
+    "MorganFemale_Promoted": {
         "connects_to": [
             "Morgan_FalconKnight",
             "Morgan_DarkFlier",
             "Morgan_WarCleric",
-            "Morgan_Valkyrie",
-            "Morgan_PegasusKnight",
-            "Morgan_Cleric",
-            "Morgan_Troubadour"
+            "Morgan_Valkyrie"
         ],
         "requires": "{YamlEnabled(Male_Avatar)}"
     },
@@ -6227,7 +6294,7 @@
         "connects_to": [
             "Taguel",
             "Yarne_DreadFighter",
-            "Yarne_Promoted"
+            "Yarne_SecondSeal"
         ],
         "requires": "|Yarne| AND {OptOne(|Yarne's Taguel|)} AND |Taguel Class|"
     },
@@ -6237,55 +6304,69 @@
         ],
         "requires": "{OptOne(|Yarne's Dread Fighter|)} AND |Dread Fighter Class|"
     },
-    "Yarne_Promoted": {
+    "Yarne_SecondSeal": {
         "connects_to": [
-            "Yarne_Parent_Promoted",
+            "Yarne_Parent_SecondSeal",
             "Yarne_Thief",
-            "Yarne_Assassin",
-            "Yarne_Trickster",
-            "Yarne_Barbarian",
-            "Yarne_Berserker",
-            "Yarne_Warrior"
+            "Yarne_Barbarian"
         ],
         "requires": "|Sealed|"
     },
+    "Yarne_Promoted": {
+        "connects_to": [
+            "Yarne_Parent_Promoted",
+            "Yarne_Assassin",
+            "Yarne_Trickster",
+            "Yarne_Berserker",
+            "Yarne_Warrior"
+        ],
+        "requires": ""
+    },
     "Yarne_Thief": {
         "connects_to": [
-            "Thief"
+            "Thief",
+            "Yarne_Assassin",
+            "Yarne_Trickster"
         ],
         "requires": "{OptOne(|Yarne's Thief|)} AND |Thief Class|"
     },
     "Yarne_Assassin": {
         "connects_to": [
-            "Assassin"
+            "Assassin",
+            "Yarne_Promoted"
         ],
         "requires": "{OptOne(|Yarne's Assassin|)} AND |Assassin Class|"
     },
     "Yarne_Trickster": {
         "connects_to": [
-            "Trickster"
+            "Trickster",
+            "Yarne_Promoted"
         ],
         "requires": "{OptOne(|Yarne's Trickster|)} AND |Trickster Class|"
     },
     "Yarne_Barbarian": {
         "connects_to": [
-            "Barbarian"
+            "Barbarian",
+            "Yarne_Berserker",
+            "Yarne_Warrior"
         ],
         "requires": "{OptOne(|Yarne's Barbarian|)} AND |Barbarian Class|"
     },
     "Yarne_Berserker": {
         "connects_to": [
-            "Berserker"
+            "Berserker",
+            "Yarne_Promoted"
         ],
         "requires": "{OptOne(|Yarne's Berserker|)} AND |Berserker Class|"
     },
     "Yarne_Warrior": {
         "connects_to": [
-            "Warrior"
+            "Warrior",
+            "Yarne_Promoted"
         ],
         "requires": "{OptOne(|Yarne's Warrior|)} AND |Warrior Class|"
     },
-    "Yarne_Parent_Promoted": {
+    "Yarne_Parent_SecondSeal": {
         "connects_to": [
             "Yarne_Tactician",
             "Yarne_Cavalier",
@@ -6298,7 +6379,12 @@
             "Yarne_DarkMage",
             "Yarne_Mage",
             "Yarne_Priest",
-            "Yarne_Villager",
+            "Yarne_Villager"
+        ],
+        "requires": "{YamlEnabled(Restrict_ChildPairs)}"
+    },
+    "Yarne_Parent_Promoted": {
+        "connects_to": [
             "Yarne_Grandmaster",
             "Yarne_Paladin",
             "Yarne_GreatKnight",
@@ -6318,67 +6404,88 @@
     },
     "Yarne_Tactician": {
         "connects_to": [
-            "Tactician"
+            "Tactician",
+            "Yarne_Grandmaster"
         ],
         "requires": "|Panne x Robin| AND {OptOne(|Yarne's Tactician|)} AND |Tactician Class|"
     },
     "Yarne_Cavalier": {
         "connects_to": [
-            "Cavalier"
+            "Cavalier",
+            "Yarne_Paladin",
+            "Yarne_GreatKnight"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Stahl| OR |Panne x Ricken|) AND {OptOne(|Yarne's Cavalier|)} AND |Cavalier Class|"
     },
     "Yarne_Knight": {
         "connects_to": [
-            "Knight"
+            "Knight",
+            "Yarne_GreatKnight",
+            "Yarne_General"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Kellam|) AND {OptOne(|Yarne's Knight|)} AND |Knight Class|"
     },
     "Yarne_Myrmidon": {
         "connects_to": [
-            "Myrmidon"
+            "Myrmidon",
+            "Yarne_Swordmaster",
+            "Yarne_Assassin"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Stahl| OR |Panne x Lon'qu| OR |Panne x Gaius| OR |Panne x Gregor|) AND {OptOne(|Yarne's Myrmidon|)} AND |Myrmidon Class|"
     },
     "Yarne_Fighter": {
         "connects_to": [
-            "Fighter"
+            "Fighter",
+            "Yarne_Warrior",
+            "Yarne_Hero"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Vaike| OR |Panne x Donnel|) AND {OptOne(|Yarne's Fighter|)} AND |Fighter Class|"
     },
     "Yarne_Mercenary": {
         "connects_to": [
-            "Mercenary"
+            "Mercenary",
+            "Yarne_Hero",
+            "Yarne_BowKnight"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Donnel| OR |Panne x Gregor|) AND {OptOne(|Yarne's Mercenary|)} AND |Mercenary Class|"
     },
     "Yarne_Archer": {
         "connects_to": [
-            "Archer"
+            "Archer",
+            "Yarne_Sniper",
+            "Yarne_BowKnight"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Virion| OR |Panne x Stahl| OR |Panne x Ricken|) AND {OptOne(|Yarne's Archer|)} AND |Archer Class|"
     },
     "Yarne_WyvernRider": {
         "connects_to": [
-            "Wyvern Rider"
+            "Wyvern Rider",
+            "Yarne_WyvernLord",
+            "Yarne_GriffonRider"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Virion| OR |Panne x Lon'qu|) AND {OptOne(|Yarne's Wyvern Rider|)} AND |Wyvern Rider Class|"
     },
     "Yarne_DarkMage": {
         "connects_to": [
-            "Dark Mage"
+            "Dark Mage",
+            "Yarne_Sorcerer",
+            "Yarne_DarkKnight"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Libra| OR |Panne x Henry|) AND {OptOne(|Yarne's Dark Mage|)} AND |Dark Mage Class|"
     },
     "Yarne_Mage": {
         "connects_to": [
-            "Mage"
+            "Mage",
+            "Yarne_Sage",
+            "Yarne_DarkKnight"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Virion| OR |Panne x Ricken| OR |Panne x Libra|) AND {OptOne(|Yarne's Mage|)} AND |Mage Class|"
     },
     "Yarne_Priest": {
         "connects_to": [
-            "Priest"
+            "Priest",
+            "Yarne_WarMonk",
+            "Yarne_Sage"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Kellam| OR |Panne x Libra|) AND {OptOne(|Yarne's Priest|)} AND |Priest Class|"
     },
@@ -6390,85 +6497,99 @@
     },
     "Yarne_Grandmaster": {
         "connects_to": [
-            "Grandmaster"
+            "Grandmaster",
+            "Yarne_Promoted"
         ],
         "requires": "|Panne x Robin| AND {OptOne(|Yarne's Grandmaster|)} AND |Grandmaster Class|"
     },
     "Yarne_Paladin": {
         "connects_to": [
-            "Paladin"
+            "Paladin",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Stahl| OR |Panne x Ricken|) AND {OptOne(|Yarne's Paladin|)} AND |Paladin Class|"
     },
     "Yarne_GreatKnight": {
         "connects_to": [
-            "Great Knight"
+            "Great Knight",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Stahl| OR |Panne x Ricken| OR |Panne x Vaike| OR |Panne x Kellam|) AND {OptOne(|Yarne's Great Knight|)} AND |Great Knight Class|"
     },
     "Yarne_General": {
         "connects_to": [
-            "General"
+            "General",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Vaike| OR |Panne x Kellam|) AND {OptOne(|Yarne's General|)} AND |General Class|"
     },
     "Yarne_Swordmaster": {
         "connects_to": [
-            "Swordmaster"
+            "Swordmaster",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Stahl| OR |Panne x Lon'qu| OR |Panne x Gaius| OR |Panne x Gregor|) AND {OptOne(|Yarne's Swordmaster|)} AND |Swordmaster Class|"
     },
     "Yarne_Hero": {
         "connects_to": [
-            "Hero"
+            "Hero",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Vaike| OR |Panne x Donnel| OR |Panne x Gregor|) AND {OptOne(|Yarne's Hero|)} AND |Hero Class|"
     },
     "Yarne_BowKnight": {
         "connects_to": [
-            "Bow Knight"
+            "Bow Knight",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Virion| OR |Panne x Stahl| OR |Panne x Ricken| OR |Panne x Donnel| OR |Panne x Gregor|) AND {OptOne(|Yarne's Bow Knight|)} AND |Bow Knight Class|"
     },
     "Yarne_Sniper": {
         "connects_to": [
-            "Sniper"
+            "Sniper",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Virion| OR |Panne x Stahl| OR |Panne x Ricken|) AND {OptOne(|Yarne's Sniper|)} AND |Sniper Class|"
     },
     "Yarne_WyvernLord": {
         "connects_to": [
-            "Wyvern Lord"
+            "Wyvern Lord",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Virion| OR |Panne x Lon'qu|) AND {OptOne(|Yarne's Wyvern Lord|)} AND |Wyvern Lord Class|"
     },
     "Yarne_GriffonRider": {
         "connects_to": [
-            "Griffon Rider"
+            "Griffon Rider",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Frederick| OR |Panne x Virion| OR |Panne x Lon'qu|) AND {OptOne(|Yarne's Griffon Rider|)} AND |Griffon Rider Class|"
     },
     "Yarne_Sorcerer": {
         "connects_to": [
-            "Sorcerer"
+            "Sorcerer",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Libra| OR |Panne x Henry|) AND {OptOne(|Yarne's Sorcerer|)} AND |Sorcerer Class|"
     },
     "Yarne_DarkKnight": {
         "connects_to": [
-            "Dark Knight"
+            "Dark Knight",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Virion| OR |Panne x Ricken| OR |Panne x Libra| OR |Panne x Henry|) AND {OptOne(|Yarne's Dark Knight|)} AND |Dark Knight Class|"
     },
     "Yarne_Sage": {
         "connects_to": [
-            "Sage"
+            "Sage",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Virion| OR |Panne x Ricken| OR |Panne x Libra| OR |Panne x Kellam|) AND {OptOne(|Yarne's Sage|)} AND |Sage Class|"
     },
     "Yarne_WarMonk": {
         "connects_to": [
-            "War Monk"
+            "War Monk",
+            "Yarne_Promoted"
         ],
         "requires": "(|Panne x Robin| OR |Panne x Kellam| OR |Panne x Libra|) AND {OptOne(|Yarne's War Monk|)} AND |War Monk Class|"
     },
@@ -7057,7 +7178,7 @@
         "connects_to": [
             "Manakete",
             "Nah_Bride",
-            "Nah_Promoted"
+            "Nah_SecondSeal"
         ],
         "requires": "|Nah| AND {OptOne(|Nah's Manakete|)} AND |Manakete Class|"
     },
@@ -7067,55 +7188,69 @@
         ],
         "requires": "{OptOne(|Nah's Bride|)} AND |Bride Class|"
     },
-    "Nah_Promoted": {
+    "Nah_SecondSeal": {
         "connects_to": [
-            "Nah_Parent_Promoted",
+            "Nah_Parent_SecondSeal",
             "Nah_WyvernRider",
-            "Nah_WyvernLord",
-            "Nah_GriffonRider",
-            "Nah_Mage",
-            "Nah_DarkKnight",
-            "Nah_Sage"
+            "Nah_Mage"
         ],
         "requires": "|Sealed|"
     },
+    "Nah_Promoted": {
+        "connects_to": [
+            "Nah_Parent_Promoted",
+            "Nah_WyvernLord",
+            "Nah_GriffonRider",
+            "Nah_DarkKnight",
+            "Nah_Sage"
+        ],
+        "requires": ""
+    },
     "Nah_WyvernRider": {
         "connects_to": [
-            "Wyvern Rider"
+            "Wyvern Rider",
+            "Nah_WyvernLord",
+            "Nah_GriffonRider"
         ],
         "requires": "{OptOne(|Nah's Wyvern Rider|)} AND |Wyvern Rider Class|"
     },
     "Nah_WyvernLord": {
         "connects_to": [
-            "Wyvern Lord"
+            "Wyvern Lord",
+            "Nah_Promoted"
         ],
         "requires": "{OptOne(|Nah's Wyvern Lord|)} AND |Wyvern Lord Class|"
     },
     "Nah_GriffonRider": {
         "connects_to": [
-            "Griffon Rider"
+            "Griffon Rider",
+            "Nah_Promoted"
         ],
         "requires": "{OptOne(|Nah's Griffon Rider|)} AND |Griffon Rider Class|"
     },
     "Nah_Mage": {
         "connects_to": [
-            "Mage"
+            "Mage",
+            "Nah_DarkKnight",
+            "Nah_Sage"
         ],
         "requires": "{OptOne(|Nah's Mage|)} AND |Mage Class|"
     },
     "Nah_DarkKnight": {
         "connects_to": [
-            "Dark Knight"
+            "Dark Knight",
+            "Nah_Promoted"
         ],
         "requires": "{OptOne(|Nah's Dark Knight|)} AND |Dark Knight Class|"
     },
     "Nah_Sage": {
         "connects_to": [
-            "Sage"
+            "Sage",
+            "Nah_Promoted"
         ],
         "requires": "{OptOne(|Nah's Sage|)} AND |Sage Class|"
     },
-    "Nah_Parent_Promoted": {
+    "Nah_Parent_SecondSeal": {
         "connects_to": [
             "Nah_Tactician",
             "Nah_Cavalier",
@@ -7127,7 +7262,12 @@
             "Nah_PegasusKnight",
             "Nah_DarkMage",
             "Nah_Cleric",
-            "Nah_Troubadour",
+            "Nah_Troubadour"
+        ],
+        "requires": "{YamlEnabled(Restrict_ChildPairs)}"
+    },
+    "Nah_Parent_Promoted": {
+        "connects_to": [
             "Nah_Grandmaster",
             "Nah_Paladin",
             "Nah_GreatKnight",
@@ -7148,157 +7288,193 @@
     },
     "Nah_Tactician": {
         "connects_to": [
-            "Tactician"
+            "Tactician",
+            "Nah_Grandmaster"
         ],
         "requires": "|Nowi x Robin| AND {OptOne(|Nah's Tactician|)} AND |Tactician Class|"
     },
     "Nah_Cavalier": {
         "connects_to": [
-            "Cavalier"
+            "Cavalier",
+            "Nah_Paladin",
+            "Nah_GreatKnight"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Frederick| OR |Nowi x Stahl| OR |Nowi x Ricken|) AND {OptOne(|Nah's Cavalier|)} AND |Cavalier Class|"
     },
     "Nah_Knight": {
         "connects_to": [
-            "Knight"
+            "Knight",
+            "Nah_GreatKnight",
+            "Nah_General"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Frederick| OR |Nowi x Vaike| OR |Nowi x Kellam|) AND {OptOne(|Nah's Knight|)} AND |Knight Class|"
     },
     "Nah_Myrmidon": {
         "connects_to": [
-            "Myrmidon"
+            "Myrmidon",
+            "Nah_Swordmaster",
+            "Nah_Assassin"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Stahl| OR |Nowi x Lon'qu| OR |Nowi x Gaius| OR |Nowi x Gregor|) AND {OptOne(|Nah's Myrmidon|)} AND |Myrmidon Class|"
     },
     "Nah_Thief": {
         "connects_to": [
-            "Thief"
+            "Thief",
+            "Nah_Assassin",
+            "Nah_Trickster"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Vaike| OR |Nowi x Kellam| OR |Nowi x Lon'qu| OR |Nowi x Gaius| OR |Nowi x Henry|) AND {OptOne(|Nah's Thief|)} AND |Thief Class|"
     },
     "Nah_Mercenary": {
         "connects_to": [
-            "Mercenary"
+            "Mercenary",
+            "Nah_Hero",
+            "Nah_BowKnight"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Vaike| OR |Nowi x Gregor|) AND {OptOne(|Nah's Mercenary|)} AND |Mercenary Class|"
     },
     "Nah_Archer": {
         "connects_to": [
-            "Archer"
+            "Archer",
+            "Nah_BowKnight",
+            "Nah_Sniper"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Virion| OR |Nowi x Stahl| OR |Nowi x Ricken|) AND {OptOne(|Nah's Archer|)} AND |Archer Class|"
     },
     "Nah_PegasusKnight": {
         "connects_to": [
-            "Pegasus Knight"
+            "Pegasus Knight",
+            "Nah_FalconKnight",
+            "Nah_DarkFlier"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Donnel| OR |Nowi x Gaius|) AND {OptOne(|Nah's Pegasus Knight|)} AND |Pegasus Knight Class|"
     },
     "Nah_DarkMage": {
         "connects_to": [
-            "Dark Mage"
+            "Dark Mage",
+            "Nah_Sorcerer",
+            "Nah_DarkKnight"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Libra| OR |Nowi x Henry|) AND {OptOne(|Nah's Dark Mage|)} AND |Dark Mage Class|"
     },
     "Nah_Cleric": {
         "connects_to": [
-            "Cleric"
+            "Cleric",
+            "Nah_WarCleric",
+            "Nah_Sage"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Kellam| OR |Nowi x Libra|) AND {OptOne(|Nah's Cleric|)} AND |Cleric Class|"
     },
     "Nah_Troubadour": {
         "connects_to": [
-            "Troubadour"
+            "Troubadour",
+            "Nah_WarCleric",
+            "Nah_Valkyrie"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Donnel| OR |Nowi x Gregor| OR |Nowi x Henry|) AND {OptOne(|Nah's Troubadour|)} AND |Troubadour Class|"
     },
     "Nah_Grandmaster": {
         "connects_to": [
-            "Grandmaster"
+            "Grandmaster",
+            "Nah_Promoted"
         ],
         "requires": "|Nowi x Robin| AND {OptOne(|Nah's Grandmaster|)} AND |Grandmaster Class|"
     },
     "Nah_Paladin": {
         "connects_to": [
-            "Paladin"
+            "Paladin",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Frederick| OR |Nowi x Stahl| OR |Nowi x Ricken|) AND {OptOne(|Nah's Paladin|)} AND |Paladin Class|"
     },
     "Nah_GreatKnight": {
         "connects_to": [
-            "Great Knight"
+            "Great Knight",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Frederick| OR |Nowi x Stahl| OR |Nowi x Ricken| OR |Nowi x Vaike| OR |Nowi x Kellam|) AND {OptOne(|Nah's Great Knight|)} AND |Great Knight Class|"
     },
     "Nah_General": {
         "connects_to": [
-            "General"
+            "General",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Frederick| OR |Nowi x Vaike| OR |Nowi x Kellam|) AND {OptOne(|Nah's General|)} AND |General Class|"
     },
     "Nah_Swordmaster": {
         "connects_to": [
-            "Swordmaster"
+            "Swordmaster",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Stahl| OR |Nowi x Lon'qu| OR |Nowi x Gaius| OR |Nowi x Gregor|) AND {OptOne(|Nah's Swordmaster|)} AND |Swordmaster Class|"
     },
     "Nah_Assassin": {
         "connects_to": [
-            "Assassin"
+            "Assassin",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Stahl| OR |Nowi x Lon'qu| OR |Nowi x Gaius| OR |Nowi x Gregor| OR |Nowi x Vaike| OR |Nowi x Kellam| OR |Nowi x Henry|) AND {OptOne(|Nah's Assassin|)} AND |Assassin Class|"
     },
     "Nah_Trickster": {
         "connects_to": [
-            "Trickster"
+            "Trickster",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Vaike| OR |Nowi x Kellam| OR |Nowi x Lon'qu| OR |Nowi x Gaius| OR |Nowi x Henry|) AND {OptOne(|Nah's Trickster|)} AND |Trickster Class|"
     },
     "Nah_Hero": {
         "connects_to": [
-            "Hero"
+            "Hero",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Vaike| OR |Nowi x Gregor|) AND {OptOne(|Nah's Hero|)} AND |Hero Class|"
     },
     "Nah_BowKnight": {
         "connects_to": [
-            "Bow Knight"
+            "Bow Knight",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Virion| OR |Nowi x Stahl| OR |Nowi x Ricken| OR |Nowi x Vaike| OR |Nowi x Gregor|) AND {OptOne(|Nah's Bow Knight|)} AND |Bow Knight Class|"
     },
     "Nah_Sniper": {
         "connects_to": [
-            "Sniper"
+            "Sniper",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Virion| OR |Nowi x Stahl| OR |Nowi x Ricken|) AND {OptOne(|Nah's Sniper|)} AND |Sniper Class|"
     },
     "Nah_FalconKnight": {
         "connects_to": [
-            "Falcon Knight"
+            "Falcon Knight",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Donnel| OR |Nowi x Gaius|) AND {OptOne(|Nah's Falcon Knight|)} AND |Falcon Knight Class|"
     },
     "Nah_DarkFlier": {
         "connects_to": [
-            "Dark Flier"
+            "Dark Flier",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Donnel| OR |Nowi x Gaius|) AND {OptOne(|Nah's Dark Flier|)} AND |Dark Flier Class|"
     },
     "Nah_Sorcerer": {
         "connects_to": [
-            "Sorcerer"
+            "Sorcerer",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Libra| OR |Nowi x Henry|) AND {OptOne(|Nah's Sorcerer|)} AND |Sorcerer Class|"
     },
     "Nah_WarCleric": {
         "connects_to": [
-            "War Cleric"
+            "War Cleric",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Kellam| OR |Nowi x Libra| OR |Nowi x Donnel| OR |Nowi x Gregor| OR |Nowi x Henry|) AND {OptOne(|Nah's War Cleric|)} AND |War Cleric Class|"
     },
     "Nah_Valkyrie": {
         "connects_to": [
-            "Valkyrie"
+            "Valkyrie",
+            "Nah_Promoted"
         ],
         "requires": "(|Nowi x Robin| OR |Nowi x Donnel| OR |Nowi x Gregor| OR |Nowi x Henry|) AND {OptOne(|Nah's Valkyrie|)} AND |Valkyrie Class|"
     },

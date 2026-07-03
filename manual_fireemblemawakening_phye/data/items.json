@@ -13211,6 +13211,15 @@
         },
         {
             "count": 0,
+            "name": "Maiden x Chrom",
+            "category": [
+                "Character Pairings",
+                "ChromPair"
+            ],
+            "progression": true
+        },
+        {
+            "count": 0,
             "name": "Lissa x Robin",
             "category": [
                 "Character Pairings",
@@ -13332,7 +13341,8 @@
             "name": "Sumia x Chrom",
             "category": [
                 "Character Pairings",
-                "SumiaPair"
+                "SumiaPair",
+                "ChromPair"
             ],
             "progression": true
         },
@@ -13378,7 +13388,8 @@
             "name": "Olivia x Chrom",
             "category": [
                 "Character Pairings",
-                "OliviaPair"
+                "OliviaPair",
+                "ChromPair"
             ],
             "progression": true
         },
@@ -13505,7 +13516,8 @@
             "name": "Maribelle x Chrom",
             "category": [
                 "Character Pairings",
-                "MaribellePair"
+                "MaribellePair",
+                "ChromPair"
             ],
             "progression": true
         },
@@ -13632,7 +13644,8 @@
             "name": "Sully x Chrom",
             "category": [
                 "Character Pairings",
-                "SullyPair"
+                "SullyPair",
+                "ChromPair"
             ],
             "progression": true
         },
@@ -14468,7 +14481,8 @@
             "category": [
                 "Character Pairings",
                 "RobinPair",
-                "FemaleRobin"
+                "FemaleRobin",
+                "ChromPair"
             ],
             "progression": true
         },

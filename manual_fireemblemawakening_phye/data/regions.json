@@ -30,7 +30,7 @@
             "Chapter 4",
             "Paralogue 1"
         ],
-        "requires": "|Main Chapter Progression:3| AND ((|Chrom| AND |Lord Class| AND {OptOne(|Chrom's Lord|)}) OR (|Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)}) OR (|Frederick| AND |Great Knight Class| AND {OptOne(|Frederick's Great Knight|)}))"
+        "requires": "|Main Chapter Progression:3| AND ((|Chrom| AND |Lord Class| AND {OptOne(|Chrom's Lord|)}) OR (|Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)}) OR (|Frederick| AND |Great Knight Class| AND {OptOne(|Frederick's Great Knight|)})) AND ((|Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)}) OR {YamlDisabled(Early_Robin)})"
     },
     "Chapter 4": {
         "connects_to": [
@@ -7526,7 +7526,7 @@
             "Xenologue 1",
             "Xenologue 2",
             "Xenologue 13",
-            "Xenologue 16"
+            "Xenologue 14"
         ],
         "requires": "|One Star|"
     },
@@ -7535,7 +7535,7 @@
             "Xenologue 3",
             "Xenologue 4",
             "Xenologue 5",
-            "Xenologue 14",
+            "Xenologue 16",
             "Xenologue 17",
             "Xenologue 18"
         ],

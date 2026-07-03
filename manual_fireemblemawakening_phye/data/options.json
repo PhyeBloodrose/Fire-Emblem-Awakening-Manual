@@ -332,6 +332,15 @@
             "default": false,
             "group": "Extra Options"
         },
+        "Early_Robin": {
+            "description": [
+                "If enabled, will make Robin be required for Chapter 3.",
+                "For those who wish to have their Avatar early."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
+        },
         "Early_Starting_Units": {
             "description": [
                 "If enabled, will make Chrom, Robin, Lissa and Frederick be required to access Chapter 1.",
@@ -533,7 +542,7 @@
                 "When enabled every Xenologue(Outrealm Tale in EU) will be included as locations.",
                 "Only matters if you have enabled any specific DLC.",
                 "Xenologues are numbered in the order of their Japanese Release and only used to easily track them",
-                "One Star Xenologues are accessible from start, Two Stars requires Chapter 10, Three Stars requires Chapter 14, Four Stars requires Chapter 18 and Five Star requires 22",
+                "One Star Xenologues are accessible from start, Two Stars requires Chapter 12, Three Stars requires Chapter 16, Four Stars requires Chapter 20 and Five Star requires 24",
                 "Apotheosis Requires Chapter 25 access as it has a 'Max' Difficulty."
             ],
             "type": "Toggle",

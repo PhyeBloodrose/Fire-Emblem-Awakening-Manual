@@ -33,7 +33,18 @@ class TotalCharactersToWinWith(Range):
     default = 50
 
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
+from Options import OptionSet
+from ..Items import item_name_groups
+
+class ManualPairing(OptionSet):
+  """Name the Pairs you wish to have in the game. Make sure to remove the Robin Pair for the gender you do not wish to play as. The items need to be named 'MOTHER x FATHER'. Make this blank if you intend to use randomized pairings."""           # Description of the yaml option in the template
+  display_name = "Manual Pairing"                              # Name of the option in the spoiler
+  valid_keys = item_name_groups["Character Pairings"]          # This is the bit that matters.  Our yaml option wants you to pick names of items in the Character Pairings category
+  default = ["Sumia x Chrom", "Robin x Gregor", "Lucina x Robin", "Lissa x Frederick", "Olivia x Virion", "Maribelle x Stahl", "Sully x Henry", "Cordelia x Vaike", "Cherche x Kellam", "Panne x Lon'qu", "Miriel x Ricken", "Tharja x Gaius", "Nowi x Donnel"]
+  group = "Child Options"
+
 def before_options_defined(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Option[Any]]]:
+    options["Manual_Pairing"] = ManualPairing  # This registers the yaml option as `Manual_Pairing`
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options

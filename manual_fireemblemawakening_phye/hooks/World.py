@@ -174,6 +174,8 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     ProgPro = is_option_enabled(multiworld, player, "Progressive_Paralogues")
     SpotPassPro = is_option_enabled(multiworld, player, "Enable_SpotPass_Paralogues")
     CharaSpecific = is_option_enabled(multiworld, player, "Character_Specific_Classes")
+    from ..Helpers import get_option_value
+    ManualPair = get_option_value(multiworld, player, "Manual_Pairing")
     
     if E_Rank:
        if Prog_Weapon:
@@ -194,15 +196,34 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
               item_config["Progressive Paralogue Chapter"] = {"progression": 23}  
         if Children:
            if ChildPair:
-              generated_pairings = generate_pairings(possible_pairings,world.random)
-              world.generated_pairings = generated_pairings
-
               generated_pairing_names = set()
 
-              for mother, father in generated_pairings.items():
-                pairing_name = f"{mother} x {father}"
-                generated_pairing_names.add(pairing_name)
-                item_config[pairing_name] = {"progression": 1}
+              if ManualPair:
+                manual_pairings = ManualPair
+                generated_pairings = {}
+
+                for pairing_name in manual_pairings:
+                    item_config[pairing_name] = {"progression": 1}
+                    generated_pairing_names.add(pairing_name)
+
+                    mother, father = pairing_name.split(" x ")
+                    generated_pairings[mother] = father
+
+                    if father == "Chrom":
+                        world.chrom_wife = mother
+                    if father == "Robin":
+                        world.robin_wife = mother
+
+                world.generated_pairings = generated_pairings
+
+              if not ManualPair:
+                generated_pairings = generate_pairings(possible_pairings,world.random)
+                world.generated_pairings = generated_pairings
+                
+                for mother, father in generated_pairings.items():
+                    pairing_name = f"{mother} x {father}"
+                    generated_pairing_names.add(pairing_name)
+                    item_config[pairing_name] = {"progression": 1}
 
               if CharaSpecific:
                     lucina_mother = world.chrom_wife

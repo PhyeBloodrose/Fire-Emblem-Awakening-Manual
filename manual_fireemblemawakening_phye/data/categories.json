@@ -103,7 +103,7 @@
         "yaml_option": [ "ShopSanity" ]
     },
     "MadKingGoal": {
-        "yaml_option": [ "Mad_King_Goal", "!Grima_Goal", "!Apotheosis_Goal" ],
+        "yaml_option": [ "Mad_King_Goal", "!Grima_Goal", "!Apotheosis_Goal", "!World_Tour_Mode" ],
         "hidden": true
     },
     "MadKingDisabled": {
@@ -281,5 +281,25 @@
     },
     "Allowed Forging": {
         "yaml_option": [ "Restrict_Forging" ]
+    },
+    "SideChara": {
+        "yaml_option": [ "Enable_SideCharacter_Units" ],
+        "hidden": true
+    },
+    "NotMainProg": {
+        "yaml_option": [ "!Progressive_MainChapters" ],
+        "hidden": true
+    },
+    "MainProg": {
+        "yaml_option": [ "Progressive_MainChapters" ],
+        "hidden": true
+    },
+    "WorldTour": {
+        "yaml_option": [ "World_Tour_Mode" ],
+        "hidden": true
+    },
+    "WorldTourDisabled": {
+        "yaml_option": [ "!World_Tour_Mode" ],
+        "hidden": true
     }
 }

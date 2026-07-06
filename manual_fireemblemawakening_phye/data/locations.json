@@ -210,7 +210,7 @@
         },
         {
             "name": "Southtown - Buy Bronze Sword",
-            "region": "Chapter 4",
+            "region": "Southtown",
             "category": [
                 "Prologue - The Verge of History",
                 "Shopping"
@@ -219,7 +219,7 @@
         },
         {
             "name": "Southtown - Buy Bronze Lance",
-            "region": "Chapter 4",
+            "region": "Southtown",
             "category": [
                 "Prologue - The Verge of History",
                 "Shopping"
@@ -228,7 +228,7 @@
         },
         {
             "name": "Southtown - Buy Bronze Axe",
-            "region": "Chapter 4",
+            "region": "Southtown",
             "category": [
                 "Prologue - The Verge of History",
                 "Shopping"
@@ -237,7 +237,7 @@
         },
         {
             "name": "Southtown - Buy Bronze Bow",
-            "region": "Chapter 4",
+            "region": "Southtown",
             "category": [
                 "Prologue - The Verge of History",
                 "Shopping"
@@ -246,7 +246,7 @@
         },
         {
             "name": "Southtown - Buy Fire",
-            "region": "Chapter 4",
+            "region": "Southtown",
             "category": [
                 "Prologue - The Verge of History",
                 "Shopping"
@@ -403,7 +403,7 @@
         },
         {
             "name": "West of Ylisstol - Buy Heal",
-            "region": "Chapter 4",
+            "region": "WestOfYlisstol",
             "category": [
                 "Chapter 01 - Unwelcome Change",
                 "Shopping"
@@ -412,7 +412,7 @@
         },
         {
             "name": "West of Ylisstol - Buy Vulnerary",
-            "region": "Chapter 4",
+            "region": "WestOfYlisstol",
             "category": [
                 "Chapter 01 - Unwelcome Change",
                 "Shopping"
@@ -666,8 +666,8 @@
             "requires": ""
         },
         {
-            "name": "The North Road - Buy Fire",
-            "region": "Chapter 4",
+            "name": "The Northroad - Buy Fire",
+            "region": "Northroad",
             "category": [
                 "Chapter 02 - Shepherds",
                 "Shopping"
@@ -675,8 +675,8 @@
             "requires": "{OptOne(|Weapon Type - Tomes|)}"
         },
         {
-            "name": "The North Road - Buy Thunder",
-            "region": "Chapter 4",
+            "name": "The Northroad - Buy Thunder",
+            "region": "Northroad",
             "category": [
                 "Chapter 02 - Shepherds",
                 "Shopping"
@@ -684,8 +684,8 @@
             "requires": "{OptOne(|Weapon Type - Tomes|)}"
         },
         {
-            "name": "The North Road - Buy Wind",
-            "region": "Chapter 4",
+            "name": "The Northroad - Buy Wind",
+            "region": "Northroad",
             "category": [
                 "Chapter 02 - Shepherds",
                 "Shopping"
@@ -693,8 +693,8 @@
             "requires": "{OptOne(|Weapon Type - Tomes|)}"
         },
         {
-            "name": "The North Road - Buy Flux",
-            "region": "Chapter 4",
+            "name": "The Northroad - Buy Flux",
+            "region": "Northroad",
             "category": [
                 "Chapter 02 - Shepherds",
                 "Shopping"
@@ -16121,7 +16121,7 @@
             "requires": ""
         },
         {
-            "name": "Cynthia Recruited",
+            "name": "Cynthia Recruited (Talk with Chrom or Sumia)",
             "region": "Paralogue 9",
             "category": [
                 "Paralogue 09 - Wings of Justice",
@@ -54400,53 +54400,53 @@
             "requires": ""
         },
         {
-            "name": "Found 1 Gemstone for the Fire Emblem",
+            "name": "Found the Argent Gemstone for the Fire Emblem",
             "region": "Begin",
             "category": [
                 "GOAL - Victory Condition",
                 "EmblemHunt"
             ],
-            "requires": "|Emblem Gemstone:1|"
+            "requires": "|Argent Gemstone|"
         },
         {
-            "name": "Found 2 Gemstones for the Fire Emblem",
+            "name": "Found the Sable Gemstone for the Fire Emblem",
             "region": "Begin",
             "category": [
                 "GOAL - Victory Condition",
                 "EmblemHunt"
             ],
-            "requires": "|Emblem Gemstone:2|"
+            "requires": "|Sable Gemstone|"
         },
         {
-            "name": "Found 3 Gemstones for the Fire Emblem",
+            "name": "Found the Gules Gemstone for the Fire Emblem",
             "region": "Begin",
             "category": [
                 "GOAL - Victory Condition",
                 "EmblemHunt"
             ],
-            "requires": "|Emblem Gemstone:3|"
+            "requires": "|Gules Gemstone|"
         },
         {
-            "name": "Found 4 Gemstones for the Fire Emblem",
+            "name": "Found the Azure Gemstone for the Fire Emblem",
             "region": "Begin",
             "category": [
                 "GOAL - Victory Condition",
                 "EmblemHunt"
             ],
-            "requires": "|Emblem Gemstone:4|"
+            "requires": "|Azure Gemstone|"
         },
         {
-            "name": "Found all Gemstones for the Fire Emblem",
+            "name": "Found the Vert Gemstone for the Fire Emblem",
             "region": "Begin",
             "category": [
                 "GOAL - Victory Condition",
                 "EmblemHunt"
             ],
-            "requires": "|Emblem Gemstone:5|"
+            "requires": "|Vert Gemstone|"
         },
         {
             "name": "Get Lissa's Partner",
-            "region": "Chapter 4",
+            "region": "OutRealm",
             "category": [
                 "Character Pairings",
                 "LocalPairs"
@@ -54456,7 +54456,7 @@
         },
         {
             "name": "Get Sumia's Partner",
-            "region": "Chapter 4",
+            "region": "OutRealm",
             "category": [
                 "Character Pairings",
                 "LocalPairs"
@@ -54486,7 +54486,7 @@
         },
         {
             "name": "Get Sully's Partner",
-            "region": "Chapter 4",
+            "region": "OutRealm",
             "category": [
                 "Character Pairings",
                 "LocalPairs"
@@ -54526,7 +54526,7 @@
         },
         {
             "name": "Get Miriel's Partner",
-            "region": "Chapter 4",
+            "region": "OutRealm",
             "category": [
                 "Character Pairings",
                 "LocalPairs"
@@ -54556,7 +54556,7 @@
         },
         {
             "name": "Get Robin's Partner",
-            "region": "Chapter 4",
+            "region": "OutRealm",
             "category": [
                 "Character Pairings",
                 "LocalPairs",

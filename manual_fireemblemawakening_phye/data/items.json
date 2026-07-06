@@ -4,7 +4,8 @@
         {
             "name": "Main Chapter Progression",
             "category": [
-                "Main Chapters"
+                "Main Chapters",
+                "MainProg"
             ],
             "count": 25,
             "progression": true
@@ -13,6 +14,246 @@
             "name": "End Chapter",
             "category": [
                 "Main Chapters",
+                "MadKingDisabled",
+                "GrimaGoal"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 1",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 2",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 3",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 4",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 5",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 6",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 7",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 8",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 9",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 10",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 11",
+            "category": [
+                "Main Chapters",
+                "NotMainProg"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 12",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 13",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 14",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 15",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 16",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 17",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 18",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 19",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 20",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 21",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 22",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 23",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 24",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
+                "MadKingDisabled"
+            ],
+            "count": 1,
+            "progression": true
+        },
+        {
+            "name": "Main Chapter 25",
+            "category": [
+                "Main Chapters",
+                "NotMainProg",
                 "MadKingDisabled"
             ],
             "count": 1,
@@ -2499,7 +2740,8 @@
             "name": "Say'ri",
             "category": [
                 "Main Characters",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "count": 1,
             "progression": true
@@ -2541,7 +2783,8 @@
         {
             "name": "Anna",
             "category": [
-                "Main Characters"
+                "Main Characters",
+                "SideChara"
             ],
             "count": 1,
             "progression": true
@@ -6570,7 +6813,8 @@
             "name": "Anna's Thief",
             "category": [
                 "Classes - Base",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6579,7 +6823,8 @@
             "name": "Anna's Assassin",
             "category": [
                 "Classes - Promoted",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6589,7 +6834,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "StartClass"
+                "StartClass",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6598,7 +6844,8 @@
             "name": "Anna's Archer",
             "category": [
                 "Classes - Base",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6607,7 +6854,8 @@
             "name": "Anna's Bow Knight",
             "category": [
                 "Classes - Promoted",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6616,7 +6864,8 @@
             "name": "Anna's Sniper",
             "category": [
                 "Classes - Promoted",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6625,7 +6874,8 @@
             "name": "Anna's Mage",
             "category": [
                 "Classes - Base",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6634,7 +6884,8 @@
             "name": "Anna's Dark Knight",
             "category": [
                 "Classes - Promoted",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6643,7 +6894,8 @@
             "name": "Anna's Sage",
             "category": [
                 "Classes - Promoted",
-                "ClassChara"
+                "ClassChara",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6654,7 +6906,8 @@
                 "Classes - Base",
                 "ClassChara",
                 "DLC_Class",
-                "DLC03"
+                "DLC03",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6941,7 +7194,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6952,7 +7206,8 @@
                 "Classes - Promoted",
                 "ClassChara",
                 "MadKingDisabled",
-                "StartClass"
+                "StartClass",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6962,7 +7217,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6972,7 +7228,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6982,7 +7239,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -6992,7 +7250,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7002,7 +7261,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7012,7 +7272,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7022,7 +7283,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7034,7 +7296,8 @@
                 "ClassChara",
                 "DLC_Class",
                 "DLC03",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7045,7 +7308,8 @@
                 "Classes - Base",
                 "ClassChara",
                 "MadKingDisabled",
-                "StartClass"
+                "StartClass",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7055,7 +7319,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7065,7 +7330,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7075,7 +7341,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7085,7 +7352,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7095,7 +7363,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7105,7 +7374,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7117,7 +7387,8 @@
                 "ClassChara",
                 "DLC_Class",
                 "DLC03",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7127,7 +7398,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7138,7 +7410,8 @@
                 "Classes - Promoted",
                 "ClassChara",
                 "MadKingDisabled",
-                "StartClass"
+                "StartClass",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7148,7 +7421,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7158,7 +7432,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7168,7 +7443,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7178,7 +7454,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7188,7 +7465,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7198,7 +7476,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7210,7 +7489,8 @@
                 "ClassChara",
                 "DLC_Class",
                 "DLC02",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7220,7 +7500,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7231,7 +7512,8 @@
                 "Classes - Promoted",
                 "ClassChara",
                 "MadKingDisabled",
-                "StartClass"
+                "StartClass",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7241,7 +7523,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7251,7 +7534,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7261,7 +7545,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7271,7 +7556,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7281,7 +7567,8 @@
             "category": [
                 "Classes - Base",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7291,7 +7578,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7301,7 +7589,8 @@
             "category": [
                 "Classes - Promoted",
                 "ClassChara",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -7313,7 +7602,8 @@
                 "ClassChara",
                 "DLC_Class",
                 "DLC03",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -14837,8 +15127,44 @@
             "progression": true
         },
         {
-            "count": 5,
-            "name": "Emblem Gemstone",
+            "count": 1,
+            "name": "Argent Gemstone",
+            "category": [
+                "Fire Emblem Gemstones",
+                "EmblemHunt"
+            ],
+            "progression": true
+        },
+        {
+            "count": 1,
+            "name": "Sable Gemstone",
+            "category": [
+                "Fire Emblem Gemstones",
+                "EmblemHunt"
+            ],
+            "progression": true
+        },
+        {
+            "count": 1,
+            "name": "Gules Gemstone",
+            "category": [
+                "Fire Emblem Gemstones",
+                "EmblemHunt"
+            ],
+            "progression": true
+        },
+        {
+            "count": 1,
+            "name": "Azure Gemstone",
+            "category": [
+                "Fire Emblem Gemstones",
+                "EmblemHunt"
+            ],
+            "progression": true
+        },
+        {
+            "count": 1,
+            "name": "Vert Gemstone",
             "category": [
                 "Fire Emblem Gemstones",
                 "EmblemHunt"
@@ -15025,7 +15351,8 @@
             "count": 4,
             "name": "Anna Support Rank",
             "category": [
-                "Support Ranks"
+                "Support Ranks",
+                "SideChara"
             ],
             "progression": true
         },
@@ -15061,7 +15388,8 @@
             "name": "Say'ri Support Rank",
             "category": [
                 "Support Ranks",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -15070,7 +15398,8 @@
             "name": "Tiki Support Rank",
             "category": [
                 "Support Ranks",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -15079,7 +15408,8 @@
             "name": "Basilio Support Rank",
             "category": [
                 "Support Ranks",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },
@@ -15088,7 +15418,8 @@
             "name": "Flavia Support Rank",
             "category": [
                 "Support Ranks",
-                "MadKingDisabled"
+                "MadKingDisabled",
+                "SideChara"
             ],
             "progression": true
         },

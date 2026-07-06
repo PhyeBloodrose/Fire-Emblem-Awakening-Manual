@@ -3,7 +3,8 @@
     "Begin": {
         "starting": true,
         "connects_to": [
-            "Prologue"
+            "Prologue",
+            "WorldTour"
         ],
         "requires": ""
     },
@@ -17,20 +18,20 @@
         "connects_to": [
             "Chapter 2"
         ],
-        "requires": "|Main Chapter Progression| AND ({YamlDisabled(Early_Starting_Units)} OR (|Chrom| AND |Lord Class| AND {OptOne(|Chrom's Lord|)} AND |Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)} AND |Frederick| AND |Great Knight Class| AND {OptOne(|Frederick's Great Knight|)} AND |Lissa| AND |Cleric Class| AND {OptOne(|Lissa's Cleric|)}))"
+        "requires": "(|Main Chapter Progression| OR |Main Chapter 1|) AND ({YamlDisabled(Early_Starting_Units)} OR (|Chrom| AND |Lord Class| AND {OptOne(|Chrom's Lord|)} AND |Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)} AND |Frederick| AND |Great Knight Class| AND {OptOne(|Frederick's Great Knight|)} AND |Lissa| AND |Cleric Class| AND {OptOne(|Lissa's Cleric|)}))"
     },
     "Chapter 2": {
         "connects_to": [
             "Chapter 3"
         ],
-        "requires": "|Main Chapter Progression:2|"
+        "requires": "|Main Chapter Progression:2| OR |Main Chapter 2|"
     },
     "Chapter 3": {
         "connects_to": [
             "Chapter 4",
             "Paralogue 1"
         ],
-        "requires": "|Main Chapter Progression:3| AND ((|Chrom| AND |Lord Class| AND {OptOne(|Chrom's Lord|)}) OR (|Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)}) OR (|Frederick| AND |Great Knight Class| AND {OptOne(|Frederick's Great Knight|)})) AND ((|Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)}) OR {YamlDisabled(Early_Robin)})"
+        "requires": "(|Main Chapter Progression:3| OR |Main Chapter 3|) AND ((|Chrom| AND |Lord Class| AND {OptOne(|Chrom's Lord|)}) OR (|Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)}) OR (|Frederick| AND |Great Knight Class| AND {OptOne(|Frederick's Great Knight|)})) AND ((|Robin (Avatar)| AND |Tactician Class| AND {OptOne(|Robin's Tactician|)}) OR {YamlDisabled(Early_Robin)})"
     },
     "Chapter 4": {
         "connects_to": [
@@ -48,9 +49,13 @@
             "Sumia",
             "Kellam",
             "Lon'qu",
-            "Supports"
+            "Supports",
+            "Southtown",
+            "WestOfYlisstol",
+            "Northroad",
+            "Longfort"
         ],
-        "requires": "|Main Chapter Progression:4|"
+        "requires": "|Main Chapter Progression:4| OR |Main Chapter 4|"
     },
     "Chapter 5": {
         "connects_to": [
@@ -59,7 +64,7 @@
             "Maribelle",
             "Paralogue 2"
         ],
-        "requires": "|Main Chapter Progression:5| AND (({YamlEnabled(Guaranteed_Army)} AND |@Base Units:6|) OR {YamlDisabled(Guaranteed_Army)})"
+        "requires": "(|Main Chapter Progression:5| OR |Main Chapter 5|) AND (({YamlEnabled(Guaranteed_Army)} AND |@Base Units:6|) OR {YamlDisabled(Guaranteed_Army)})"
     },
     "Chapter 6": {
         "connects_to": [
@@ -67,7 +72,7 @@
             "Panne",
             "Gaius"
         ],
-        "requires": "|Main Chapter Progression:6| AND ((|Gaius| AND |Thief Class| AND {OptOne(|Gaius's Thief|)} AND {OptOne(|Thief Skill (Lv1) - Locktouch|)}) OR {YamlDisabled(Early_Thief)})"
+        "requires": "(|Main Chapter Progression:6| OR |Main Chapter 6|) AND ((|Gaius| AND |Thief Class| AND {OptOne(|Gaius's Thief|)} AND {OptOne(|Thief Skill (Lv1) - Locktouch|)}) OR {YamlDisabled(Early_Thief)})"
     },
     "Chapter 7": {
         "connects_to": [
@@ -75,7 +80,7 @@
             "Paralogue 3",
             "Cordelia"
         ],
-        "requires": "|Main Chapter Progression:7|"
+        "requires": "|Main Chapter Progression:7| OR |Main Chapter 7|"
     },
     "Chapter 8": {
         "connects_to": [
@@ -83,7 +88,7 @@
             "Gregor",
             "Nowi"
         ],
-        "requires": "|Main Chapter Progression:8|"
+        "requires": "|Main Chapter Progression:8| OR |Main Chapter 8|"
     },
     "Chapter 9": {
         "connects_to": [
@@ -92,27 +97,27 @@
             "Libra",
             "Tharja"
         ],
-        "requires": "|Main Chapter Progression:9|"
+        "requires": "|Main Chapter Progression:9| OR |Main Chapter 9|"
     },
     "Chapter 10": {
         "connects_to": [
             "Chapter 11"
         ],
-        "requires": "|Main Chapter Progression:10| AND (({YamlEnabled(Guaranteed_Army)} AND |@Base Units:10|) OR {YamlDisabled(Guaranteed_Army)})"
+        "requires": "(|Main Chapter Progression:10| OR |Main Chapter 10|) AND (({YamlEnabled(Guaranteed_Army)} AND |@Base Units:10|) OR {YamlDisabled(Guaranteed_Army)})"
     },
     "Chapter 11": {
         "connects_to": [
             "Chapter 12",
             "Olivia"
         ],
-        "requires": "|Main Chapter Progression:11| AND ({YamlEnabled(Mad_King_Goal)} OR ((|Gaius Access| OR |Anna Access|)) AND |Lucina Parents| AND {OptOne(|Thief Skill (Lv1) - Locktouch|)})"
+        "requires": "(|Main Chapter Progression:11| OR |Main Chapter 11|) AND ({YamlEnabled(Mad_King_Goal)} OR ((|Gaius Access| OR |Anna Access|)) AND |Lucina Parents| AND {OptOne(|Thief Skill (Lv1) - Locktouch|)})"
     },
     "Chapter 12": {
         "connects_to": [
             "Chapter 13",
             "Cherche"
         ],
-        "requires": "|Main Chapter Progression:12|"
+        "requires": "|Main Chapter Progression:12| OR |Main Chapter 12|"
     },
     "Chapter 13": {
         "connects_to": [
@@ -127,13 +132,13 @@
             "Henry",
             "Lucina"
         ],
-        "requires": "|Main Chapter Progression:13|"
+        "requires": "|Main Chapter Progression:13| OR |Main Chapter 13|"
     },
     "Chapter 14": {
         "connects_to": [
             "Chapter 15"
         ],
-        "requires": "|Main Chapter Progression:14|"
+        "requires": "|Main Chapter Progression:14| OR |Main Chapter 14|"
     },
     "Chapter 15": {
         "connects_to": [
@@ -142,52 +147,52 @@
             "Paralogue 6",
             "Say'ri"
         ],
-        "requires": "|Main Chapter Progression:15| AND (({YamlEnabled(Guaranteed_Army)} AND |@Base Units:12|) OR {YamlDisabled(Guaranteed_Army)})"
+        "requires": "(|Main Chapter Progression:15| OR |Main Chapter 15|) AND (({YamlEnabled(Guaranteed_Army)} AND |@Base Units:12|) OR {YamlDisabled(Guaranteed_Army)})"
     },
     "Chapter 16": {
         "connects_to": [
             "Chapter 17",
             "Paralogue 7"
         ],
-        "requires": "|Main Chapter Progression:16|"
+        "requires": "|Main Chapter Progression:16| OR |Main Chapter 16|"
     },
     "Chapter 17": {
         "connects_to": [
             "Chapter 18",
             "Paralogue 11"
         ],
-        "requires": "|Main Chapter Progression:17|"
+        "requires": "|Main Chapter Progression:17| OR |Main Chapter 17|"
     },
     "Chapter 18": {
         "connects_to": [
             "Chapter 19",
             "Paralogue 17"
         ],
-        "requires": "|Main Chapter Progression:18|"
+        "requires": "|Main Chapter Progression:18| OR |Main Chapter 18|"
     },
     "Chapter 19": {
         "connects_to": [
             "Chapter 20"
         ],
-        "requires": "|Main Chapter Progression:19|"
+        "requires": "|Main Chapter Progression:19| OR |Main Chapter 19|"
     },
     "Chapter 20": {
         "connects_to": [
             "Chapter 21"
         ],
-        "requires": "|Main Chapter Progression:20| AND (({YamlEnabled(Guaranteed_Army)} AND |@Units:15|) OR {YamlDisabled(Guaranteed_Army)})"
+        "requires": "(|Main Chapter Progression:20| OR |Main Chapter 20|) AND (({YamlEnabled(Guaranteed_Army)} AND |@Units:15|) OR {YamlDisabled(Guaranteed_Army)})"
     },
     "Chapter 21": {
         "connects_to": [
             "Chapter 22"
         ],
-        "requires": "|Main Chapter Progression:21|"
+        "requires": "|Main Chapter Progression:21| OR |Main Chapter 21|"
     },
     "Chapter 22": {
         "connects_to": [
             "Chapter 23"
         ],
-        "requires": "|Main Chapter Progression:22|"
+        "requires": "|Main Chapter Progression:22| OR |Main Chapter 22|"
     },
     "Chapter 23": {
         "connects_to": [
@@ -195,13 +200,13 @@
             "Basilio",
             "Flavia"
         ],
-        "requires": "|Main Chapter Progression:23|"
+        "requires": "|Main Chapter Progression:23| OR |Main Chapter 23|"
     },
     "Chapter 24": {
         "connects_to": [
             "Chapter 25"
         ],
-        "requires": "|Main Chapter Progression:24|"
+        "requires": "|Main Chapter Progression:24| OR |Main Chapter 24|"
     },
     "Chapter 25": {
         "connects_to": [
@@ -213,7 +218,7 @@
             "Paralogue 22",
             "Paralogue 23"
         ],
-        "requires": "|Main Chapter Progression:25|"
+        "requires": "|Main Chapter Progression:25| OR |Main Chapter 25|"
     },
     "End": {
         "connects_to": [],
@@ -7847,5 +7852,128 @@
     "Apotheosis": {
         "connects_to": [],
         "requires": "{OptOne(|Xenologue Apotheosis|)} AND |Chapter 25| AND |@Units:20|"
+    },
+    "WorldTour": {
+        "connects_to": [
+            "OutRealm",
+            "All_Characters",
+            "Southtown",
+            "Supports",
+            "Farfort",
+            "WestOfYlisstol_WT"
+        ],
+        "requires": "{YamlEnabled(World_Tour_Mode)}"
+    },
+    "All_Characters": {
+        "connects_to": [
+            "Robin",
+            "Chrom",
+            "Lissa",
+            "Frederick",
+            "Sully",
+            "Virion",
+            "Stahl",
+            "Vaike",
+            "Miriel",
+            "Sumia",
+            "Kellam",
+            "Donnel",
+            "Lon'qu",
+            "Ricken",
+            "Maribelle",
+            "Panne",
+            "Gaius",
+            "Cordelia",
+            "Gregor",
+            "Nowi",
+            "Libra",
+            "Tharja",
+            "Anna",
+            "Olivia",
+            "Cherche",
+            "Henry",
+            "Lucina",
+            "Say'ri",
+            "Tiki",
+            "Basilio",
+            "Flavia",
+            "Gangrel",
+            "Walhart",
+            "Emmeryn",
+            "Yen'fay",
+            "Aversa",
+            "Priam"
+        ],
+        "requires": ""
+    },
+    "Southtown": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "WestOfYlisstol_WT": {
+        "connects_to": [
+            "WestOfYlisstol",
+            "BorderPass",
+            "Ylisstol",
+            "Northroad_WT"
+        ],
+        "requires": "|Main Chapter Progression:1| OR |Main Chapter 1|"
+    },
+    "WestOfYlisstol": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "Northroad_WT": {
+        "connects_to": [
+            "Northroad",
+            "WestOfYlisstol_WT",
+            "BorderSands",
+            "Longfort_WT",
+            "BreakneckPass"
+        ],
+        "requires": "|Main Chapter Progression:2| OR |Main Chapter 2|"
+    },
+    "Northroad": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "Farfort": {
+        "connects_to": [
+            "Paralogue 1",
+            "DesertOasis"
+        ],
+        "requires": ""
+    },
+    "Longfort": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "Longfort_WT": {
+        "connects_to": [
+            "Longfort"
+        ],
+        "requires": ""
+    },
+    "BorderPass": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "Ylisstol": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "BorderSands": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "BreakneckPass": {
+        "connects_to": [],
+        "requires": ""
+    },
+    "DesertOasis": {
+        "connects_to": [
+            "Paralogue 14"
+        ],
+        "requires": "|Laurent Parents|"
     }
 }

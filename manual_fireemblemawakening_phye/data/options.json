@@ -287,6 +287,15 @@
             "default": false,
             "group": "SpotPass Options"
         },
+        "Progressive_MainChapters": {
+            "description": [
+                "When enabled every Main Chapter will require a 'Main Chapter Progression' of the same amount of its number before it is accessible.",
+                "If it is disabled, then each Main Chapter will have its own item called 'Main Chapter 1', 'Main Chapter 2' and so forth."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Extra Options"
+        },
         "Disable_SealLogic": {
             "description": [
                 "If enabled, will not restrict access to classes/skills that are reached by using Master or Second Seals.",
@@ -358,6 +367,35 @@
             ],
             "type": "Toggle",
             "default": false,
+            "group": "Extra Options"
+        },
+        "Enable_SideCharacter_Units": {
+            "description": [
+                "If enabled, will add Anna, Say'ri, Flavia, Basilio and Tiki into the item pool.",
+                "Option is here for those that only wish to focus on the main cast and thus can disable them."
+            ],
+            "type": "Toggle",
+            "default": true,
+            "group": "Extra Options"
+        },
+        "World_Tour_Mode": {
+            "description": [
+                "This setting is made to be able to explore the world in a non-linear fashion and requires a person to have played up to 'Endgame' before doing this playthrough.",
+                "As such if enabled, any checks which requires you to play through a Main Chapter will be disabled.",
+                "The prelude checks will also be disabled.",
+                "Any settings that forces a unit or amount of units will be ignored for all those chapters as well.",
+                "To reach a child's paralogue's location it will be restricted by having the Child's Parents accessible still if that setting is enabled.",
+                "The decision was made in case for people who wish to prepare a file where you don't pair up anyone(except Chrom) to run through this mode.",
+                "The MadKing Goal is disabled if this setting is enabled.",
+                "Units are also all treated as if they begin from their default class, this can usually be done by using a Second Seal on them.",
+                "The Future Children's class checks for Skillsanity are only available whenever you can receive them normally from their Paralogues.",
+                "All other Characters are accessible from start as long as you have the proper items for them.",
+                "Feel free to go buy Reeking Boxes outside of the locations you have access to as that's the only way to force an encounter on the spot you are standing on.",
+                "Note: Currently not playable as such is hidden from normal yaml generation."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "hidden": true,
             "group": "Extra Options"
         },
         "ChestSanity": {
@@ -714,11 +752,21 @@
             "description": [
                 "When enabled requires you to collect five 'Emblem Gemstones' for the Fire Emblem to goal.",
                 "These Gemstones are just macguffins, as soon as you have them in your inventory the goal will be accessible.",
+                "Five extra locations will also be added which requires each specific gemstone for it to be in logic.",
                 "NOTE: Unlike other Goals, this goal can be added together with another goal, in that case you require both of the goals to be achieved before you can Goal the game!"
             ],
             "type": "Toggle",
             "default": false,
             "group": "Goal Options"
+        },
+        "Manual_Blacklist": {
+            "description": [
+                "When this is enabled, it will treat the list as a blacklist instead. Removing those pairs from the list of possible pairings.",
+                "NOTE! You need at least one Possible Pairing for each child or it won't go through generation.",
+                "Except for Lucina as if Chrom has no possible pairings he will always marry the Maiden. Maiden will NEVER be randomly chosen."
+            ],
+            "type": "Toggle",
+            "default": false
         }
     }
 

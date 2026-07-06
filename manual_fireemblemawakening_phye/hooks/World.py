@@ -89,7 +89,9 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     robin_wives = ["Sully", "Sumia", "Maribelle", "Olivia", "Lissa", "Cordelia", "Cherche", "Panne", "Miriel", "Tharja", "Nowi" ]
     robin_extra_wives = ["Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah"]
     robin_extra_1 = get_option_value(multiworld, player, "Robin_PairPlus") >= 1
-    robin_extra_2 = get_option_value(multiworld, player, "Robin_PairPlus") >= 2
+    sideChara = is_option_enabled(multiworld, player, "Enable_SideCharacter_Units")
+    robin_side = get_option_value(multiworld, player, "Robin_PairPlus") >= 2
+    robin_extra_2 = sideChara and robin_side
     robin_spotpass = get_option_value(multiworld, player, "Robin_PairPlus") >= 3
     spotpassChara = is_option_enabled(multiworld, player, "SpotPass_Characters")
     robin_extra_3 = robin_spotpass and spotpassChara
@@ -103,10 +105,10 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
           possible_pairings["Robin"] = ["Frederick", "Virion", "Stahl", "Vaike", "Kellam", "Lon'qu", "Ricken", "Gaius", "Donnel", "Gregor", "Libra", "Henry"]
           if robin_extra_1:
              possible_pairings["Robin"] += ["Brady", "Gerome", "Owain", "Inigo", "Yarne", "Laurent"]
-             if robin_extra_2:
-                possible_pairings["Robin"] += ["Basilio"]
-                if robin_extra_3:
-                   possible_pairings["Robin"] += ["Gangrel", "Walhart", "Yen'fay", "Priam"]
+          if robin_extra_2:
+             possible_pairings["Robin"] += ["Basilio"]
+          if robin_extra_3:
+             possible_pairings["Robin"] += ["Gangrel", "Walhart", "Yen'fay", "Priam"]
        if robin_2nd:
           possible_pairings["Robin"] = ["Brady", "Gerome", "Owain", "Inigo", "Yarne", "Laurent"]
     
@@ -121,11 +123,11 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
         if robin_extra_1:
             wives.extend(["Lucina", "Kjelle", "Cynthia", "Severa", "Noire", "Nah"])
 
-            if robin_extra_2:
-                wives.extend(["Anna", "Say'ri", "Flavia", "Tiki"])
+        if robin_extra_2:
+            wives.extend(["Anna", "Say'ri", "Flavia", "Tiki"])
 
-                if robin_extra_3:
-                    wives.extend(["Aversa", "Emmeryn"])
+        if robin_extra_3:
+            wives.extend(["Aversa", "Emmeryn"])
 
         return wives
 
@@ -173,6 +175,8 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     CharaSpecific = is_option_enabled(multiworld, player, "Character_Specific_Classes")
     from ..Helpers import get_option_value
     ManualPair = get_option_value(multiworld, player, "Manual_Pairing")
+    MainProg = is_option_enabled(multiworld, player, "Progressive_MainChapters")
+    ManualPairBlacklist = is_option_enabled(multiworld, player, "Manual_Blacklist")
     
     if E_Rank:
        if Prog_Weapon:
@@ -186,7 +190,8 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
             item_config["Progressive Dark Tome Rank"] = {"useful": 5}
             item_config["Progressive Staff Rank"] = {"useful": 5}
     if MadKing:
-        item_config["Main Chapter Progression"] = {"progression": 11}
+        if MainProg:
+            item_config["Main Chapter Progression"] = {"progression": 11}
     if not MadKing:
         if ProgPro:
            if SpotPassPro:
@@ -195,9 +200,23 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
            if ChildPair:
               generated_pairing_names = set()
               manual_pairings = ManualPair or []
+              blacklisted_pairings = set(manual_pairings) if ManualPairBlacklist else set()
               generated_pairings = {}
+              
+              #Remove Pairs from the Manual List if Blacklist is enabled.
+              if ManualPairBlacklist:
+                for pairing_name in blacklisted_pairings:
+                    mother, father = pairing_name.split(" x ")
 
-              for pairing_name in manual_pairings:
+                    if mother in possible_pairings and father in possible_pairings[mother]:
+                        possible_pairings[mother].remove(father)
+
+                    if father == "Chrom" and mother in chrom_wives:
+                        chrom_wives.remove(mother)
+
+              #If Blacklist is not enabled it checks the pairs inside the list to add them as selected pairs.
+              if not ManualPairBlacklist:
+                for pairing_name in manual_pairings:
                    item_config[pairing_name] = {"progression": 1}
                    generated_pairing_names.add(pairing_name)
 
@@ -215,7 +234,8 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                         father for father in possible_pairings[mother]
                         if father not in used_fathers
                    ]
-
+                
+              #Chrom gets his wife first. Checks if he was manually picked otherwise it is randomized.
               if "Chrom" not in used_fathers:
                     available_chrom_wives = [
                         wife for wife in chrom_wives
@@ -236,6 +256,7 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                         if father == "Chrom"
                     )
               
+              #Robin gets his Wife after Chrom to ensure Morgan is possible.
               if male_avatar and "Robin" in used_fathers:
                     world.robin_wife = next(
                     mother for mother, father in generated_pairings.items()
@@ -244,6 +265,13 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
 
               if male_avatar and "Robin" not in used_fathers:
                    robin_pool = get_robin_wife_pool()
+
+                   if ManualPairBlacklist:
+                       for pairing_name in blacklisted_pairings:
+                         mother, father = pairing_name.split(" x ")
+
+                         if father == "Robin" and mother in robin_pool:
+                            robin_pool.remove(mother)
 
                    available_robin_wives = [
                      wife for wife in robin_pool
@@ -259,10 +287,8 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                       possible_pairings.pop(robin_wife, None)
                       used_mothers.add(robin_wife)
                       used_fathers.add("Robin")
-
-              if not male_avatar:
-                   world.robin_wife = "None"
-              
+           
+              #Next up, generating pairs!
               auto_pairings = generate_pairings(possible_pairings, world.random)
               generated_pairings.update(auto_pairings)
 
@@ -272,7 +298,8 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                    pairing_name = f"{mother} x {father}"
                    generated_pairing_names.add(pairing_name)
                    item_config[pairing_name] = {"progression": 1}
-
+                
+              #Then we handle all the Character Specific classes for the children if it is enabled. As with the pairing items we can check if they have certain parents!
               if CharaSpecific:
                    lucina_mother = world.chrom_wife
                    owain_father = generated_pairings.get("Lissa")
@@ -282,8 +309,6 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                    cynthia_father = generated_pairings.get("Sumia")
                    severa_father = generated_pairings.get("Cordelia")
                    gerome_father = generated_pairings.get("Cherche")
-                   morgan_mother = world.robin_wife
-                   morgan_father = generated_pairings.get("Robin")
                    yarne_father = generated_pairings.get("Panne")
                    laurent_father = generated_pairings.get("Miriel")
                    noire_father = generated_pairings.get("Tharja")
@@ -677,12 +702,6 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                    if gerome_father != "Donnel":
                         item_config["Gerome's Villager"] = {"progression": 0} 
 
-                   if morgan_mother not in {"Nowi", "Nah", "Tiki"}:
-                        item_config["Morgan's Manakete"] = {"progression": 0}  
-
-                   if morgan_father != "Donnel":
-                        item_config["Morgan's Villager"] = {"progression": 0}  
-
                    if not taguel_parent:
                         item_config["Morgan's Taguel"] = {"progression": 0}
 
@@ -905,92 +924,121 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                         item_config["Nah's Troubadour"] = {"progression": 0}
                         item_config["Nah's Valkyrie"] = {"progression": 0}  
 
+                   #Morgan's Parents!
+                   if male_avatar:
+                      morgan_mother = getattr(world, "robin_wife", None)
+                      morgan_father = "Robin"
+                   else:
+                      morgan_mother = "Robin"
+                      morgan_father = generated_pairings.get("Robin")
+
                    StartClass = is_option_enabled(multiworld, player, "Character_Specific_Classes_Include_Start_Class")
 
+                   morgan_classes = {
+                   "Morgan's Tactician": {
+                        "mothers": {"Olivia", "Lucina"},
+                        "fathers": {"Chrom", "Walhart"},
+                        },
+                   "Morgan's Cleric": {
+                        "mothers": {"Lissa", "Emmeryn"},
+                        "fathers": set(),
+                        },
+                   "Morgan's Cavalier": {
+                        "mothers": {"Sully"},
+                        "fathers": {"Frederick", "Stahl"},
+                        },
+                   "Morgan's Archer": {
+                      "mothers": {"Noire"},
+                      "fathers": {"Virion"},
+                        },
+                   "Morgan's Fighter": {
+                        "mothers": set(),
+                        "fathers": {"Vaike", "Basilio"},
+                        },
+                   "Morgan's Mage": {
+                        "mothers": {"Miriel"},
+                        "fathers": {"Ricken", "Laurent"},
+                        },
+                   "Morgan's Pegasus Knight": {
+                        "mothers": {"Sumia", "Cordelia", "Aversa", "Cynthia"},
+                        "fathers": set(),
+                        },
+                   "Morgan's Knight": {
+                        "mothers": {"Kjelle"},
+                        "fathers": {"Kellam"},
+                        },
+                   "Morgan's Villager": {
+                        "mothers": set(),
+                        "fathers": {"Donnel"},
+                        },
+                   "Morgan's Myrmidon": {
+                        "mothers": {"Say'ri"},
+                        "fathers": {"Lon'qu", "Yen'fay", "Owain"},
+                        },
+                   "Morgan's Troubadour": {
+                        "mothers": {"Maribelle"},
+                        "fathers": set(),
+                        },
+                   "Morgan's Taguel": {
+                        "mothers": {"Panne"},
+                        "fathers": {"Yarne"},
+                        },
+                   "Morgan's Thief": {
+                        "mothers": {"Anna"},
+                        "fathers": {"Gaius", "Gangrel"},
+                        },
+                   "Morgan's Mercenary": {
+                        "mothers": {"Flavia", "Severa"},
+                        "fathers": {"Gregor", "Priam", "Inigo"},
+                        },
+                   "Morgan's Manakete": {
+                        "mothers": {"Nowi", "Tiki", "Nah"},
+                        "fathers": set(),
+                        },
+                   "Morgan's Priest": {
+                        "mothers": set(),
+                        "fathers": {"Libra", "Brady"},
+                        },
+                   "Morgan's Dark Mage": {
+                        "mothers": {"Tharja"},
+                        "fathers": {"Henry"},
+                        },
+                   "Morgan's Wyvern Rider": {
+                        "mothers": {"Cherche"},
+                        "fathers": {"Gerome"},
+                        }
+                   }
+                   morgan_inherited_classes = {
+                   "Morgan's Villager": {
+                        "mothers": set(),
+                        "fathers": {"Donnel"},
+                        },
+                   "Morgan's Taguel": {
+                        "mothers": {"Panne"},
+                        "fathers": {"Yarne"},
+                        },
+                   "Morgan's Manakete": {
+                        "mothers": {"Nowi", "Tiki", "Nah"},
+                        "fathers": set(),
+                        }
+                   }
+                   def morgan_has_class(data):
+                       return (
+                       morgan_mother in data["mothers"]
+                       or morgan_father in data["fathers"]
+                       )
+
+                   # Remove parent-only classes if Morgan does NOT inherit them.
+                   for item_name, data in morgan_inherited_classes.items():
+                      if not morgan_has_class(data):
+                          item_config[item_name] = {"progression": 0}
+
+
+                   # If start classes are disabled, remove Morgan's actual starting class.
                    if not StartClass:
-                       if morgan_mother in {"Olivia", "Lucina"}:
-                            item_config["Morgan's Tactician"] = {"progression": 0}
-
-                       if morgan_father in {"Chrom", "Walhart"}:
-                            item_config["Morgan's Tactician"] = {"progression": 0}
-
-                       if morgan_mother in {"Lissa", "Emmeryn"}:
-                            item_config["Morgan's Cleric"] = {"progression": 0}
-
-                       if morgan_father in {"Frederick", "Stahl"}:
-                            item_config["Morgan's Cavalier"] = {"progression": 0}
-
-                       if morgan_mother == "Sully":
-                            item_config["Morgan's Cavalier"] = {"progression": 0}
-
-                       if morgan_father == "Virion":
-                            item_config["Morgan's Archer"] = {"progression": 0}
-
-                       if morgan_mother == "Noire":
-                            item_config["Morgan's Archer"] = {"progression": 0}
-
-                       if morgan_father in {"Vaike", "Basilio"}:
-                            item_config["Morgan's Fighter"] = {"progression": 0}
-
-                       if morgan_father in {"Ricken", "Laurent"}:
-                            item_config["Morgan's Mage"] = {"progression": 0}
-
-                       if morgan_mother == "Miriel":
-                            item_config["Morgan's Mage"] = {"progression": 0}
-
-                       if morgan_mother in {"Sumia", "Cordelia", "Aversa", "Cynthia"}:
-                            item_config["Morgan's Pegasus Knight"] = {"progression": 0}
-
-                       if morgan_mother == "Kjelle":
-                            item_config["Morgan's Knight"] = {"progression": 0}
-
-                       if morgan_father == "Kellam":
-                            item_config["Morgan's Knight"] = {"progression": 0}
-
-                       if morgan_father == "Donnel":
-                            item_config["Morgan's Villager"] = {"progression": 0}
-
-                       if morgan_father in {"Lon'qu", "Yen'fay", "Owain"}:
-                            item_config["Morgan's Myrmidon"] = {"progression": 0}
-
-                       if morgan_mother == "Say'ri":
-                            item_config["Morgan's Myrmidon"] = {"progression": 0}
-
-                       if morgan_mother == "Maribelle":
-                            item_config["Morgan's Troubadour"] = {"progression": 0}
-
-                       if taguel_parent:
-                            item_config["Morgan's Taguel"] = {"progression": 0}
-
-                       if morgan_father in {"Gaius", "Gangrel"}:
-                            item_config["Morgan's Thief"] = {"progression": 0}
-
-                       if morgan_mother == "Anna":
-                            item_config["Morgan's Thief"] = {"progression": 0}
-
-                       if morgan_father in {"Gregor", "Priam", "Inigo"}:
-                            item_config["Morgan's Mercenary"] = {"progression": 0}
-
-                       if morgan_mother in {"Flavia", "Severa"}:
-                            item_config["Morgan's Mercenary"] = {"progression": 0}
-
-                       if morgan_mother in {"Nowi", "Tiki", "Nah"}:
-                            item_config["Morgan's Manakete"] = {"progression": 0}
-
-                       if morgan_father in {"Libra", "Brady"}:
-                            item_config["Morgan's Priest"] = {"progression": 0}
-
-                       if morgan_mother == "Tharja":
-                            item_config["Morgan's Dark Mage"] = {"progression": 0}
-
-                       if morgan_father == "Henry":
-                            item_config["Morgan's Dark Mage"] = {"progression": 0}
-
-                       if morgan_mother == "Cherche":
-                            item_config["Morgan's Wyvern Rider"] = {"progression": 0}
-
-                       if morgan_father == "Gerome":
-                            item_config["Morgan's Wyvern Rider"] = {"progression": 0}
+                      for item_name, data in morgan_classes.items():
+                         if morgan_has_class(data):
+                           item_config[item_name] = {"progression": 0}
 
     return item_config
 

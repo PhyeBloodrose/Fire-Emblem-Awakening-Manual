@@ -7946,7 +7946,7 @@
             "requires": ""
         },
         {
-            "name": "CH18 - Obtained Concoction from Warrior",
+            "name": "CH18 - Obtained Concoction from Paladin",
             "region": "Chapter 18",
             "category": [
                 "Chapter 18 - Sibling Blades",
@@ -10295,7 +10295,7 @@
             "requires": ""
         },
         {
-            "name": "CH22 - Defeat Corpus",
+            "name": "CH22 - Defeat Porcus",
             "region": "Chapter 22",
             "category": [
                 "Chapter 22 - An Ill Presage",
@@ -16017,17 +16017,6 @@
             "category": [
                 "Paralogue 09 - Wings of Justice",
                 "EnemySanityLuna",
-                "Paralogues",
-                "MadKingDisabled"
-            ],
-            "requires": ""
-        },
-        {
-            "name": "P9 - Defeat a Pegasus Knight",
-            "region": "Paralogue 9",
-            "category": [
-                "Paralogue 09 - Wings of Justice",
-                "EnemySanityType",
                 "Paralogues",
                 "MadKingDisabled"
             ],

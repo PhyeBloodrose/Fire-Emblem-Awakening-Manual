@@ -262,6 +262,8 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                     mother for mother, father in generated_pairings.items()
                     if father == "Robin"
                     )
+              if not male_avatar:
+                    world.robin_wife = None
 
               if male_avatar and "Robin" not in used_fathers:
                    robin_pool = get_robin_wife_pool()
@@ -312,7 +314,7 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                    yarne_father = generated_pairings.get("Panne")
                    laurent_father = generated_pairings.get("Miriel")
                    noire_father = generated_pairings.get("Tharja")
-                   nah_father = generated_pairings.get("Nowi")    
+                   nah_father = generated_pairings.get("Nowi")
                    taguel_parent = (
                    world.robin_wife == "Panne" or
                    generated_pairings.get("Robin") == "Yarne"

@@ -364,7 +364,7 @@
         "connects_to": [
             "Priam"
         ],
-        "requires": "{OptOne(|Progressive Paralogue Chapter:23|)} AND {OptOne(|Paralogue Chapter 23|)}"
+        "requires": "{OptOne(|Progressive Paralogue Chapter:23|)} AND {OptOne(|Paralogue Chapter 23|)} AND |@Units:20|"
     },
     "Supports": {
         "connects_to": [

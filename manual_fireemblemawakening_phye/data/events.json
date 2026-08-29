@@ -3,11 +3,11 @@
     "data": [
         {
             "name": "MasterSealed",
-            "requires": "|Chapter 12| OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)} OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 8| OR |Paralogue 12| OR |Paralogue 13|))"
+            "requires": "({OptOne(|Master Seal|)} AND (|Chapter 12| OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 8| OR |Paralogue 12| OR |Paralogue 13|)))) OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)}"
         },
         {
             "name": "Sealed",
-            "requires": "|Chapter 16| OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)} OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 6| OR |Paralogue 10| OR |Paralogue 16|))"
+            "requires": "({OptOne(|Second Seal|)} AND (|Chapter 16| OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 6| OR |Paralogue 10| OR |Paralogue 16|)))) OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)}"
         },
         {
             "name": "Chapter 1",
@@ -2229,167 +2229,167 @@
         },
         {
             "name": "Lord Class",
-            "requires": "{OptOne(|Lord|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
+            "requires": "{OptOne(|Lord|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Great Lord Class",
-            "requires": "{OptOne(|Great Lord|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}))"
+            "requires": "{OptOne(|Great Lord|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Tactician Class",
-            "requires": "{OptOne(|Tactician|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
+            "requires": "{OptOne(|Tactician|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Grandmaster Class",
-            "requires": "{OptOne(|Grandmaster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
+            "requires": "{OptOne(|Grandmaster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Cavalier Class",
-            "requires": "{OptOne(|Cavalier|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}))"
+            "requires": "{OptOne(|Cavalier|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Knight Class",
-            "requires": "{OptOne(|Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}"
+            "requires": "{OptOne(|Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Paladin Class",
-            "requires": "{OptOne(|Paladin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}))"
+            "requires": "{OptOne(|Paladin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Great Knight Class",
-            "requires": "{OptOne(|Great Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
+            "requires": "{OptOne(|Great Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "General Class",
-            "requires": "{OptOne(|General|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
+            "requires": "{OptOne(|General|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Myrmidon Class",
-            "requires": "{OptOne(|Myrmidon|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
+            "requires": "{OptOne(|Myrmidon|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Thief Class",
-            "requires": "{OptOne(|Thief|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
+            "requires": "{OptOne(|Thief|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Swordmaster Class",
-            "requires": "{OptOne(|Swordmaster|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
+            "requires": "{OptOne(|Swordmaster|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Assassin Class",
-            "requires": "{OptOne(|Assassin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}))"
+            "requires": "{OptOne(|Assassin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Trickster Class",
-            "requires": "{OptOne(|Trickster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
+            "requires": "{OptOne(|Trickster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Barbarian Class",
-            "requires": "{OptOne(|Barbarian|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
+            "requires": "{OptOne(|Barbarian|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Fighter Class",
-            "requires": "{OptOne(|Fighter|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
+            "requires": "{OptOne(|Fighter|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Mercenary Class",
-            "requires": "{OptOne(|Mercenary|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
+            "requires": "{OptOne(|Mercenary|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Archer Class",
-            "requires": "{OptOne(|Archer|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}"
+            "requires": "{OptOne(|Archer|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Berserker Class",
-            "requires": "{OptOne(|Berserker|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
+            "requires": "{OptOne(|Berserker|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Warrior Class",
-            "requires": "{OptOne(|Warrior|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}))"
+            "requires": "{OptOne(|Warrior|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Hero Class",
-            "requires": "{OptOne(|Hero|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
+            "requires": "{OptOne(|Hero|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Bow Knight Class",
-            "requires": "{OptOne(|Bow Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}))"
+            "requires": "{OptOne(|Bow Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Sniper Class",
-            "requires": "{OptOne(|Sniper|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}"
+            "requires": "{OptOne(|Sniper|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Pegasus Knight Class",
-            "requires": "{OptOne(|Pegasus Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}"
+            "requires": "{OptOne(|Pegasus Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Wyvern Rider Class",
-            "requires": "{OptOne(|Wyvern Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
+            "requires": "{OptOne(|Wyvern Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Falcon Knight Class",
-            "requires": "{OptOne(|Falcon Knight|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
+            "requires": "{OptOne(|Falcon Knight|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Dark Flier Class",
-            "requires": "{OptOne(|Dark Flier|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
+            "requires": "{OptOne(|Dark Flier|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Wyvern Lord Class",
-            "requires": "{OptOne(|Wyvern Lord|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
+            "requires": "{OptOne(|Wyvern Lord|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Griffon Rider Class",
-            "requires": "{OptOne(|Griffon Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}"
+            "requires": "{OptOne(|Griffon Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Dark Mage Class",
-            "requires": "{OptOne(|Dark Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}"
+            "requires": "{OptOne(|Dark Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Mage Class",
-            "requires": "{OptOne(|Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}"
+            "requires": "{OptOne(|Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Priest Class",
-            "requires": "{OptOne(|Priest|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}"
+            "requires": "{OptOne(|Priest|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Cleric Class",
-            "requires": "{OptOne(|Cleric|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}"
+            "requires": "{OptOne(|Cleric|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Troubadour Class",
-            "requires": "{OptOne(|Troubadour|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}"
+            "requires": "{OptOne(|Troubadour|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Sorcerer Class",
-            "requires": "{OptOne(|Sorcerer|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}"
+            "requires": "{OptOne(|Sorcerer|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Dark Knight Class",
-            "requires": "{OptOne(|Dark Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
+            "requires": "{OptOne(|Dark Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Sage Class",
-            "requires": "{OptOne(|Sage|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
+            "requires": "{OptOne(|Sage|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "War Monk Class",
-            "requires": "{OptOne(|War Monk|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
+            "requires": "{OptOne(|War Monk|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "War Cleric Class",
-            "requires": "{OptOne(|War Cleric|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
+            "requires": "{OptOne(|War Cleric|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Valkyrie Class",
-            "requires": "{OptOne(|Valkyrie|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
+            "requires": "{OptOne(|Valkyrie|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Villager Class",
-            "requires": "{OptOne(|Villager|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}"
+            "requires": "{OptOne(|Villager|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Taguel Class",
@@ -2397,7 +2397,7 @@
         },
         {
             "name": "Dancer Class",
-            "requires": "{OptOne(|Dancer|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
+            "requires": "{OptOne(|Dancer|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         },
         {
             "name": "Manakete Class",
@@ -2409,7 +2409,7 @@
                 "DLC_Class",
                 "DLC02"
             ],
-            "requires": "|Xenologue 5| AND {OptOne(|Dread Fighter|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)}))"
+            "requires": "|Xenologue 5| AND {OptOne(|Dread Scroll|)} AND {OptOne(|Dread Fighter|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Bride Class",
@@ -2417,15 +2417,15 @@
                 "DLC_Class",
                 "DLC03"
             ],
-            "requires": "|Xenologue 8| AND {OptOne(|Bride|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)}) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)}))"
+            "requires": "|Xenologue 8| AND {OptOne(|Wedding Bouquet|)} AND {OptOne(|Bride|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Conqueror Class",
-            "requires": "{OptOne(|Conqueror|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)}) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)}))"
+            "requires": "{OptOne(|Conqueror|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
         },
         {
             "name": "Lodestar Class",
-            "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)}"
+            "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
         }
     ]
 }

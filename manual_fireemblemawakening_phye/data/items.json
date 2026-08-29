@@ -805,7 +805,10 @@
                 "Weapon Upgrades",
                 "Prog_Weapon"
             ],
-            "count": 4,
+            "classification_count": {
+                "progression": 1,
+                "useful": 4
+            },
             "useful": true
         },
         {
@@ -814,7 +817,10 @@
                 "Weapon Upgrades",
                 "Prog_Weapon"
             ],
-            "count": 4,
+            "classification_count": {
+                "progression": 1,
+                "useful": 4
+            },
             "useful": true
         },
         {
@@ -823,7 +829,10 @@
                 "Weapon Upgrades",
                 "Prog_Weapon"
             ],
-            "count": 4,
+            "classification_count": {
+                "progression": 1,
+                "useful": 4
+            },
             "useful": true
         },
         {
@@ -832,7 +841,10 @@
                 "Weapon Upgrades",
                 "Prog_Weapon"
             ],
-            "count": 4,
+            "classification_count": {
+                "progression": 1,
+                "useful": 4
+            },
             "useful": true
         },
         {
@@ -841,7 +853,10 @@
                 "Weapon Upgrades",
                 "Prog_Weapon"
             ],
-            "count": 4,
+            "classification_count": {
+                "progression": 1,
+                "useful": 4
+            },
             "useful": true
         },
         {
@@ -886,7 +901,10 @@
                 "Weapon Upgrades",
                 "Prog_Weapon"
             ],
-            "count": 4,
+            "classification_count": {
+                "progression": 1,
+                "useful": 4
+            },
             "useful": true
         },
         {
@@ -942,7 +960,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Armourslayer",
@@ -1041,7 +1059,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Falchion",
@@ -1085,7 +1103,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Tyrfing",
@@ -1096,7 +1114,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Balmung",
@@ -1107,7 +1125,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Mystletainn",
@@ -1118,7 +1136,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Sol Katti",
@@ -1129,7 +1147,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Ragnell",
@@ -1140,7 +1158,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Tree Branch",
@@ -1305,7 +1323,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Javelin",
@@ -1393,7 +1411,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Gáe Bolg",
@@ -1404,7 +1422,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Gungnir",
@@ -1415,7 +1433,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Log",
@@ -1558,7 +1576,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Hand Axe",
@@ -1646,7 +1664,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Hauteclere",
@@ -1657,7 +1675,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Helswath",
@@ -1668,7 +1686,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Armads",
@@ -1679,7 +1697,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Ladle",
@@ -1822,7 +1840,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Blessed Bow",
@@ -1877,7 +1895,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Yewfelle",
@@ -1888,7 +1906,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Nidhogg",
@@ -1899,7 +1917,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Double Bow",
@@ -1910,7 +1928,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Slack Bow",
@@ -2047,7 +2065,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Thunder",
@@ -2167,7 +2185,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Forseti",
@@ -2179,7 +2197,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Book of Naga",
@@ -2191,7 +2209,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Flux",
@@ -2251,7 +2269,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Grima's Truth",
@@ -2414,7 +2432,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Goddess Staff",
@@ -2425,7 +2443,7 @@
                 "Weapons - Rank A"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Rescue",
@@ -2509,7 +2527,7 @@
                 "Not_Prog_Weapon"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Dragonstone",
@@ -2527,7 +2545,7 @@
                 "Not_Prog_Weapon"
             ],
             "count": 1,
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "name": "Chrom",
@@ -12489,7 +12507,7 @@
             "category": [
                 "Class Skills"
             ],
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "count": 1,
@@ -12497,7 +12515,7 @@
             "category": [
                 "Class Skills"
             ],
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "count": 1,
@@ -12801,7 +12819,7 @@
             "category": [
                 "Class Skills"
             ],
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "count": 1,
@@ -12957,7 +12975,7 @@
         },
         {
             "count": 1,
-            "name": "War Cleric/Monk Skill (Lv10) - Renewal",
+            "name": "War Cleric/Monk Skill (Lv15) - Renewal",
             "category": [
                 "Class Skills"
             ],
@@ -13095,7 +13113,7 @@
                 "DLC_Skill",
                 "DLC02"
             ],
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "count": 1,
@@ -13125,7 +13143,7 @@
                 "DLC_Skill",
                 "DLC01"
             ],
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "count": 1,
@@ -13155,13 +13173,14 @@
                 "DLC_Skill",
                 "DLC04"
             ],
-            "progression_skip_balancing": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Vulnerary",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13169,23 +13188,26 @@
             "count": 1,
             "name": "Concoction",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Elixir",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Pure Water",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13193,7 +13215,8 @@
             "count": 1,
             "name": "HP Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13201,7 +13224,8 @@
             "count": 1,
             "name": "Strength Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13209,7 +13233,8 @@
             "count": 1,
             "name": "Magic Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13217,7 +13242,8 @@
             "count": 1,
             "name": "Skill Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13225,7 +13251,8 @@
             "count": 1,
             "name": "Speed Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13233,7 +13260,8 @@
             "count": 1,
             "name": "Luck Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13241,7 +13269,8 @@
             "count": 1,
             "name": "Defence Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13249,7 +13278,8 @@
             "count": 1,
             "name": "Resistance Tonic",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13257,135 +13287,152 @@
             "count": 1,
             "name": "Door Key",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Chest Key",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Master Key",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Seraph Robe",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Energy Drop",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Spirit Dust",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Secret Book",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Speedwing",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Goddess Icon",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Dracoshield",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Talisman",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Naga's Tear",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Boots",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Arms Scroll",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Master Seal",
             "category": [
-                "Items"
+                "Items",
+                "Seals"
             ],
-            "filler": true
+            "progression": true
         },
         {
             "count": 1,
             "name": "Second Seal",
             "category": [
-                "Items"
+                "Items",
+                "Seals"
             ],
-            "filler": true
+            "progression": true
         },
         {
             "count": 1,
             "name": "Bullion (S)",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13393,23 +13440,26 @@
             "count": 1,
             "name": "Bullion (M)",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Bullion (L)",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Sweet Tincture",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13417,7 +13467,8 @@
             "count": 1,
             "name": "Gaius's Confect",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13425,7 +13476,8 @@
             "count": 1,
             "name": "Kris's Confect",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13433,7 +13485,8 @@
             "count": 1,
             "name": "Tiki's Tear",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13441,7 +13494,8 @@
             "count": 1,
             "name": "Seed of Trust",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
             "filler": true
         },
@@ -13449,45 +13503,88 @@
             "count": 1,
             "name": "Reeking Box",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Rift Door",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Supreme Emblem",
             "category": [
-                "Items"
+                "Items",
+                "MoreItems"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 1,
             "name": "Dread Scroll",
             "category": [
                 "Items",
-                "DLC_Item",
+                "DLC_ClassItem",
                 "DLC02"
             ],
-            "filler": true
+            "progression": true
         },
         {
             "count": 1,
             "name": "Wedding Bouquet",
             "category": [
                 "Items",
+                "DLC_ClassItem",
+                "DLC03"
+            ],
+            "progression": true
+        },
+        {
+            "count": 1,
+            "name": "All Stats +2",
+            "category": [
+                "Items",
+                "DLC_Item",
+                "DLC01"
+            ],
+            "useful": true
+        },
+        {
+            "count": 1,
+            "name": "Paragon",
+            "category": [
+                "Items",
+                "DLC_Item",
+                "DLC02"
+            ],
+            "useful": true
+        },
+        {
+            "count": 1,
+            "name": "Iote's Shield",
+            "category": [
+                "Items",
                 "DLC_Item",
                 "DLC03"
             ],
-            "filler": true
+            "useful": true
+        },
+        {
+            "count": 1,
+            "name": "Limit Breaker",
+            "category": [
+                "Items",
+                "DLC_Item",
+                "DLC04"
+            ],
+            "useful": true
         },
         {
             "count": 1,
@@ -13497,7 +13594,7 @@
                 "DLC_Item",
                 "DLC05"
             ],
-            "filler": true
+            "useful": true
         },
         {
             "count": 0,

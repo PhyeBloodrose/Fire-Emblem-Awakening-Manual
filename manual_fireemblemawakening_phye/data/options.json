@@ -24,22 +24,30 @@
     "user": {
         "Progressive_Weapons": {
             "description": [
-                "When enabled, will give progressive weapons going from rank D to A. E is available from start.",
-                "When disabled, one of each weapon will be added into the multiworld. Rank E of every weapon type is allowed to use from start.",
-                "Beware if this is disabled, you may need some extra locations to have room to place all of them into the multiworld.",
-                "Rank A Weapons and Stones are considered as Progression.",
-                "Rank B and C weapons are considered as Useful.",
-                "Rank D Weapons are considered as Filler.",
-                "Progressive Weapons are all considered as useful."
+                "When enabled, add progressive weapons going from rank D to A. E is available from start.",
+                "In this Manual Tomes are split into their types instead of having a single Progressive Tome encompassing all of them, they're split into Fire, Wind, Thunder and Dark.",
+                "The Water Tome is just called 'Water Tome Rank A' as there is only one in the game.",
+                "All these items are considered as Useful."
             ],
             "type": "Toggle",
             "default": true,
             "group": "Item Options"
         },
+        "All_Weapons": {
+            "description": [
+                "When enabled, will add one of each weapon into the multiworld.",
+                "Rank A, B and C Weapons are considered as Useful.",
+                "Rank D and E Weapons are considered as Filler.",
+                "Beast and Dragonstones are considered as Progression. Their upgraded variants are considered useful however."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
         "Include_Rank_E": {
             "description": [
-                "If 'Progressive_Weapons' is enabled, will add an additional Progressive Weapon of each type.",
-                "If 'Progressive_Weapons' is disabled, will also include every Rank E weapon in the pool.",
+                "If 'Progressive_Weapons' is enabled, will add an additional Progressive Weapon of each type which will be required before a Character/Class is in logic.",
+                "If 'All_Weapons' is enabled, will also include every Rank E weapon in the pool.",
                 "Bronze Weapons will be considered as Progression for various Classes.",
                 "Only the Fire Tome will be labeled as Progression for Tome Classes.",
                 "Only the Heal Staff will be labeled as Progression for Staff Classes.",
@@ -104,7 +112,6 @@
             "description": [
                 "Adds one of each Skill as an item into the item pool restricting you from using said skill until found.",
                 "These are considered as Filler and Useful Items.",
-                "Some skills such as Galeforce and Limit Breaker are labeled as progression items due to their almost must have status for harder difficulties.",
                 "The decision to decide what classifies as what was done entirely by personal taste."
             ],
             "type": "Toggle",
@@ -113,8 +120,17 @@
         },
         "More_Items": {
             "description": [
-                "Adds one of each item(exluding weapons) into the multiworld.",
-                "These are considered as filler items."
+                "Adds one of each item(exluding weapons, seals and dlc items) into the multiworld.",
+                "These are all considered as filler or useful items."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Item Options"
+        },
+        "Add_Seals": {
+            "description": [
+                "Adds the Master and Second Seal into the multiworld.",
+                "These are considered as progression items and will be required before you can reclass your characters unless 'Disable_SealLogic' is enabled."
             ],
             "type": "Toggle",
             "default": false,
@@ -427,43 +443,20 @@
         },
         "EnemySanity": {
             "description": [
-                "Defeating every initial enemy unit in each chapter is a check.",
-                "You don't require to defeat specific units, just a number of them. As such if reinforcements do arrive in a chapter you'll have some wiggle room.",
-                "This does not include extra enemies on Hard or Lunatic Difficulty.",
-                "This does not include enemies which can be recruited.",
-                "If the Mad King Goal is enabled, it will decrease the amount of enemies you're required to defeat in specific Xenologue Chapters if Xenologues are enabled."
+                "Defeating Enemies on each map is a check.",
+                "'Per Map' makes you defeat an x amount of enemies per map. Hard/Lunatic adds more to this count as they have increased enemies on each map.",
+                "'Per Type' will have you defeat each different enemy type you can find on a map. The only exception is Chapter 22 which will then label them by their names instead as they're all unique.",
+                "If the Mad King Goal is enabled, it may reduce the amount of enemies needed to be defeated in certain Xenologues."
             ],
-            "type": "Toggle",
-            "default": false,
-            "group": "Sanity Options"
-        },
-        "EnemySanity_Hard": {
-            "description": [
-                "Does nothing if 'EnemySanity' is not enabled.",
-                "Includes enemies which only appear on Hard Difficulty."
-            ],
-            "type": "Toggle",
-            "default": false,
-            "group": "Sanity Options"
-        },
-        "EnemySanity_Lunatic": {
-            "description": [
-                "Does nothing if 'EnemySanity' and 'Enemysanity_Hard' are not enabled.",
-                "Includes enemies which only appear on Lunatic Difficulty."
-            ],
-            "type": "Toggle",
-            "default": false,
-            "group": "Sanity Options"
-        },
-        "EnemySanity_PerType": {
-            "description": [
-                "If enabled, will make the EnemySanity count for each different kind of unit on the battle field instead of each unit on the field.",
-                "Does nothing if 'EnemySanity' is disabled.",
-                "Does not account for the Boss' type of each chapter since that location is always seperate.",
-                "The only exception to this option is Chapter 22 where instead of its types its every different named NPC instead."
-            ],
-            "type": "Toggle",
-            "default": false,
+            "values": {
+                "disabled": 0,
+                "enemies_per_map": 1,
+                "enemies_per_map_hard": 2,
+                "enemies_per_map_lunatic": 3,
+                "enemies_per_type": 4
+            },
+            "type": "Choice",
+            "default": 0,
             "group": "Sanity Options"
         },
         "LevelUpSanity": {
@@ -625,8 +618,19 @@
         },
         "DLC_Items": {
             "description": [
-                "When enabled together with the DLC the item is from, the dlc item will be added into the item pool.",
-                "Is only added if you have 'More_Items' enabled."
+                "All the various DLC items will be added into the multiworld.",
+                "They are considered useful.",
+                "Requires DLCs to be enabled which adds items or this option does nothing."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "DLC Options"
+        },
+        "DLC_ClassItems": {
+            "description": [
+                "If enabled, will add the 'Wedding Bouqet' and 'Dread Scroll' into the multiworld.",
+                "These items are considered as progression and will be required before the respective classes are accessible.",
+                "Requires their DLC to be enabled or this option does nothing."
             ],
             "type": "Toggle",
             "default": false,
@@ -767,6 +771,18 @@
             ],
             "type": "Toggle",
             "default": false
+        },
+        "Unrestricted_Character_Access": {
+            "description": [
+                "When this option is enabled, every Character except the Child Characters will be considered accessible from start.",
+                "You still require respective items and such before they're in logic.",
+                "BE AWARE: This setting cannot guarantee you actually have access to them ingame, it's merely a way for people who can get later game characters earlier at any time with the aid of other means.",
+                "NOTE: If using Local_Pairs, you need access to their original Location before they're in logic as they are in the chapters' themselves. May be changed in the future, but if you intend to restrict_childpairs feel free to disable local pairs.",
+                "NOTE: Characters obtained past Chapter 11 remain unobtainable if the Mad King Goal is enabled."
+            ],
+            "type": "Toggle",
+            "default": false,
+            "group": "Extra Options"
         }
     }
 

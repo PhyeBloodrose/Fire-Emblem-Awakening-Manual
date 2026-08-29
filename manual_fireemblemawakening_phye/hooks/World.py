@@ -180,15 +180,23 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
     
     if E_Rank:
        if Prog_Weapon:
-            item_config["Progressive Sword Rank"] = {"useful": 5}
-            item_config["Progressive Lance Rank"] = {"useful": 5}
-            item_config["Progressive Axe Rank"] = {"useful": 5}
-            item_config["Progressive Bow Rank"] = {"useful": 5}
-            item_config["Progressive Fire Tome Rank"] = {"useful": 5}
+            item_config["Progressive Sword Rank"] = {"progression": 1, "useful": 4}
+            item_config["Progressive Lance Rank"] = {"progression": 1, "useful": 4}
+            item_config["Progressive Axe Rank"] = {"progression": 1, "useful": 4}
+            item_config["Progressive Bow Rank"] = {"progression": 1, "useful": 4}
+            item_config["Progressive Fire Tome Rank"] = {"progression": 1, "useful": 4}
             item_config["Progressive Wind Tome Rank"] = {"useful": 5}
             item_config["Progressive Thunder Tome Rank"] = {"useful": 5}
             item_config["Progressive Dark Tome Rank"] = {"useful": 5}
-            item_config["Progressive Staff Rank"] = {"useful": 5}
+            item_config["Progressive Staff Rank"] = {"progression": 1, "useful": 4}
+    if not E_Rank:
+       if Prog_Weapon:
+            item_config["Progressive Sword Rank"] = {"useful": 4}
+            item_config["Progressive Lance Rank"] = {"useful": 4}
+            item_config["Progressive Axe Rank"] = {"useful": 4}
+            item_config["Progressive Bow Rank"] = {"useful": 4}
+            item_config["Progressive Fire Tome Rank"] = {"useful": 4}
+            item_config["Progressive Staff Rank"] = {"useful": 4}
     if MadKing:
         if MainProg:
             item_config["Main Chapter Progression"] = {"progression": 11}

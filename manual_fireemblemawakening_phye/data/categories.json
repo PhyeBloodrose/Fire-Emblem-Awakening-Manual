@@ -4,11 +4,11 @@
         "hidden": true
     },
     "Not_Prog_Weapon": {
-        "yaml_option": [ "!Progressive_Weapons" ],
+        "yaml_option": [ "All_Weapons" ],
         "hidden": true
     },
     "Weapons - Rank E": {
-        "yaml_option": [ "!Progressive_Weapons", "Include_Rank_E" ]
+        "yaml_option": [ "All_Weapons", "Include_Rank_E" ]
     },
     "Classes - Base": {
         "yaml_option": [ "Base_Classes" ]
@@ -35,8 +35,13 @@
     "Class Skills": {
         "yaml_option": [ "Skills" ]
     },
-    "Items": {
-        "yaml_option": [ "More_Items" ]
+    "MoreItems": {
+        "yaml_option": [ "More_Items" ],
+        "hidden": true
+    },
+    "Seals": {
+        "yaml_option": [ "Add_Seals" ],
+        "hidden": true
     },
     "Weapon Types": {
         "yaml_option": [ "Restrict_Weapons" ]
@@ -75,24 +80,24 @@
         "yaml_option": [ "DLC_Skills", "Skills" ],
         "hidden": true
     },
+    "DLC_ClassItem": {
+        "yaml_option": [ "DLC_ClassItems" ],
+        "hidden": true
+    },
     "DLC_Item": {
-        "yaml_option": [ "DLC_Items", "More_Items" ],
+        "yaml_option": [ "DLC_Items" ],
         "hidden": true
     },
     "EnemySanity": {
-        "yaml_option": [ "EnemySanity", "!EnemySanity_PerType" ],
         "hidden": true
     },
     "EnemySanityHard": {
-        "yaml_option": [ "EnemySanity", "EnemySanity_Hard", "!EnemySanity_PerType" ],
         "hidden": true
     },
     "EnemySanityLuna": {
-        "yaml_option": [ "EnemySanity", "EnemySanity_Hard", "EnemySanity_Lunatic", "!EnemySanity_PerType" ],
         "hidden": true
     },
     "EnemySanityType": {
-        "yaml_option": [ "EnemySanity", "EnemySanity_PerType" ],
         "hidden": true
     },
     "Sparkles": {

@@ -1162,6 +1162,14 @@
             "requires": ""
         },
         {
+            "name": "Lon'qu Recruited (Automatically at the end of Chapter)",
+            "region": "Chapter 4",
+            "category": [
+                "Chapter 04 - Two Falchions"
+            ],
+            "requires": ""
+        },
+        {
             "name": "CH4 - Event Tile 1",
             "region": "Chapter 4",
             "category": [
@@ -14229,7 +14237,7 @@
             "requires": ""
         },
         {
-            "name": "P5 - Obtained Second Seal from Elixir",
+            "name": "P5 - Obtained Second Seal from Gecko",
             "region": "Paralogue 5",
             "category": [
                 "Paralogue 05 - Scion of Legend",
@@ -50210,7 +50218,7 @@
         },
         {
             "name": "Virion - Reached Level 20 in a Promoted Class",
-            "region": "Lissa_Promoted",
+            "region": "Virion_Promoted",
             "category": [
                 "Unit Leveling",
                 "LevelUpSanityPromo"
@@ -51914,7 +51922,7 @@
         },
         {
             "name": "Flavia - Reached Level 10 in a Promoted Class",
-            "region": "Basilio",
+            "region": "Flavia",
             "category": [
                 "Unit Leveling",
                 "LevelUpSanityPromo"

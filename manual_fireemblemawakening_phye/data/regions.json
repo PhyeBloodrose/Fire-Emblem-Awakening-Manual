@@ -4,7 +4,8 @@
         "starting": true,
         "connects_to": [
             "Prologue",
-            "WorldTour"
+            "WorldTour",
+            "All_Characters"
         ],
         "requires": ""
     },
@@ -7853,17 +7854,6 @@
         "connects_to": [],
         "requires": "{OptOne(|Xenologue Apotheosis|)} AND |Chapter 25| AND |@Units:20|"
     },
-    "WorldTour": {
-        "connects_to": [
-            "OutRealm",
-            "All_Characters",
-            "Southtown",
-            "Supports",
-            "Farfort",
-            "WestOfYlisstol_WT"
-        ],
-        "requires": "{YamlEnabled(World_Tour_Mode)}"
-    },
     "All_Characters": {
         "connects_to": [
             "Robin",
@@ -7892,7 +7882,6 @@
             "Olivia",
             "Cherche",
             "Henry",
-            "Lucina",
             "Say'ri",
             "Tiki",
             "Basilio",
@@ -7902,9 +7891,26 @@
             "Emmeryn",
             "Yen'fay",
             "Aversa",
-            "Priam"
+            "Priam",
+            "WorldTour_Lucina"
         ],
-        "requires": ""
+        "requires": "{YamlEnabled(World_Tour_Mode)} OR {YamlEnabled(Unrestricted_Character_Access)}"
+    },
+    "WorldTour_Lucina": {
+        "connects_to": [
+            "Lucina"
+        ],
+        "requires": "{YamlEnabled(World_Tour_Mode)}"
+    },
+    "WorldTour": {
+        "connects_to": [
+            "OutRealm",
+            "Southtown",
+            "Supports",
+            "Farfort",
+            "WestOfYlisstol_WT"
+        ],
+        "requires": "{YamlEnabled(World_Tour_Mode)}"
     },
     "Southtown": {
         "connects_to": [],

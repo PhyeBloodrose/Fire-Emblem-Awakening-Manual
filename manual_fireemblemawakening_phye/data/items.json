@@ -2454,7 +2454,7 @@
                 "Weapons - Rank E"
             ],
             "count": 1,
-            "filler": true
+            "progression": true
         },
         {
             "name": "Ward",

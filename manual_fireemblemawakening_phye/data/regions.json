@@ -237,7 +237,7 @@
     },
     "Paralogue 3": {
         "connects_to": [],
-        "requires": "{OptOne(|Progressive Paralogue Chapter:3|)} AND {OptOne(|Paralogue Chapter 3|)}"
+        "requires": "{OptOne(|Progressive Paralogue Chapter:3|)} AND {OptOne(|Paralogue Chapter 3|)} AND (|Rescue Staff Access| OR {YamlDisabled(ExtraRewardSanity)})"
     },
     "Paralogue 4": {
         "connects_to": [
@@ -284,13 +284,13 @@
             "Paralogue 9",
             "Severa"
         ],
-        "requires": "{OptOne(|Progressive Paralogue Chapter:10|)} AND {OptOne(|Paralogue Chapter 10|)} AND |Severa Parents|"
+        "requires": "{OptOne(|Progressive Paralogue Chapter:10|)} AND {OptOne(|Paralogue Chapter 10|)} AND |Severa Parents| AND |Rescue Staff Access|"
     },
     "Paralogue 11": {
         "connects_to": [
             "Gerome"
         ],
-        "requires": "{OptOne(|Progressive Paralogue Chapter:11|)} AND {OptOne(|Paralogue Chapter 11|)} AND |Gerome Parents|"
+        "requires": "{OptOne(|Progressive Paralogue Chapter:11|)} AND {OptOne(|Paralogue Chapter 11|)} AND |Gerome Parents| AND (|Rescue Staff Access| OR {YamlDisabled(ExtraRewardSanity)})"
     },
     "Paralogue 12": {
         "connects_to": [
@@ -329,7 +329,7 @@
             "Paralogue 9",
             "Tiki"
         ],
-        "requires": "{OptOne(|Progressive Paralogue Chapter:17|)} AND {OptOne(|Paralogue Chapter 17|)}"
+        "requires": "{OptOne(|Progressive Paralogue Chapter:17|)} AND {OptOne(|Paralogue Chapter 17|)} AND |Rescue Staff Access|"
     },
     "Paralogue 18": {
         "connects_to": [
@@ -347,13 +347,13 @@
         "connects_to": [
             "Emmeryn"
         ],
-        "requires": "{OptOne(|Progressive Paralogue Chapter:20|)} AND {OptOne(|Paralogue Chapter 20|)}"
+        "requires": "{OptOne(|Progressive Paralogue Chapter:20|)} AND {OptOne(|Paralogue Chapter 20|)} AND |Rescue Staff Access|"
     },
     "Paralogue 21": {
         "connects_to": [
             "Yen'fay"
         ],
-        "requires": "{OptOne(|Progressive Paralogue Chapter:21|)} AND {OptOne(|Paralogue Chapter 21|)}"
+        "requires": "{OptOne(|Progressive Paralogue Chapter:21|)} AND {OptOne(|Paralogue Chapter 21|)} AND (|Say'ri| OR {YamlDisabled(Enable_SideCharacter_Units)})"
     },
     "Paralogue 22": {
         "connects_to": [

@@ -2426,6 +2426,10 @@
         {
             "name": "Lodestar Class",
             "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+        },
+        {
+            "name": "Rescue Staff Access",
+            "requires": "({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Rescue|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND (|Lissa Access| OR |Maribelle Access| OR |Libra Access| OR |Anna Access| OR |Brady Access| OR |Gangrel Access| OR |Emmeryn Access|)"
         }
     ]
 }

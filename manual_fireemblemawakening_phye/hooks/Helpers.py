@@ -7,14 +7,19 @@ from BaseClasses import MultiWorld
 def before_is_category_enabled(multiworld: MultiWorld, player: int, category_name: str) -> Optional[bool]:
     from ..Helpers import get_option_value
 
+    sanity = get_option_value(multiworld, player, "EnemySanity")
+
     if category_name == "EnemySanity":
-       return get_option_value(multiworld, player, "EnemySanity") >= 1 < 4
+        return 1 <= sanity <= 3
+
     if category_name == "EnemySanityHard":
-        return get_option_value(multiworld, player, "EnemySanity") >= 2 < 4
+        return 2 <= sanity <= 3
+
     if category_name == "EnemySanityLuna":
-        return get_option_value(multiworld, player, "EnemySanity") == 3
+        return sanity == 3
+
     if category_name == "EnemySanityType":
-        return get_option_value(multiworld, player, "EnemySanity") == 4
+        return sanity == 4
 
     return None
 

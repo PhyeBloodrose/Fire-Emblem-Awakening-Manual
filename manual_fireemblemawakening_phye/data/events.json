@@ -3,11 +3,11 @@
     "data": [
         {
             "name": "MasterSealed",
-            "requires": "({OptOne(|Master Seal|)} AND (|Chapter 12| OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 8| OR |Paralogue 12| OR |Paralogue 13|)))) OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)}"
+            "requires": "({OptOne(|Master Seal|)} AND ((|Chapter 12| AND {OptOne(|Port Ferox Shop Key|)}) OR ({YamlEnabled(Enable_Paralogues)} AND ((|Paralogue 8| AND {OptOne(|Dueling Grounds Shop Key|)}) OR (|Paralogue 12| AND {OptOne(|The Ruins of Time Shop Key|)}) OR (|Paralogue 13| AND {OptOne(|Law's End Shop Key|)}))))) OR {YamlEnabled(Disable_SealLogic)} OR {YamlCompare(Main_Goal == 0)}"
         },
         {
-            "name": "Sealed",
-            "requires": "({OptOne(|Second Seal|)} AND (|Chapter 16| OR ({YamlEnabled(Enable_Paralogues)} AND (|Paralogue 6| OR |Paralogue 10| OR |Paralogue 16|)))) OR {YamlEnabled(Disable_SealLogic)} OR {YamlEnabled(Mad_King_Goal)}"
+            "name": "SecondSealed",
+            "requires": "({OptOne(|Second Seal|)} AND ((|Chapter 16| AND {OptOne(|The Mila Tree Shop Key|)}) OR ({YamlEnabled(Enable_Paralogues)} AND ((|Paralogue 6| AND {OptOne(|Great Gate Shop Key|)}) OR (|Paralogue 10| AND {OptOne(|Mercenary Fortress Shop Key|)}) OR (|Paralogue 16| AND {OptOne(|Manor of Lost Souls Shop Key|)}))))) OR {YamlEnabled(Disable_SealLogic)} OR {YamlCompare(Main_Goal == 0)}"
         },
         {
             "name": "Chapter 1",
@@ -310,7 +310,10 @@
         },
         {
             "name": "Xenologue 5",
-            "region": "Xenologue 5"
+            "region": "Xenologue 5",
+            "category": [
+                "MadKingDisabled"
+            ]
         },
         {
             "name": "Xenologue 8",
@@ -328,7 +331,7 @@
         },
         {
             "name": "Victory Achieved",
-            "requires": "((|Chapter 11| AND {YamlEnabled(Mad_King_Goal)}) OR (|EndChapter| AND {YamlEnabled(Grima_Goal)}) OR (|Apotheosis| AND {YamlEnabled(Apotheosis_Goal)}) OR ({YamlDisabled(Mad_King_Goal)} AND {YamlDisabled(Grima_Goal)} AND {YamlDisabled(Apotheosis_Goal)})) AND {OptOne(|@Fire Emblem Gemstones:5|)}"
+            "requires": "((|Chapter 11| AND {YamlCompare(Main_Goal == 0)}) OR (|EndChapter| AND {YamlCompare(Main_Goal == 1)}) OR {YamlCompare(Main_Goal == 2)}) AND ((|Apotheosis| AND {YamlEnabled(Apotheosis_Goal)}) OR {YamlDisabled(Apotheosis_Goal)} OR {YamlCompare(Main_Goal == 0)}) AND {OptOne(|@Fire Emblem Gemstones:5|)}"
         },
         {
             "name": "Lucina Parents",
@@ -787,6 +790,7 @@
             "region": "Lucina",
             "category": [
                 "Base Units",
+                "Child Characters",
                 "MadKingDisabled"
             ]
         },
@@ -795,6 +799,7 @@
             "region": "Lucina_Promoted",
             "category": [
                 "Units",
+                "Child Characters",
                 "MadKingDisabled"
             ]
         },
@@ -852,7 +857,8 @@
             "region": "Owain",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -860,7 +866,8 @@
             "region": "Owain_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -868,7 +875,8 @@
             "region": "Inigo",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -876,7 +884,8 @@
             "region": "Inigo_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -884,7 +893,8 @@
             "region": "Brady",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -892,7 +902,8 @@
             "region": "Brady_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -900,7 +911,8 @@
             "region": "Kjelle",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -908,7 +920,8 @@
             "region": "Kjelle_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -916,7 +929,8 @@
             "region": "Cynthia",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -924,7 +938,8 @@
             "region": "Cynthia_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -932,7 +947,8 @@
             "region": "Severa",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -940,7 +956,8 @@
             "region": "Severa_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -948,7 +965,8 @@
             "region": "Gerome",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -956,15 +974,17 @@
             "region": "Gerome_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
             "name": "Morgan Access",
-            "region": "Morgan",
+            "region": "Morgan_Access",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -972,7 +992,8 @@
             "region": "Morgan_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -981,7 +1002,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -989,7 +1011,8 @@
             "region": "Laurent",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -997,7 +1020,8 @@
             "region": "Laurent_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1005,7 +1029,8 @@
             "region": "Noire",
             "category": [
                 "Base Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1013,7 +1038,8 @@
             "region": "Noire_Promoted",
             "category": [
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1022,7 +1048,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "Child Characters"
+                "Child Characters",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1040,7 +1067,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1049,7 +1077,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1058,7 +1087,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1067,7 +1097,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1076,7 +1107,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1085,7 +1117,8 @@
             "category": [
                 "Base Units",
                 "Units",
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ]
         },
         {
@@ -1511,28 +1544,32 @@
         {
             "name": "Lucina Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank:4|)}"
         },
         {
             "name": "Lucina Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank:3|)}"
         },
         {
             "name": "Lucina Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank:2|)}"
         },
         {
             "name": "Lucina Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Lucina Access| AND {OptOne(|Lucina Support Rank|)}"
         },
@@ -1655,329 +1692,376 @@
         {
             "name": "Owain Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Owain Access| AND {OptOne(|Owain Support Rank:4|)}"
         },
         {
             "name": "Owain Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Owain Access| AND {OptOne(|Owain Support Rank:3|)}"
         },
         {
             "name": "Owain Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Owain Access| AND {OptOne(|Owain Support Rank:2|)}"
         },
         {
             "name": "Owain Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Owain Access| AND {OptOne(|Owain Support Rank|)}"
         },
         {
             "name": "Inigo Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank:4|)}"
         },
         {
             "name": "Inigo Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank:3|)}"
         },
         {
             "name": "Inigo Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank:2|)}"
         },
         {
             "name": "Inigo Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Inigo Access| AND {OptOne(|Inigo Support Rank|)}"
         },
         {
             "name": "Brady Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Brady Access| AND {OptOne(|Brady Support Rank:4|)}"
         },
         {
             "name": "Brady Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Brady Access| AND {OptOne(|Brady Support Rank:3|)}"
         },
         {
             "name": "Brady Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Brady Access| AND {OptOne(|Brady Support Rank:2|)}"
         },
         {
             "name": "Brady Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Brady Access| AND {OptOne(|Brady Support Rank|)}"
         },
         {
             "name": "Kjelle Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank:4|)}"
         },
         {
             "name": "Kjelle Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank:3|)}"
         },
         {
             "name": "Kjelle Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank:2|)}"
         },
         {
             "name": "Kjelle Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Kjelle Access| AND {OptOne(|Kjelle Support Rank|)}"
         },
         {
             "name": "Cynthia Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank:4|)}"
         },
         {
             "name": "Cynthia Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank:3|)}"
         },
         {
             "name": "Cynthia Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank:2|)}"
         },
         {
             "name": "Cynthia Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Cynthia Access| AND {OptOne(|Cynthia Support Rank|)}"
         },
         {
             "name": "Severa Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Severa Access| AND {OptOne(|Severa Support Rank:4|)}"
         },
         {
             "name": "Severa Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Severa Access| AND {OptOne(|Severa Support Rank:3|)}"
         },
         {
             "name": "Severa Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Severa Access| AND {OptOne(|Severa Support Rank:2|)}"
         },
         {
             "name": "Severa Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Severa Access| AND {OptOne(|Severa Support Rank|)}"
         },
         {
             "name": "Gerome Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank:4|)}"
         },
         {
             "name": "Gerome Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank:3|)}"
         },
         {
             "name": "Gerome Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank:2|)}"
         },
         {
             "name": "Gerome Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gerome Access| AND {OptOne(|Gerome Support Rank|)}"
         },
         {
             "name": "Morgan Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Morgan Access| AND {OptOne(|Morgan Support Rank:3|)}"
         },
         {
             "name": "Morgan Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Morgan Access| AND {OptOne(|Morgan Support Rank:2|)}"
         },
         {
             "name": "Morgan Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Morgan Access| AND {OptOne(|Morgan Support Rank|)}"
         },
         {
             "name": "Yarne Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank:4|)}"
         },
         {
             "name": "Yarne Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank:3|)}"
         },
         {
             "name": "Yarne Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank:2|)}"
         },
         {
             "name": "Yarne Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yarne Access| AND {OptOne(|Yarne Support Rank|)}"
         },
         {
             "name": "Laurent Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank:4|)}"
         },
         {
             "name": "Laurent Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank:3|)}"
         },
         {
             "name": "Laurent Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank:2|)}"
         },
         {
             "name": "Laurent Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Laurent Access| AND {OptOne(|Laurent Support Rank|)}"
         },
         {
             "name": "Noire Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Noire Access| AND {OptOne(|Noire Support Rank:4|)}"
         },
         {
             "name": "Noire Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Noire Access| AND {OptOne(|Noire Support Rank:3|)}"
         },
         {
             "name": "Noire Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Noire Access| AND {OptOne(|Noire Support Rank:2|)}"
         },
         {
             "name": "Noire Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Noire Access| AND {OptOne(|Noire Support Rank|)}"
         },
         {
             "name": "Nah Support S",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Nah Access| AND {OptOne(|Nah Support Rank:4|)}"
         },
         {
             "name": "Nah Support A",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Nah Access| AND {OptOne(|Nah Support Rank:3|)}"
         },
         {
             "name": "Nah Support B",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Nah Access| AND {OptOne(|Nah Support Rank:2|)}"
         },
         {
             "name": "Nah Support C",
             "category": [
-                "ChildChara"
+                "ChildChara",
+                "MadKingDisabled"
             ],
             "requires": "|Nah Access| AND {OptOne(|Nah Support Rank|)}"
         },
@@ -2012,168 +2096,192 @@
         {
             "name": "Gangrel Support S",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank:4|)}"
         },
         {
             "name": "Gangrel Support A",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank:3|)}"
         },
         {
             "name": "Gangrel Support B",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank:2|)}"
         },
         {
             "name": "Gangrel Support C",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Gangrel Access| AND {OptOne(|Gangrel Support Rank|)}"
         },
         {
             "name": "Walhart Support S",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank:4|)}"
         },
         {
             "name": "Walhart Support A",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank:3|)}"
         },
         {
             "name": "Walhart Support B",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank:2|)}"
         },
         {
             "name": "Walhart Support C",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Walhart Access| AND {OptOne(|Walhart Support Rank|)}"
         },
         {
             "name": "Emmeryn Support S",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank:4|)}"
         },
         {
             "name": "Emmeryn Support A",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank:3|)}"
         },
         {
             "name": "Emmeryn Support B",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank:2|)}"
         },
         {
             "name": "Emmeryn Support C",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Emmeryn Access| AND {OptOne(|Emmeryn Support Rank|)}"
         },
         {
             "name": "Yen'fay Support S",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank:4|)}"
         },
         {
             "name": "Yen'fay Support A",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank:3|)}"
         },
         {
             "name": "Yen'fay Support B",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank:2|)}"
         },
         {
             "name": "Yen'fay Support C",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Yen'fay Access| AND {OptOne(|Yen'fay Support Rank|)}"
         },
         {
             "name": "Aversa Support S",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank:4|)}"
         },
         {
             "name": "Aversa Support A",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank:3|)}"
         },
         {
             "name": "Aversa Support B",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank:2|)}"
         },
         {
             "name": "Aversa Support C",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Aversa Access| AND {OptOne(|Aversa Support Rank|)}"
         },
         {
             "name": "Priam Support S",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Priam Access| AND {OptOne(|Priam Support Rank:4|)}"
         },
         {
             "name": "Priam Support A",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Priam Access| AND {OptOne(|Priam Support Rank:3|)}"
         },
         {
             "name": "Priam Support B",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Priam Access| AND {OptOne(|Priam Support Rank:2|)}"
         },
         {
             "name": "Priam Support C",
             "category": [
-                "SpotPassChara"
+                "SpotPassChara",
+                "MadKingDisabled"
             ],
             "requires": "|Priam Access| AND {OptOne(|Priam Support Rank|)}"
         },
@@ -2204,232 +2312,234 @@
             "category": [
                 "MadKingDisabled"
             ],
-            "requires": "|Chapter 16|"
+            "requires": "|Chapter 14|"
         },
         {
             "name": "Level 30",
             "category": [
                 "MadKingDisabled"
             ],
-            "requires": "|Chapter 18|"
+            "requires": "|Chapter 16|"
         },
         {
             "name": "Level 35",
             "category": [
                 "MadKingDisabled"
             ],
-            "requires": "|Chapter 20|"
+            "requires": "|Chapter 18|"
         },
         {
             "name": "Level 40",
             "category": [
                 "MadKingDisabled"
             ],
-            "requires": "|Chapter 22|"
+            "requires": "|Chapter 20|"
         },
         {
             "name": "Lord Class",
-            "requires": "{OptOne(|Lord|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Lord|)} AND {OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|How to be the Main Character|)}"
         },
         {
             "name": "Great Lord Class",
-            "requires": "{OptOne(|Great Lord|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Great Lord|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|How to be the Main Character|)}"
         },
         {
             "name": "Tactician Class",
-            "requires": "{OptOne(|Tactician|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Tactician|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|How to be the Main Character|)}"
         },
         {
             "name": "Grandmaster Class",
-            "requires": "{OptOne(|Grandmaster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Grandmaster|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|How to be the Main Character|)}"
         },
         {
             "name": "Cavalier Class",
-            "requires": "{OptOne(|Cavalier|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Cavalier|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|A Guide to Knighthood|)}"
         },
         {
             "name": "Knight Class",
-            "requires": "{OptOne(|Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Knight|)} AND {OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|A Guide to Knighthood|)}"
         },
         {
             "name": "Paladin Class",
-            "requires": "{OptOne(|Paladin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Paladin|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|A Guide to Knighthood|)}"
         },
         {
             "name": "Great Knight Class",
-            "requires": "{OptOne(|Great Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Great Knight|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|A Guide to Knighthood|)}"
         },
         {
             "name": "General Class",
-            "requires": "{OptOne(|General|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|General|)} AND (({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|A Guide to Knighthood|)}"
         },
         {
             "name": "Myrmidon Class",
-            "requires": "{OptOne(|Myrmidon|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Myrmidon|)} AND {OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Sword-wielding Guide|)}"
         },
         {
             "name": "Thief Class",
-            "requires": "{OptOne(|Thief|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Thief|)} AND {OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Sword-wielding Guide|)}"
         },
         {
             "name": "Swordmaster Class",
-            "requires": "{OptOne(|Swordmaster|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Swordmaster|)} AND {OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Sword-wielding Guide|)}"
         },
         {
             "name": "Assassin Class",
-            "requires": "{OptOne(|Assassin|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Assassin|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Bow Weapon License|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Sword-wielding Guide|)}"
         },
         {
             "name": "Trickster Class",
-            "requires": "{OptOne(|Trickster|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Trickster|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Sword-wielding Guide|)}"
         },
         {
             "name": "Barbarian Class",
-            "requires": "{OptOne(|Barbarian|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Barbarian|)} AND {OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Fighter Class",
-            "requires": "{OptOne(|Fighter|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Fighter|)} AND {OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Mercenary Class",
-            "requires": "{OptOne(|Mercenary|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Mercenary|)} AND {OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Archer Class",
-            "requires": "{OptOne(|Archer|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Archer|)} AND {OptOne(|Bow Weapon License|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Berserker Class",
-            "requires": "{OptOne(|Berserker|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Berserker|)} AND {OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Warrior Class",
-            "requires": "{OptOne(|Warrior|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Warrior|)} AND (({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Bow Weapon License|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Hero Class",
-            "requires": "{OptOne(|Hero|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Hero|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Bow Knight Class",
-            "requires": "{OptOne(|Bow Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Bow Knight|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Bow Weapon License|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Sniper Class",
-            "requires": "{OptOne(|Sniper|)} AND {OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Sniper|)} AND {OptOne(|Bow Weapon License|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Guidebook for Fighters|)}"
         },
         {
             "name": "Pegasus Knight Class",
-            "requires": "{OptOne(|Pegasus Knight|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Pegasus Knight|)} AND {OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|How to Fly|)}"
         },
         {
             "name": "Wyvern Rider Class",
-            "requires": "{OptOne(|Wyvern Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Wyvern Rider|)} AND {OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|How to Fly|)}"
         },
         {
             "name": "Falcon Knight Class",
-            "requires": "{OptOne(|Falcon Knight|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Falcon Knight|)} AND (({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|How to Fly|)}"
         },
         {
             "name": "Dark Flier Class",
-            "requires": "{OptOne(|Dark Flier|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Dark Flier|)} AND (({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|How to Fly|)}"
         },
         {
             "name": "Wyvern Lord Class",
-            "requires": "{OptOne(|Wyvern Lord|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Wyvern Lord|)} AND (({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|How to Fly|)}"
         },
         {
             "name": "Griffon Rider Class",
-            "requires": "{OptOne(|Griffon Rider|)} AND {OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Griffon Rider|)} AND {OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|How to Fly|)}"
         },
         {
             "name": "Dark Mage Class",
-            "requires": "{OptOne(|Dark Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Dark Mage|)} AND {OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Mage Class",
-            "requires": "{OptOne(|Mage|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Mage|)} AND {OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Priest Class",
-            "requires": "{OptOne(|Priest|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Priest|)} AND {OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Cleric Class",
-            "requires": "{OptOne(|Cleric|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Cleric|)} AND {OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Troubadour Class",
-            "requires": "{OptOne(|Troubadour|)} AND {OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Troubadour|)} AND {OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Sorcerer Class",
-            "requires": "{OptOne(|Sorcerer|)} AND {OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Sorcerer|)} AND {OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Dark Knight Class",
-            "requires": "{OptOne(|Dark Knight|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Dark Knight|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Sage Class",
-            "requires": "{OptOne(|Sage|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Sage|)} AND (({OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "War Monk Class",
-            "requires": "{OptOne(|War Monk|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|War Monk|)} AND (({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "War Cleric Class",
-            "requires": "{OptOne(|War Cleric|)} AND (({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|War Cleric|)} AND (({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Valkyrie Class",
-            "requires": "{OptOne(|Valkyrie|)} AND (({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Valkyrie|)} AND (({OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Magic for Dummies|)}"
         },
         {
             "name": "Villager Class",
-            "requires": "{OptOne(|Villager|)} AND {OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Villager|)} AND {OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Taguel Class",
-            "requires": "{OptOne(|Taguel|)} AND {OptOne(|Weapon Type - Beaststones|)} AND {OptOne(|Beaststone|)}"
+            "requires": "{OptOne(|Taguel|)} AND {OptOne(|Beaststone Weapon License|)} AND {OptOne(|Beaststone|)} AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Dancer Class",
-            "requires": "{OptOne(|Dancer|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Dancer|)} AND {OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Manakete Class",
-            "requires": "{OptOne(|Manakete|)} AND {OptOne(|Weapon Type - Dragonstones|)} AND {OptOne(|Dragonstone|)}"
+            "requires": "{OptOne(|Manakete|)} AND {OptOne(|Dragonstone Weapon License|)} AND {OptOne(|Dragonstone|)} AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Dread Fighter Class",
             "category": [
                 "DLC_Class",
-                "DLC02"
+                "Lost Bloodlines 2",
+                "MadKingDisabled"
             ],
-            "requires": "|Xenologue 5| AND {OptOne(|Dread Scroll|)} AND {OptOne(|Dread Fighter|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Tomes|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "|Xenologue 5| AND {OptOne(|Dread Scroll|)} AND {OptOne(|Dread Fighter|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Tome Weapon License|)} AND {OptOne(|Fire|)} AND (|Progressive Fire Tome Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Bride Class",
             "category": [
                 "DLC_Class",
-                "DLC03"
+                "Smash Brethren 2",
+                "MadKingDisabled"
             ],
-            "requires": "|Xenologue 8| AND {OptOne(|Wedding Bouquet|)} AND {OptOne(|Bride|)} AND (({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Bows|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "|Xenologue 8| AND {OptOne(|Wedding Bouquet|)} AND {OptOne(|Bride|)} AND (({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Bow Weapon License|)} AND {OptOne(|Bronze Bow|)} AND (|Progressive Bow Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Staff Weapon License|)} AND {OptOne(|Heal|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Conqueror Class",
-            "requires": "{OptOne(|Conqueror|)} AND (({OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Lances|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Weapon Type - Axes|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})))"
+            "requires": "{OptOne(|Conqueror|)} AND (({OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Lance Weapon License|)} AND {OptOne(|Bronze Lance|)} AND (|Progressive Lance Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})) OR ({OptOne(|Axe Weapon License|)} AND {OptOne(|Bronze Axe|)} AND (|Progressive Axe Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}))) AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Lodestar Class",
-            "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Weapon Type - Swords|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)})"
+            "requires": "{OptOne(|Lodestar|)} AND {OptOne(|Sword Weapon License|)} AND {OptOne(|Bronze Sword|)} AND (|Progressive Sword Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND {OptOne(|Just be You|)}"
         },
         {
             "name": "Rescue Staff Access",
-            "requires": "({OptOne(|Weapon Type - Staves|)} AND {OptOne(|Rescue|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND (|Lissa Access| OR |Maribelle Access| OR |Libra Access| OR |Anna Access| OR |Brady Access| OR |Gangrel Access| OR |Emmeryn Access|)"
+            "requires": "({OptOne(|Staff Weapon License|)} AND {OptOne(|Rescue|)} AND (|Progressive Staff Rank| OR {YamlDisabled(Progressive_Weapons)} OR {YamlDisabled(Include_Rank_E)}) AND (|Lissa Access| OR |Maribelle Access| OR |Libra Access| OR |Anna Access| OR |Brady Access| OR |Gangrel Access| OR |Emmeryn Access|)"
         }
     ]
 }

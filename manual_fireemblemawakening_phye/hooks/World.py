@@ -164,16 +164,15 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
             available_fathers.remove(chosen)
 
         return result
-
+    from ..Helpers import get_option_value
     Children = is_option_enabled(multiworld, player, "Enable_Children")
     ChildPair = is_option_enabled(multiworld, player, "Restrict_ChildPairs")
     E_Rank = is_option_enabled(multiworld, player, "Include_Rank_E")
     Prog_Weapon = is_option_enabled(multiworld, player, "Progressive_Weapons")
-    MadKing = is_option_enabled(multiworld, player, "Mad_King_Goal")
+    MadKing = get_option_value(multiworld, player, "Main_Goal")
     ProgPro = is_option_enabled(multiworld, player, "Progressive_Paralogues")
     SpotPassPro = is_option_enabled(multiworld, player, "Enable_SpotPass_Paralogues")
-    CharaSpecific = is_option_enabled(multiworld, player, "Character_Specific_Classes")
-    from ..Helpers import get_option_value
+    CharaSpecific = get_option_value(multiworld, player, "Randomized_Classes") >= 4
     ManualPair = get_option_value(multiworld, player, "Manual_Pairing")
     MainProg = is_option_enabled(multiworld, player, "Progressive_MainChapters")
     ManualPairBlacklist = is_option_enabled(multiworld, player, "Manual_Blacklist")
@@ -197,10 +196,10 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
             item_config["Progressive Bow Rank"] = {"useful": 4}
             item_config["Progressive Fire Tome Rank"] = {"useful": 4}
             item_config["Progressive Staff Rank"] = {"useful": 4}
-    if MadKing:
+    if MadKing == 0:
         if MainProg:
             item_config["Main Chapter Progression"] = {"progression": 11}
-    if not MadKing:
+    if MadKing >= 1:
         if ProgPro:
            if SpotPassPro:
               item_config["Progressive Paralogue Chapter"] = {"progression": 23}  

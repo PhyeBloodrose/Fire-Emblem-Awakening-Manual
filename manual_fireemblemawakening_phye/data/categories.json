@@ -10,26 +10,19 @@
     "Weapons - Rank E": {
         "yaml_option": [ "All_Weapons", "Include_Rank_E" ]
     },
-    "Classes - Base": {
-        "yaml_option": [ "Base_Classes" ]
+    "ClassGenericBase": {
+        "hidden": true
     },
-    "Classes - Promoted": {
-        "yaml_option": [ "Promoted_Classes" ]
-    },
-    "ClassGeneric": {
-        "yaml_option": [ "!Character_Specific_Classes" ],
+    "ClassGenericPromo": {
         "hidden": true
     },
     "ClassChara": {
-        "yaml_option": [ "Character_Specific_Classes" ],
         "hidden": true
     },
     "StartClass": {
-        "yaml_option": [ "Character_Specific_Classes", "Character_Specific_Classes_Include_Start_Class" ],
         "hidden": true
     },
     "ClassCharaChild": {
-        "yaml_option": [ "Character_Specific_Classes", "Character_Specific_Classes_ALL_Children", "Enable_Children", "!Mad_King_Goal" ],
         "hidden": true
     },
     "Class Skills": {
@@ -40,40 +33,38 @@
         "hidden": true
     },
     "Seals": {
-        "yaml_option": [ "Add_Seals" ],
         "hidden": true
     },
-    "Weapon Types": {
+    "CharaSeals": {
+        "hidden": true
+    },
+    "Weapon Licenses": {
         "yaml_option": [ "Restrict_Weapons" ]
     },
     "Child Characters": {
-        "yaml_option": [ "Enable_Children", "!Mad_King_Goal" ]
+        "yaml_option": [ "Enable_Children" ]
     },
     "SpotPass": {
-        "yaml_option": [ "Enable_SpotPass_Paralogues", "!Mad_King_Goal" ],
+        "yaml_option": [ "Enable_SpotPass_Paralogues" ],
         "hidden": true
     },
     "SpotPassItem": {
-        "yaml_option": [ "Enable_SpotPass_Paralogues", "Restrict_SpotPass_Paralogues", "!Mad_King_Goal" ],
+        "yaml_option": [ "Enable_SpotPass_Paralogues", "Restrict_SpotPass_Paralogues" ],
         "hidden": true
     },
     "SpotPassChara": {
-        "yaml_option": [ "SpotPass_Characters", "!Mad_King_Goal" ],
+        "yaml_option": [ "SpotPass_Characters" ],
         "hidden": true
     },
     "SpotPassCharaMisc": {
         "yaml_option": [ "Misc_SpotPass_Characters" ],
         "hidden": true
     },
-    "SpotPassClass": {
-        "yaml_option": [ "SpotPass_Characters", "Base_Classes", "!Mad_King_Goal" ],
-        "hidden": true
-    },
     "DLC Characters": {
         "yaml_option": [ "DLC_Characters" ]
     },
     "DLC_Class": {
-        "yaml_option": [ "DLC_Classes", "Base_Classes" ],
+        "yaml_option": [ "DLC_Classes" ],
         "hidden": true
     },
     "DLC_Skill": {
@@ -108,34 +99,105 @@
         "yaml_option": [ "ShopSanity" ]
     },
     "MadKingGoal": {
-        "yaml_option": [ "Mad_King_Goal", "!Grima_Goal", "!Apotheosis_Goal", "!World_Tour_Mode" ],
         "hidden": true
     },
     "MadKingDisabled": {
-        "yaml_option": [ "!Mad_King_Goal" ],
         "hidden": true
     },
     "GrimaGoal": {
-        "yaml_option": [ "Grima_Goal", "!Mad_King_Goal", "!Apotheosis_Goal" ],
         "hidden": true
     },
     "ApotheosisGoal": {
-        "yaml_option": [ "Apotheosis_DLC", "Apotheosis_Goal", "!Grima_Goal", "!Mad_King_Goal" ],
+        "yaml_option": [ "Apotheosis_Goal" ],
         "hidden": true
     },
     "EmblemHunt": {
         "yaml_option": [ "Emblem_Hunt_Goal" ],
         "hidden": true
     },
-    "DLC_Apotheosis": {
-        "yaml_option": [ "Apotheosis_DLC" ],
+    "Xenologues": {
+        "yaml_option": [ "Enable_Xenologue_Locations" ],
+        "hidden": true
+    },
+    "Champions of Yore 1": {
+        "hidden": true
+    },
+    "Champions of Yore 2": {
+        "hidden": true
+    },
+    "Champions of Yore 3": {
+        "hidden": true
+    },
+    "Lost Bloodlines 1": {
+        "hidden": true
+    },
+    "Lost Bloodlines 2": {
+        "hidden": true
+    },
+    "Lost Bloodlines 3": {
+        "hidden": true
+    },
+    "Smash Brethren 1": {
+        "hidden": true
+    },
+    "Smash Brethren 2": {
+        "hidden": true
+    },
+    "Smash Brethren 3": {
+        "hidden": true
+    },
+    "Rogues & Redeemers 1": {
+        "hidden": true
+    },
+    "Rogues & Redeemers 2": {
+        "hidden": true
+    },
+    "Rogues & Redeemers 3": {
+        "hidden": true
+    },
+    "The Golden Gaffe": {
+        "hidden": true
+    },
+    "EXPonential Growth": {
+        "hidden": true
+    },
+    "Infinite Regalia": {
+        "hidden": true
+    },
+    "Harvest Scramble": {
+        "hidden": true
+    },
+    "Summer Scramble": {
+        "hidden": true
+    },
+    "Hot-Spring Scramble": {
+        "hidden": true
+    },
+    "Death's Embrace": {
+        "hidden": true
+    },
+    "Five-Anna Firefight": {
+        "hidden": true
+    },
+    "Roster Rescue": {
+        "hidden": true
+    },
+    "The Future Past 1": {
+        "hidden": true
+    },
+    "The Future Past 2": {
+        "hidden": true
+    },
+    "The Future Past 3": {
+        "hidden": true
+    },
+    "Apotheosis": {
         "hidden": true
     },
     "Character Pairings": {
-        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "!Mad_King_Goal" ]
+        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs" ]
     },
     "Character Pairs": {
-        "yaml_option": [ "!Mad_King_Goal" ],
         "hidden": true
     },
     "MaleRobin": {
@@ -147,7 +209,7 @@
         "hidden": true
     },
     "LocalPairs": {
-        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "Pairings_Local", "!Mad_King_Goal" ],
+        "yaml_option": [ "Enable_Children", "Restrict_ChildPairs", "Pairings_Local" ],
         "hidden": true
     },
     "ChromPair": { "hidden": true },
@@ -164,7 +226,7 @@
     "NowiPair": { "hidden": true },
     "RobinPair": { "hidden": true },
     "MarthClass": {
-        "yaml_option": [ "DLC_Characters", "DLC_Classes", "Champions_DLC", "Base_Classes" ],
+        "yaml_option": [ "DLC_Characters", "DLC_Classes" ],
         "hidden": true
     },
     "Chests": {
@@ -203,51 +265,11 @@
         "yaml_option": [ "Enable_Paralogues", "Restrict_Paralogues", "Progressive_Paralogues" ],
         "hidden": true
     },
-    "Xenologues": {
-        "yaml_option": [ "Enable_Xenologues" ],
-        "hidden": true
-    },
     "Xenologue Chapters": {
-        "yaml_option": [ "Enable_Xenologues", "Restrict_Xenologues" ]
-    },
-    "DLC01": {
-        "yaml_option": [ "Champions_DLC" ],
-        "hidden": true
-    },
-    "DLC02": {
-        "yaml_option": [ "Lost_Bloodlines_DLC" ],
-        "hidden": true
-    },
-    "DLC03": {
-        "yaml_option": [ "Smash_DLC" ],
-        "hidden": true
-    },
-    "DLC04": {
-        "yaml_option": [ "Rogue_And_Redeemers_DLC" ],
-        "hidden": true
-    },
-    "DLC05": {
-        "yaml_option": [ "Golden_DLC" ],
-        "hidden": true
-    },
-    "DLC06": {
-        "yaml_option": [ "Scramble_DLC" ],
-        "hidden": true
-    },
-    "DLC07": {
-        "yaml_option": [ "Challenge_DLC" ],
-        "hidden": true
-    },
-    "DLC08": {
-        "yaml_option": [ "Future Past_DLC" ],
-        "hidden": true
-    },
-    "DLC09": {
-        "yaml_option": [ "Apotheosis_DLC" ],
-        "hidden": true
+        "yaml_option": [ "Restrict_Xenologues" ]
     },
     "ApotheosisSecret": {
-        "yaml_option": [ "Apotheosis_DLC", "Apotheosis_Secret" ],
+        "yaml_option": [ "Apotheosis_Secret" ],
         "hidden": true
     },
     "Support Ranks": {
@@ -258,11 +280,11 @@
         "hidden": true
     },
     "Child Support": {
-        "yaml_option": [ "SupportSanity_Children", "!Mad_King_Goal", "!SupportSanity_Mini" ],
+        "yaml_option": [ "SupportSanity_Children", "!SupportSanity_Mini" ],
         "hidden": true
     },
     "ChildChara": {
-        "yaml_option": [ "Enable_Children", "!Mad_King_Goal" ],
+        "yaml_option": [ "Enable_Children" ],
         "hidden": true
     },
     "UnitSupp": {
@@ -270,18 +292,22 @@
         "hidden": true
     },
     "ChildSupp": {
-        "yaml_option": [ "SupportSanity_Children", "!Mad_King_Goal", "SupportSanity_Mini" ],
+        "yaml_option": [ "SupportSanity_Children", "SupportSanity_Mini" ],
         "hidden": true
     },
     "Skill Learning": {
         "yaml_option": [ "SkillSanity" ]
     },
     "LevelUpSanity": {
-        "yaml_option": [ "LevelUpSanity" ],
         "hidden": true
     },
     "LevelUpSanityPromo": {
-        "yaml_option": [ "LevelUpSanity", "LevelUpSanityPlus", "!Mad_King_Goal" ],
+        "hidden": true
+    },
+    "LevelUpTwenty": {
+        "hidden": true
+    },
+    "LevelUpMax": {
         "hidden": true
     },
     "Allowed Forging": {
@@ -299,12 +325,12 @@
         "yaml_option": [ "Progressive_MainChapters" ],
         "hidden": true
     },
-    "WorldTour": {
-        "yaml_option": [ "World_Tour_Mode" ],
+    "Guidebooks": {
+        "yaml_option": [ "Restrict_Classes" ],
         "hidden": true
     },
-    "WorldTourDisabled": {
-        "yaml_option": [ "!World_Tour_Mode" ],
+    "ShopKeys": {
+        "yaml_option": [ "Restrict_Shops" ],
         "hidden": true
     }
 }

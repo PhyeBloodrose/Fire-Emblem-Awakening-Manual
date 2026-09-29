@@ -156,7 +156,7 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
             ]
 
             if not valid:
-               raise Exception(f"No valid father remaining for {mother}")
+               raise Exception(f"No valid partner remaining for {mother}")
 
             chosen = rng.choice(valid)
 
@@ -221,14 +221,44 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
                     if father == "Chrom" and mother in chrom_wives:
                         chrom_wives.remove(mother)
 
-              #If Blacklist is not enabled it checks the pairs inside the list to add them as selected pairs.
+              # If Blacklist is not enabled it checks the pairs inside the list to add them as selected pairs.
               if not ManualPairBlacklist:
+
+                manual_by_mother = {}
+
                 for pairing_name in manual_pairings:
+                    mother, father = pairing_name.split(" x ")
+
+                    if mother not in manual_by_mother:
+                       manual_by_mother[mother] = []
+                    
+                    manual_by_mother[mother].append(father)
+
+                if male_avatar and "Robin" in manual_by_mother:
+                   del manual_by_mother["Robin"]
+
+                manual_used_fathers = set()
+
+                for mother, fathers in manual_by_mother.items():
+
+                   available_fathers = [
+                     father for father in fathers
+                     if father not in manual_used_fathers
+                     and (father != "Robin" or male_avatar)
+                   ]
+
+                   if not available_fathers:
+                      continue
+
+                   father = world.random.choice(available_fathers)
+
+                   pairing_name = f"{mother} x {father}"
+
                    item_config[pairing_name] = {"progression": 1}
                    generated_pairing_names.add(pairing_name)
 
-                   mother, father = pairing_name.split(" x ")
                    generated_pairings[mother] = father
+                   manual_used_fathers.add(father)
 
               used_mothers = set(generated_pairings.keys())
               used_fathers = set(generated_pairings.values())

@@ -84,7 +84,6 @@ def before_is_category_enabled(multiworld: MultiWorld, player: int, category_nam
 # Use this if you want to override the default behavior of is_option_enabled
 # Return True to enable the item, False to disable it, or None to use the default behavior
 def before_is_item_enabled(multiworld: MultiWorld, player: int, item:  dict[str, Any]) -> Optional[bool]:
-    # Remove unwanted dlc from the item pool
     return None
 
 # Use this if you want to override the default behavior of is_option_enabled

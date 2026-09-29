@@ -37,7 +37,7 @@ from Options import OptionSet
 from ..Items import item_name_groups
 
 class ManualPairing(OptionSet):
-  """Name the Pairs you wish to have in the game. \n Make sure to remove the Robin Pair for the gender you do not wish to play as. \n The items need to be named 'MOTHER x FATHER'. \n Anyone not mentioned here will get a random pairing. \n Does nothing if 'Restrict_Childpair' is disabled."""           # Description of the yaml option in the template
+  """Name the Pairs you wish to have in the game. \n If multiple pairs uses the same Mother, it will choose one of them at random. Anyone that doesn't get a partner during this will return to the pool of randomized pairings. \n These items need to be named 'MOTHER x FATHER'. \n Anyone not mentioned here will get a random pairing. \n NOTE: This list does nothing if 'Restrict_Childpair' is disabled."""           # Description of the yaml option in the template
   display_name = "Manual Pairing"                              # Name of the option in the spoiler
   valid_keys = item_name_groups["Character Pairings"]          # This is the bit that matters.  Our yaml option wants you to pick names of items in the Character Pairings category
   default = ["Sumia x Chrom", "Robin x Gregor", "Lucina x Robin", "Lissa x Frederick", "Olivia x Virion", "Maribelle x Stahl", "Sully x Henry", "Cordelia x Vaike", "Cherche x Kellam", "Panne x Lon'qu", "Miriel x Ricken", "Tharja x Gaius", "Nowi x Donnel"]
